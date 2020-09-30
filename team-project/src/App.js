@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import Age from "./pages/Age"
 import Insurance from "./pages/Insurance"
 import Result from "./pages/Result"
+import Case1 from "./pages/Case1"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {Formik} from "formik"
@@ -44,6 +45,9 @@ function App() {
                     </Route>
                     <Route path="/questionnaire-result">
                         <Result/>
+                    </Route>
+                    <Route path="/case1">
+                        <Case1/>
                     </Route>
                 </Switch>
         </Router>
