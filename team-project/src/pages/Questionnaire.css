@@ -1,0 +1,25 @@
+#hero-background {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 0px;
+    background-color: white;
+    font-weight: 400;
+    color: black;
+    padding: 0rem 5.6rem;
+    margin-bottom: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    font-family: Montserrat,sans-serif;
+  
+    background: url("https://images.unsplash.com/photo-1598884143267-586d90a32141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
+    background-position: center;
+    background-size: cover;
+  
+    /* @include respond(phone) {
+      padding: 0rem */
+    }
