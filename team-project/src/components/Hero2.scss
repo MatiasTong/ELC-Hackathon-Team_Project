@@ -1,0 +1,133 @@
+//Hero Image with scss files pulled from https://github.com/cobidev/gatsby-simplefolio/tree/master/src
+//starter site: https://gatsby-simplefolio.netlify.app/
+
+@import './_mixins';
+
+#hero2 {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 0px;
+    background-color: white;
+    font-weight: 400;
+    color: white;
+    padding: 0rem 5.6rem;
+    margin-bottom: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    font-family: Montserrat,sans-serif;
+  
+    // If you want to set a background image on the hero section, uncomment these with yout custom image
+    background: url("https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-position: center;
+    background-size: cover;
+  
+    @include respond(phone) {
+      padding: 0rem
+    }
+  
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 3.2rem;
+      text-align: left;
+  
+      @include respond(tab-land) {
+        font-size: 4rem;
+      }
+      @include respond(tab-port) {
+        font-size: 3.6rem;
+        text-align: center;
+      }
+      @include respond(phone) {
+        font-size: 3.5rem;
+        line-height: 1.5;
+      }
+      @include respond(phone-xs) {
+        font-size: 2.8rem;
+      }
+    }
+  
+    .hero-cta {
+      display: flex;
+  
+      @include respond(tab-port) {
+        justify-content: center;
+      }
+  
+      & a {
+        font-size: 2.4rem;
+  
+        @include respond(phone) {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .cta-btn {
+      display: inline-block;
+      position: relative;
+      padding: 0.8rem;
+      font-weight: bold;
+      line-height: 1;
+      z-index: 1;
+      transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+    
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 0px;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+      }
+    }
+    
+    /* Hero Style */
+    .cta-btn--hero {
+      background-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border-width: 2px;
+      border-style: solid;
+      border-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
+      border-image-slice: 1;
+      cursor: pointer;
+      // Responsive Button hero style
+      @include respond(phone) {
+        background-image: none;
+        border: 2px solid lightblue;
+        -webkit-text-fill-color: lightblue;
+      }
+    
+      &::after {
+        background-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
+        color: white;
+        // Responsive Button hero style
+        @include respond(phone) {
+          background-image: none;
+        }
+      }
+    
+      &:hover {
+        -webkit-text-fill-color: white;
+        text-decoration: none;
+        // Responsive Button hover hero style
+        @include respond(phone) {
+          -webkit-text-fill-color: lightblue;
+        }
+    
+        &::after {
+          width: 100%;
+          color: white;
+        }
+      }
+    }
+  }
