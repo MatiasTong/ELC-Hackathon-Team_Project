@@ -14,9 +14,9 @@ import {
     Row,
     Col
 } from "react-bootstrap";
-import Hero from "../components/Hero";
-import InfoModal from "../components/InfoModal";
-import Option from "../components/Option"
+import Hero from "./Hero";
+import InfoModal from "./InfoModal";
+import Option from "./Option"
 
 function Case1Page2(props) {
     const [modalShow, setModalShow] = React.useState(false);

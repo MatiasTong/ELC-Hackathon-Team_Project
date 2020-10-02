@@ -1,11 +1,7 @@
 
-@import './_mixins';
+
 
 #result {
     background: url("https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg");
 
-  
-    @include respond(phone) {
-      padding: 0rem
-    }
 }

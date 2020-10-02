@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 // import { Link } from 'react-scroll';
 import { Link } from 'react-router-dom';
-import "./Hero2.scss"
+import "./Hero3.scss"
 
 // import PortfolioContext from '../../context/context';
 
@@ -25,7 +25,7 @@ const Header2 = () => {
   }, []);
 
   return (
-    <section id="hero2" className="jumbotron">
+    <section id="hero3" className="jumbotron">
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={200} distance="30px">
           <h1 className="hero-title">

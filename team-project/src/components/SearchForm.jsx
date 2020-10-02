@@ -36,7 +36,7 @@ function SearchForm({ isDesktop, isMobile, displayForm }) {
             </Form.Control>
           </Form.Group>
           <div className="my-auto col-2">
-            <Link to="/result" style={{ display: "flex" }}>
+            <Link to="/case2" style={{ display: "flex" }}>
               <Button variant="primary" className="my-auto"><b>
                 Search</b></Button>
             </Link>

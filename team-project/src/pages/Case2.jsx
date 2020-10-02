@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Navbar, Form, Nav, FormControl, Button } from "react-bootstrap"
+import { Navbar, Form, Nav, FormControl, Button, Card } from "react-bootstrap"
 import Hero2 from "../components/Hero2"
 import Media from 'react-bootstrap/Media'
+import Steps from "../components/Steps"
 
 function Case2(props) {
     return (
@@ -16,6 +17,20 @@ function Case2(props) {
                 </Nav>
             </Navbar>
             <Hero2 />
+
+            <Steps/>
+
+            <Card>
+                <Card.Header>
+                    
+                </Card.Header>
+                <Card.Body>
+
+                </Card.Body>
+                <Card.Footer>
+                    
+                </Card.Footer>
+            </Card>
 
             <ul className="list-unstyled">
                 <Media as="li" className="mx-5 my-5">
