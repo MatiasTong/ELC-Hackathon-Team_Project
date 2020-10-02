@@ -1,0 +1,15 @@
+#search-form{
+        margin-left: 20px; 
+        margin-bottom:10px;
+        display: flex; 
+        background-color: rgb(255,255,255,0.3); 
+}
+
+
+
+@media screen and (max-width: 1200px){
+    #search-form {
+      margin:0;
+      padding: 15px;
+      }
+  }
