@@ -5,8 +5,14 @@ import Age from "./pages/Age"
 import Insurance from "./pages/Insurance"
 import Result from "./pages/Result"
 import Case1 from "./pages/Case1"
-import Case4 from "./pages/Case4"
 
+import Case1V2 from "./pages/Case1V2";
+import Case1V2Step1 from "./pages/Case1V2Step1";
+import Case1V2Step2 from "./pages/Case1V2Step2";
+import Case1V2Step3 from "./pages/Case1V2Step3";
+import Case1V2Step4 from "./pages/Case1V2Step4";
+import Case1Page2 from "./pages/Case1Page2";
+import Case4 from "./pages/Case4"
 import Case3 from "./pages/Case3"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,6 +25,7 @@ function App() {
 
 
   return (
+
     <div className="App">
       <Formik    
         initialValues={{
@@ -57,6 +64,24 @@ function App() {
                     </Route>
                     <Route path="/case1">
                         <Case1/>
+                    </Route>
+                    <Route path="/case1page2">
+                        <Case1Page2 />
+                    </Route>
+                    <Route path="/case1V2">
+                        <Case1V2 />
+                    </Route>
+                    <Route path="/case1V2Step1">
+                        <Case1V2Step1 />
+                    </Route>
+                    <Route path="/case1V2Step2">
+                        <Case1V2Step2 />
+                    </Route>
+                    <Route path="/case1V2Step3">
+                        <Case1V2Step3 />
+                    </Route>
+                    <Route path="/case1V2Step4">
+                        <Case1V2Step4 />
                     </Route>
 
                     <Route path="/case4">
