@@ -9,9 +9,9 @@ function Home(props) {
             <Navbar variant="dark" className = "Navbar fixed-top" >
                 <Navbar.Brand style = {{fontSize: "1.5rem"}} href="#home">Overcomer</Navbar.Brand>
                 <Nav className="mr-auto" style = {{fontSize: "1.3rem"}}>
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Prevention</Nav.Link>
+                    <Nav.Link href="#home">About Us</Nav.Link>
+                    <Nav.Link href="#resources">Resources</Nav.Link>
+               
                 </Nav>
                 {/* <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
