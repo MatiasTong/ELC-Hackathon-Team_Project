@@ -17,6 +17,7 @@ function Home(props) {
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                     <Button variant="outline-primary">Search</Button>
                 </Form> */}
+                
             </Navbar>
             <Hero/>
         </div>
