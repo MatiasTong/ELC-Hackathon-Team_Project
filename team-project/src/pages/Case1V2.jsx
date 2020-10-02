@@ -1,8 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-import { Navbar, Form, Nav, FormControl, Button, Card, Container } from "react-bootstrap";
+import {
+    Navbar,
+    Form,
+    Nav,
+    FormControl,
+    Button,
+    Card,
+    Container,
+} from "react-bootstrap";
 import Hero from "../components/Hero";
 
 function Case1(props) {
@@ -65,14 +73,21 @@ function Case1(props) {
                 >
                     <Card.Header>Next Step</Card.Header>
                     <Card.Body>
-                        <Card.Title>Make an appointment</Card.Title>
                         <Card.Text>
-                            There are a few steps and guidelines that will help
-                            you make the appointment process easy.
+                            <p>
+                                Step 1: Call your primary doctor to make an
+                                appointment.
+                            </p>
+                            <p>
+                                Step 2: Make appointment with radiology lab/
+                                clinic.
+                            </p>
+                            <p>Step 3: Wait for the result.</p>
+                            <p>Step 4: Keep the report of your mammogram</p>
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Link to="/case1page2" smooth duration={1000}>
+                <Link to="/case1v2step1" smooth duration={1000}>
                     <Button
                         className="my-2 mx-auto"
                         variant="success"
@@ -86,11 +101,6 @@ function Case1(props) {
     );
 }
 
-Case1.propTypes = {
+Case1.propTypes = {};
 
-}
-
-export default Case1
-
-
-
+export default Case1;
