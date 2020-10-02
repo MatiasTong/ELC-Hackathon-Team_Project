@@ -1,7 +1,14 @@
-//Hero Image with scss files pulled from https://github.com/cobidev/gatsby-simplefolio/tree/master/src
-//starter site: https://gatsby-simplefolio.netlify.app/
+/* //Hero Image with scss files pulled from https://github.com/cobidev/gatsby-simplefolio/tree/master/src
+//starter site: https://gatsby-simplefolio.netlify.app/ */
 
-@import './_mixins';
+
+
+.link:hover {
+    color:rgb(255, 255, 255);
+    text-decoration:none;
+}
+
+
 
 #hero {
     min-height: 100vh;
@@ -21,54 +28,31 @@
     z-index: -1;
     font-family: Montserrat,sans-serif;
   
-    // If you want to set a background image on the hero section, uncomment these with yout custom image
+    /* // If you want to set a background image on the hero section, uncomment these with yout custom image */
     background: url("https://images.unsplash.com/photo-1598884143267-586d90a32141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
     background-position: center;
     background-size: cover;
+}
   
-    @include respond(phone) {
-      padding: 0rem
-    }
   
     .hero-title {
       font-size: 4rem;
       font-weight: 700;
       margin-bottom: 3.2rem;
       text-align: left;
-  
-      @include respond(tab-land) {
-        font-size: 4rem;
-      }
-      @include respond(tab-port) {
-        font-size: 3.6rem;
-        text-align: center;
-      }
-      @include respond(phone) {
-        font-size: 3.5rem;
-        line-height: 1.5;
-      }
-      @include respond(phone-xs) {
-        font-size: 2.8rem;
-      }
     }
   
     .hero-cta {
       display: flex;
-  
-      @include respond(tab-port) {
-        justify-content: center;
-      }
-  
-      & a {
-        font-size: 2.4rem;
-  
-        @include respond(phone) {
-          font-size: 2rem;
-        }
-      }
     }
+  
+    .hero-cta a {
+        font-size: 2.4rem;
+        color:white;
+      } 
 
-    .cta-btn {
+
+      .cta-btn {
       display: inline-block;
       position: relative;
       padding: 0.8rem;
@@ -77,57 +61,144 @@
       z-index: 1;
       transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
     
-      &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 0px;
-        height: 100%;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
-      }
+    
+    }
+
+    .cta-btn::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0px;
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
     }
     
-    /* Hero Style */
-    .cta-btn--hero {
-      background-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      border-width: 2px;
-      border-style: solid;
-      border-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
-      border-image-slice: 1;
-      cursor: pointer;
-      // Responsive Button hero style
-      @include respond(phone) {
-        background-image: none;
-        border: 2px solid lightblue;
-        -webkit-text-fill-color: lightblue;
-      }
-    
-      &::after {
-        background-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
-        color: white;
-        // Responsive Button hero style
-        @include respond(phone) {
-          background-image: none;
-        }
-      }
-    
-      &:hover {
-        -webkit-text-fill-color: white;
-        text-decoration: none;
-        // Responsive Button hover hero style
-        @include respond(phone) {
-          -webkit-text-fill-color: lightblue;
-        }
-    
-        &::after {
-          width: 100%;
-          color: white;
-        }
-      }
+
+
+/* Hero Style */
+.cta-btn--hero {
+  background-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
+  border-image-slice: 1;
+  cursor: pointer;
+
+  &::after {
+    background-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
+    // Responsive Button hero style
+  }
+
+  &:hover {
+    -webkit-text-fill-color: white;
+    text-decoration: none;
+    // Responsive Button hover hero style
+
+    &::after {
+      width: 100%;
     }
   }
+}
+
+
+    // /* Hero Style */
+    // .cta-btn--hero {
+    //   background-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    //   border-width: 2px;
+    //   border-style: solid;
+    //   border-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
+    //   border-image-slice: 1;
+    //   cursor: pointer;
+    //   /* // Responsive Button hero style */
+    // }
+    
+    //   .cta-btn--hero::after {
+    //     background-image: linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%);
+    //     color: white;
+    //     /* // Responsive Button hero style
+    //     @include respond(phone) {
+    //       background-image: none;
+    //     } */
+    //   }
+    
+    //   .cta-btn--hero:hover {
+    //     -webkit-text-fill-color: white;
+    //     text-decoration: none;
+    //     /* // Responsive Button hover hero style
+    //     @include respond(phone) {
+    //       -webkit-text-fill-color: lightblue; */
+    //     }
+    
+    //     .cta-btn--hero::after {
+    //       width: 100%;
+    //       color: white;
+    //     }
+
+
+
+          
+   
+
+  
+
+
+/* Table Landscape */
+  @media screen and (max-width: 75em){
+    .hero-title {
+      font-size: 4rem;
+      }
+  }
+/* Table Portrait */
+  @media screen and (max-width: 56.25em){
+    .hero-title {
+      margin-top:2em;
+      font-size: 3.2rem;
+        text-align: center;
+      }
+
+      .cta-btn--hero{
+        margin-left:auto;
+        margin-right:auto;
+      }
+     
+  }
+/* phone */
+  @media screen and (max-width: 37.5em){
+    #hero {
+      padding: 0rem;
+    }
+    .hero-title {
+      padding-top:2em;
+     font-size: 3rem;
+      line-height: 1.5;
+    }
+    .hero-cta a {
+      font-size: 2rem;
+    }
+  .cta-btn--hero{
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+
+/* Phone xs */
+@media screen and (max-width: 20em){
+  .hero-title {
+    padding-top:2em;
+    font-size: 2.8rem;
+    }
+}
+
+
+
+      
+    
+  
