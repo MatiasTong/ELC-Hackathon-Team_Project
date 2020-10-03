@@ -26,7 +26,7 @@ function Case2(props) {
 <ResourceCard className ="col mx-2"/>
 </Row>
            
-
+{/* 
             <ul className="list-unstyled">
                 <Media as="li" className="mx-5 my-5">
                     <img
@@ -108,7 +108,7 @@ function Case2(props) {
                 </Media>
                 <a href="http://www.zocdoc.com"><h1>Find doctors in your network</h1> </a>
 
-            </ul>
+            </ul> */}
 
         </div>
     )

@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 export const StyledCard = styled(Card)`
    width: 400px;
-// height: 10vh;
    margin:0.5rem 0.5rem;
 //border: 2px solid lightgray;
    background-color: white;
