@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Navbar, Form, Nav, FormControl, Button, Card } from "react-bootstrap"
+import { Navbar, Form, Nav, FormControl, Button, Card, Container } from "react-bootstrap"
 import Hero2 from "../components/Hero2"
 import Media from 'react-bootstrap/Media'
 import Steps from "../components/Steps"
@@ -31,7 +31,6 @@ function Case2(props) {
                     
                 </Card.Footer>
             </Card>
-
             <ul className="list-unstyled">
                 <Media as="li" className="mx-5 my-5">
                     <img
@@ -111,6 +110,7 @@ function Case2(props) {
                         </h5>
                     </Media.Body>
                 </Media>
+
                 <a href="http://www.zocdoc.com"><h1>Find doctors in your network</h1> </a>
 
             </ul>
