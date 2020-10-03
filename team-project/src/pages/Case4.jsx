@@ -1,8 +1,9 @@
 import React from 'react'
 import Image from 'react-bootstrap/Image'
-import { Carousel, Container, Card, Button, CardGroup, Form, Jumbotron } from 'react-bootstrap';
+import { Navbar, Nav, Carousel, Container, Card, Button, CardGroup, Form, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types'
 import "../components/Result.scss"
+import Hero2 from "../components/Hero2"
 import Gallery from "../components/Gallery"
 import "../App.css"
 import "../components/Gallery.scss"
@@ -10,25 +11,20 @@ import "../components/Gallery.scss"
 function Case4(props) {
     return (
         <div>
+            <Navbar variant="dark" className="Navbar fixed-top" >
+                <Navbar.Brand style={{ fontSize: "1.5rem" }} href="#home">Overcomer</Navbar.Brand>
+                <Nav className="mr-auto" style={{ fontSize: "1.3rem" }}>
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="#features">Features</Nav.Link>
+                    <Nav.Link href="#pricing">Prevention</Nav.Link>
+                </Nav>
+            </Navbar>
+            <Hero2 />
             <Container>
-                <Card>
-                    <Card.Header>Resources:</Card.Header>
-                    <Card.Body>
-                        <blockquote className="blockquote mb-0">
-                            <p>
-                                {' '}
-        When women take care of their health, they become their best friend.{' '}
-                            </p>
-                            <footer className="blockquote-footer">
-                                Maya Angelou
-                                                    </footer>
-                        </blockquote>
-                    </Card.Body>
-                </Card>
-
-                <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
+                <br />
 
             </Container>
+            <br />
             <Container>
                 <CardGroup>
                     <Card>
@@ -74,10 +70,10 @@ function Case4(props) {
                     </Card>
                 </CardGroup>
             </Container>
-            {/* <Image src="https://www.verywellhealth.com/thmb/QHP2aDBiLsk9UEfvdlU6T78eVM8=/1333x1000/smart/filters:no_upscale()/430283_color-5bb3d89946e0fb00261df155.png" fluid />
-            <Image src="https://www.beaumont.org/images/default-source/cancer/screening-diagnostic.jpg?sfvrsn=844a6e2_0" fluid /> */}
-
+            <br />        
             <Gallery />
+            <br />
+            <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
 
         </div>
     )
