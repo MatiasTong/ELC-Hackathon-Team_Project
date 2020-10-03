@@ -66,46 +66,52 @@ function Case1Page2(props) {
                         <Accordion.Toggle as={Card.Header}
                             style={{ padding: "0px", backgroundColor: "white", color: "black" }}
                             eventKey="0">
-                            <Row>
-                                <Col className="py-2" md={2} style={{ color:"white",fontWeight:"bold", backgroundColor: "palevioletred" }}>Step 1</Col>
-                                <Col className="py-2" md={8} style={{textAlign:"center"}} >Call your primary doctor to make an appointment.</Col>
+                            <Row> {/*backgroundColor: "palevioletred" */}
+                                <Col className="py-2" md={2} style={{
+                                    color: "white", fontWeight: "bold",
+                                    backgroundImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201) 100%)",
+                                    // background: "linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(https://images.unsplash.com/photo-1559759708-d6e99b50f0e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)",
+                                    //  backgroundImage: "url(https://images.unsplash.com/photo-1559759708-d6e99b50f0e9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80)",
+                                    backgroundSize: "cover"}}>
+                                    Step 1</Col>
+                                <Col className="py-2" md={8} style={{ textAlign: "center" }} >Call your primary doctor to make an appointment.</Col>
                             </Row>
 
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="0">
-                            <Card.Body style ={{backgroundColor: "rgb(255, 227, 215)"}}>
-                            <Row className="justify-content-center"> 
+                            <Card.Body style={{ backgroundColor: "rgb(255, 227, 215)" }}>
+                                <Row className="justify-content-center">
 
-                           
-                            <Card className="col-9 px-0 m-2" style={{color:"black", width:"50%"}}>
-                                <Card.Header setModalShow={setModalShow}>
-                                    Who is my primary doctor?
+
+                                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
+                                        <Card.Header setModalShow={setModalShow}>
+                                            Who is my primary doctor?
                                 </Card.Header>
-                                <Card.Body>
-                                    <p>ajlkhdfhaksdlfhajksdfhakj</p>
-                                </Card.Body>
-    
-                                </Card>
-                                <Card className="col-9 px-0 m-2" style={{color:"black", width:"50%"}}>
-                                <Card.Header setModalShow={setModalShow}>
-                                    How can I contact my doctor?
+                                        <Card.Body>
+                                            <p>ajlkhdfhaksdlfhajksdfhakj</p>
+                                        </Card.Body>
+
+                                    </Card>
+                                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
+                                        <Card.Header setModalShow={setModalShow}>
+                                            How can I contact my doctor?
                                 </Card.Header>
-                                <Card.Body>
-                                    <p>ajlkhdfhaksdlfhajksdfhakj</p>
-                                </Card.Body>
-    
-                                </Card>
-                                <Card className="col-9 px-0 m-2" style={{color:"black", width:"50%"}}>
-                                <Card.Header setModalShow={setModalShow}>
-                                    What should I say to my doctor?
+                                        <Card.Body>
+                                            <p>ajlkhdfhaksdlfhajksdfhakj</p>
+                                        </Card.Body>
+
+                                    </Card>
+                                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
+                                        <Card.Header setModalShow={setModalShow}>
+                                            What should I say to my doctor?
                                 </Card.Header>
-                                <Card.Body>
-                                    <p>ajlkhdfhaksdlfhajksdfhakj</p>
-                                </Card.Body>
-    
-                                </Card>
+                                        <Card.Body>
+                                            <p>ajlkhdfhaksdlfhajksdfhakj</p>
+                                        </Card.Body>
+
+                                    </Card>
                                 </Row>
-                                
+
                             </Card.Body>
                         </Accordion.Collapse>
                     </Card>
@@ -123,24 +129,28 @@ function Case1Page2(props) {
                             style={{ padding: "0px", backgroundColor: "white", color: "black" }}
                             eventKey="0">
                             <Row>
-                                <Col className="py-2" md={2} style={{ color:"white",
-                                fontWeight:"bold", backgroundColor: "palevioletred" }}>Step 2</Col>
-                                <Col className="py-2" style={{textAlign:"center"}}  md={8}>Make appointment with radiologist or clinic.</Col>
+                            <Col className="py-2" md={2} style={{
+                                    color: "white", fontWeight: "bold",
+                                    backgroundImage: "linear-gradient(135deg, rgb(250, 40, 160) 0%, rgb(225, 168, 190) 100%)",
+                                    //  backgroundImage: "url(https://images.unsplash.com/photo-1547496832-84e64458210a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80)",
+                                    backgroundSize: "cover"}}>
+                                    Step 2</Col>
+                                <Col className="py-2" style={{ textAlign: "center" }} md={8}>Make appointment with radiologist or clinic.</Col>
                             </Row>
 
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="0">
-                            <Card.Body style ={{backgroundColor: "rgb(255, 227, 215)"}}>
+                            <Card.Body style={{ backgroundColor: "rgb(255, 227, 215)" }}>
                                 <Card>
-                                <Card.Header setModalShow={setModalShow}>
-                                    Who is my primary doctor?
+                                    <Card.Header setModalShow={setModalShow}>
+                                        Who is my primary doctor?
                                 </Card.Header>
-                                <Card.Body>
-                                    <p>ajlkhdfhaksdlfhajksdfhakj</p>
-                                </Card.Body>
-    
+                                    <Card.Body>
+                                        <p>ajlkhdfhaksdlfhajksdfhakj</p>
+                                    </Card.Body>
+
                                 </Card>
-                                
+
                                 <Option setModalShow={setModalShow}>
                                     How Can I contact my doctor?
                                 </Option>
@@ -164,14 +174,18 @@ function Case1Page2(props) {
                             style={{ padding: "0px", backgroundColor: "white", color: "black" }}
                             eventKey="0">
                             <Row>
-                                <Col className="py-2" md={2} style={{ color:"white",
-                                fontWeight:"bold", backgroundColor: "palevioletred" }}>Step 3</Col>
-                                <Col className="py-2" style={{textAlign:"center"}}  md={8}>Wait for the result.</Col>
+                            <Col className="py-2" md={2} style={{
+                                    color: "white", fontWeight: "bold",
+                                    backgroundImage: "linear-gradient(135deg, rgb(250, 40, 160) 0%, rgb(225, 168, 190) 100%)",
+                                    //  backgroundImage: "url(https://images.unsplash.com/photo-1547496832-84e64458210a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80)",
+                                    backgroundSize: "cover"}}>
+                                    Step 3</Col>
+                                <Col className="py-2" style={{ textAlign: "center" }} md={8}>Wait for the result.</Col>
                             </Row>
 
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="0">
-                            <Card.Body style ={{backgroundColor: "rgb(255, 227, 215)"}}>
+                            <Card.Body style={{ backgroundColor: "rgb(255, 227, 215)" }}>
                                 <Option setModalShow={setModalShow}>
                                     Who is my primary doctor?
                                 </Option>
@@ -198,14 +212,18 @@ function Case1Page2(props) {
                             style={{ padding: "0px", backgroundColor: "white", color: "black" }}
                             eventKey="0">
                             <Row>
-                                <Col className="py-2" md={2} style={{ color:"white",
-                                fontWeight:"bold", backgroundColor: "palevioletred" }}>Step 4</Col>
-                                <Col className="py-2" style={{textAlign:"center"}}  md={8}>Keep your mammogram result.</Col>
+                            <Col className="py-2" md={2} style={{
+                                    color: "white", fontWeight: "bold",
+                                    backgroundImage: "linear-gradient(135deg, rgb(250, 40, 160) 0%, rgb(225, 168, 190) 100%)",
+                                    //  backgroundImage: "url(https://images.unsplash.com/photo-1547496832-84e64458210a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80)",
+                                    backgroundSize: "cover"}}>
+                                    Step 4</Col>
+                                <Col className="py-2" style={{ textAlign: "center" }} md={8}>Keep your mammogram result.</Col>
                             </Row>
 
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="0">
-                            <Card.Body style ={{backgroundColor: "rgb(255, 227, 215)"}}>
+                            <Card.Body style={{ backgroundColor: "rgb(255, 227, 215)" }}>
                                 <Option setModalShow={setModalShow}>
                                     Who is my primary doctor?
                                 </Option>
