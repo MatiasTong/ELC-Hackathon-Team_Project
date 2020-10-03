@@ -22,7 +22,9 @@ function Case1Page2(props) {
     const [modalShow, setModalShow] = React.useState(false);
 
     return (
-        <div>
+        <div style={{ 
+         background: "linear-gradient(0deg, rgba(241, 241, 241,0.2), rgba(241, 241, 241,0.2)), url(https://images.unsplash.com/photo-1552035509-b247fe8e5078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
+         backgroundSize: "cover"}}>
             <Container className="mt-5">
                 {/* intro */}
                 <Card
@@ -61,7 +63,7 @@ function Case1Page2(props) {
                         className="my-4 mx-auto"
                         // bg={"Success".toLowerCase()}
                         text={"white"}
-                        style={{ width: "80%" }}
+                        style={{ width: "80%", border:"none" }}
                     >
                         <Accordion.Toggle as={Card.Header}
                             style={{ padding: "0px", backgroundColor: "white", color: "black" }}

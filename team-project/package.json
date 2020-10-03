@@ -15,12 +15,15 @@
     "react-bootstrap": "^1.3.0",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
+    "react-photo-gallery": "^8.0.0",
     "react-reveal": "^1.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",
     "react-transition-group": "^4.4.1",
-    "styled-components": "^5.2.0"
+    "react-whirligig": "^6.6.12",
+    "styled-components": "^5.2.0",
+    "whirligig": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

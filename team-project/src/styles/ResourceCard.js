@@ -30,7 +30,7 @@ export const StyledCard = styled(Card)`
 
    
    export const StyledCardBody = styled(Card.Body)`
-//    border-left: 5px solid blue;
+// border-left: 5px solid blue;
    padding:5px;
    padding-top:20px;
    text-align:left;
