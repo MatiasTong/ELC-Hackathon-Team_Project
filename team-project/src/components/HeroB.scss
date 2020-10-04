@@ -10,7 +10,8 @@
 
 
 
-#hero3 {
+#hero2 {
+    border-radius:0px;
     min-height: 100vh;
     height: 100vh;
     display: flex;
@@ -29,7 +30,7 @@
     font-family: Montserrat,sans-serif;
   
     /* // If you want to set a background image on the hero section, uncomment these with yout custom image */
-    background: url("https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background: url("https://images.unsplash.com/photo-1598884143267-586d90a32141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
     background-position: center;
     background-size: cover;
 }

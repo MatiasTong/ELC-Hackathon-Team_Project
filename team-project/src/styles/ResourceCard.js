@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 
 export const StyledCard = styled(Card)`
-   width: 400px;
+font-family: 'Roboto', sans-serif;
+   width: 28rem;
    margin:0.5rem 0.5rem;
 //border: 2px solid lightgray;
    background-color: white;
@@ -23,6 +24,7 @@ export const StyledCard = styled(Card)`
     color: white;
     text-align: right;
     margin:0px;
+    fontSize: 18px
     background-color: #1a73e8;
     // background-color: rgb(193, 218, 255);
    `

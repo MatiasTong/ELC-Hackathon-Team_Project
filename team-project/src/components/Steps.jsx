@@ -16,13 +16,25 @@ function Steps(props) {
     const [modalShow, setModalShow] = React.useState(false);
 
     return (
+        // Colorful border
+        <div style={{
+            margin:"10px", 
+            border: "20px solid",
+            padding:"0px",
+            borderImage: "linear-gradient(to right, #FFCCCB, #b19cd9) 1"}}>
         <div style={{
             //  background: "linear-gradient(0deg, rgba(241, 241, 241,0.2), rgba(241, 241, 241,0.2)), url(https://images.unsplash.com/photo-1552035509-b247fe8e5078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
-            backgroundColor: "lightgray"
+            // backgroundColor: "#eaf8ff",
+            backgroundColor: "#f2f6fa",
+            // borderRadius:"10%",
+            border:"none"
         }}>
             <Container className="py-5">
+                <div style = {{textAlign:"left", marginBottom:"2rem"}}>
+                <h3 style = {{fontSize:"3rem", fontWeight:"bold"}}>Step by Step Directions</h3>
+                </div>
                 {/* intro */}
-                <Card
+                {/* <Card
                     className="my-4 mx-auto"
                     border="info"
                     style={{ width: "80%" }}
@@ -34,10 +46,10 @@ function Steps(props) {
                             appointment.
                         </Card.Text>
                     </Card.Body>
-                </Card>
+                </Card> */}
 
                 {/* Modal */}
-                <InfoModal
+                {/* <InfoModal
                     show={modalShow}
                     onHide={() => setModalShow(false)}
                     title="Who is my primary care doctor"
@@ -50,38 +62,28 @@ function Steps(props) {
                         </div>
                     }
 
-                />
+                /> */}
 
                 {/* Step: 1 */}
                 <Accordion 
                 stepTitle = "Step 1" 
                 stepDescription= "Call your primary doctor to make an appointment" >
                     <Row className="justify-content-center">
-
-
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
-                                Who is my primary doctor?
-                                </Card.Header>
-                            <Card.Body>
+                            <Card.Body style={{textAlign:"left"}}>
+                            <h4>Who is my primary doctor?</h4>
                                 <p>ajlkhdfhaksdlfhajksdfhakj</p>
                             </Card.Body>
-
                         </Card>
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
-                                How can I contact my doctor?
-                                </Card.Header>
-                            <Card.Body>
+                            <Card.Body style={{textAlign:"left"}}>
+                            <h4> How can I contact my doctor?</h4>
                                 <p>ajlkhdfhaksdlfhajksdfhakj</p>
                             </Card.Body>
-
                         </Card>
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
-                                What should I say to my doctor?
-                                </Card.Header>
-                            <Card.Body>
+                            <Card.Body style={{textAlign:"left"}}>
+                            <h4> What should I say to my doctor?</h4>
                                 <p>ajlkhdfhaksdlfhajksdfhakj</p>
                             </Card.Body>
 
@@ -92,7 +94,7 @@ function Steps(props) {
                 {/* Step: 2 */}
                 <Accordion
                 stepTitle = "Step 2" 
-                stepDescription= "Make appointment with radiologist or clinic" >>
+                stepDescription= "Make appointment with radiologist or clinic">
 
                     <Row className="justify-content-center">
 
@@ -129,7 +131,7 @@ function Steps(props) {
                 {/* Step: 3 */}
                 <Accordion
                 stepTitle = "Step 3" 
-                stepDescription= "Wait for the result" >>
+                stepDescription= "Wait for the result">
 
                     <Row className="justify-content-center">
 
@@ -167,7 +169,10 @@ function Steps(props) {
                 </Accordion>
 
                 {/* Step 4 */}
-                <Accordion>
+                <Accordion
+                stepTitle = "Step 4" 
+                stepDescription= "Wait for the result"
+        >
 
                     <Row className="justify-content-center">
 
@@ -203,7 +208,6 @@ function Steps(props) {
 
 
                 </Accordion>
-
                 {/* Step: 4 */}
                 {/* <Accordion defaultActiveKey="1">
                     <Card
@@ -242,6 +246,7 @@ function Steps(props) {
                     </Card>
                 </Accordion> */}
             </Container>
+        </div>
         </div>
     );
 }

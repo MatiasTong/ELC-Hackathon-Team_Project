@@ -1,32 +1,76 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Navbar, Form, Nav, FormControl, Button, Card, Row, Col } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import Hero2 from "../components/Hero2"
 import Media from 'react-bootstrap/Media'
 import Steps from "../components/Steps"
 import ResourceCard from "../components/ResourceCard"
+import Navbar from "../components/Navbar"
+import Gallery from "../components/Gallery"
 
 function Case2(props) {
     return (
         <div>
-            <Navbar variant="dark" className="Navbar fixed-top" >
-                <Navbar.Brand style={{ fontSize: "1.5rem" }} href="#home">Overcomer</Navbar.Brand>
-                <Nav className="mr-auto" style={{ fontSize: "1.3rem" }}>
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Prevention</Nav.Link>
-                </Nav>
-            </Navbar>
+            <Navbar />
             <Hero2 />
+            <div style={{
+                height: "50vh",
+                padding: "0px",
+                backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
+            }}>
+            </div>
 
-            <Steps/>
-<Row className ="justify-content-center">
-<ResourceCard className="col mx-2"/>
-<ResourceCard className ="col mx-2"/>
-<ResourceCard className ="col mx-2"/>
-</Row>
-           
-{/* 
+            <div style={{
+                // backgroundImage: "url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
+                // backgroundSize: "cover"
+            }}>
+
+                <div style={{
+                    margin: "10px",
+                    border: "10px solid",
+                    padding: "0px",
+                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
+                    borderImage: "linear-gradient(to right, #FFCCCB, #b19cd9) 1"
+                }}>
+                    <Steps />
+                </div>
+
+            </div>
+            <di>
+                
+            </di>
+            <section style={{ backgroundImage: "linear-gradient(to right, #b19cd9 0%, #FFCCCB 100%)" }}>
+                
+                <div style={{
+                    padding: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor:"#f2f6fa",
+                    margin:"10px"
+                }}>
+                    <Row className="justify-content-center">
+                        <ResourceCard className="col mx-2" />
+                        <ResourceCard className="col mx-2" />
+                        <ResourceCard className="col mx-2" />
+                    </Row>
+                </div>
+                <div className="py-5">
+
+                    <Gallery />
+                </div>
+
+            </section>
+
+
+
+
+
+
+
+
+            {/* 
             <ul className="list-unstyled">
                 <Media as="li" className="mx-5 my-5">
                     <img
