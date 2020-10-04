@@ -150,6 +150,7 @@ function Case2(props) {
                         </h5>
                     </Media.Body>
                 </Media>
+
                 <a href="http://www.zocdoc.com"><h1>Find doctors in your network</h1> </a>
 
             </ul> */}
