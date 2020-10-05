@@ -56,7 +56,6 @@ function Case2(props) {
                 }}>
             </div>
 
-
             {/* Section 3: Resources */}
             <div style={{
                 padding: "20px",
@@ -74,7 +73,6 @@ function Case2(props) {
                 </Row>
             </div>
 
-
             {/* Spacer Div */}
             <div
                 style={{
@@ -84,8 +82,7 @@ function Case2(props) {
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                 }}>
             </div>
-
-
+            
             {/* Section 4: Gallery */}
             <div className="py-5" >
                 <Gallery />
