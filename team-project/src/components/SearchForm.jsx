@@ -8,7 +8,25 @@ import "./SearchForm.css"
 
 function SearchForm({ isDesktop, isMobile, displayForm }) {
   const { values, handleChange } = useFormikContext();
+    let resultPage = "";
 
+    if (
+        values.age >= 40 &&
+        (values.insuranceType == "state insurance" ||
+            values.insuranceType == "private insurance")
+    ) {
+        resultPage = "/case1";
+    } else if (
+        values.age < 40 &&
+        (values.insuranceType == "state insurance" ||
+            values.insuranceType == "private insurance")
+    ) {
+        resultPage = "/case2";
+    } else if (values.age < 40 && values.insuranceType == "none") {
+        resultPage = "/case3";
+    } else if (values.age >= 40 && values.insuranceType == "none") {
+        resultPage = "/case4";
+    } else resultPage = "/";
 
   return (
 
@@ -36,7 +54,7 @@ function SearchForm({ isDesktop, isMobile, displayForm }) {
             </Form.Control>
           </Form.Group>
           <div className="my-auto col-2">
-            <Link to="/case2" style={{ display: "flex" }}>
+            <Link to={ resultPage }style={{ display: "flex" }}>
               <Button variant="primary" className="my-auto"><b>
                 Search</b></Button>
             </Link>

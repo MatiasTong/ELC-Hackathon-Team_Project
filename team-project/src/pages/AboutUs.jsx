@@ -10,12 +10,13 @@ import {
     Button,
     Card,
     Container,
-    Carousel, Row, Col, Image
+    Carousel,
+    Row,
+    Col,
+    Image,
 } from "react-bootstrap";
 import Hero from "../components/Hero";
 import "./AboutUs.css";
-
-
 
 function AboutUs(props) {
     const [index, setIndex] = useState(0);
@@ -31,24 +32,17 @@ function AboutUs(props) {
                 <Row>
                     <h2 className="featurette-heading">About Us</h2>
 
-                    <p className="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eveniet quo, quasi accusantium maxime magni impedit nemo
-                        quam asperiores dolor quos voluptates vero, commodi est
-                        sequi similique ea labore reprehenderit incidunt.Lorem
-                        ipsum dolor sit amet consectetur adipisicing elit.
-                        Eveniet quo, quasi accusantium maxime magni impedit nemo
-                        quam asperiores dolor quos voluptates vero, commodi est
-                        sequi similique ea labore reprehenderit incidunt.Lorem
-                        ipsum dolor sit amet consectetur adipisicing elit.
-                        Eveniet quo, quasi accusantium maxime magni impedit nemo
-                        quam asperiores dolor quos voluptates vero, commodi est
-                        sequi similique ea labore reprehenderit incidunt.Lorem
-                        ipsum dolor sit amet consectetur adipisicing elit.
-                        Eveniet quo, quasi accusantium maxime magni impedit nemo
-                        quam asperiores dolor quos voluptates vero, commodi est
-                        sequi similique ea labore reprehenderit incidunt.Lorem
-                        ipsum dolor sit amet consectetur adipisicing elit.
+                    <p className="lead" style={{ textAlign: "left" }}>
+                        We are a team of 5 aspired developers with varieties of
+                        professional backgrounds. We met at LaGuardia Community
+                        College - Software Guild web development bootcamp. We
+                        went through a 9 months intensive programming course
+                        together and recently graduated from the bootcamp with
+                        Java Web Development certificate. We are passionate
+                        about learning new technology and building cool
+                        projects. We love to challenge ourselves and are very
+                        excited about our first hackathon here with ELC
+                        Hackathon.
                     </p>
                 </Row>
                 {/* Member Profile */}
@@ -121,7 +115,7 @@ function AboutUs(props) {
                     <Col md={5} className="order-md-1">
                         <Image
                             className="featurette-image img-fluid mx-auto"
-                            src="../profileholder.jpg"
+                            src="../shirley-profilepic.jpg"
                         />
                     </Col>
                 </Row>
@@ -160,7 +154,7 @@ function AboutUs(props) {
                     <Col md={5}>
                         <Image
                             className="featurette-image img-fluid mx-auto"
-                            src="../profileholder.jpg"
+                            src="../tom-profilepic.jpg"
                         />
                     </Col>
                 </Row>
@@ -192,7 +186,7 @@ function AboutUs(props) {
                     <Col md={5} className="order-md-1">
                         <Image
                             className="featurette-image img-fluid mx-auto"
-                            src="../profileholder.jpg"
+                            src="../alan-profilepic.jpg"
                         />
                     </Col>
                 </Row>
