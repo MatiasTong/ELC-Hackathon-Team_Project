@@ -25,7 +25,7 @@ function AboutUs(props) {
     };
 
     return (
-        <div>
+        <div className="about-us">
             <Container>
                 {/* About Us */}
                 <Row>

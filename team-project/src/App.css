@@ -2,12 +2,7 @@
   text-align: center;
 }
 
-.Navbar{
-  /* navbar opacity */
-  background: rgba(255, 205, 205, 0);
-  z-index: 2;
-  position:fixed;
-}
+
 
 #footer-message{
   position: fixed;

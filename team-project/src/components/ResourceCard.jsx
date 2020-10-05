@@ -30,7 +30,7 @@ function ResourceCard({ title, link }, ...props) {
                     Web
                         </div>
                 <Row style={{ marginBottom: "1rem", display: "grid", fontSize: "14px", gridTemplateColumns: "repeat(4, 1fr)", justifyItems: "center" }}>
-                    <div style={{ backgroundColor: "#FCF7DF", color: "#908A8A", padding: "5px 10px" }}>
+                    <div style={{ color: "#908A8A", padding: "5px 10px" }}>
                         #Recommended
                     </div>
                     <div></div>
