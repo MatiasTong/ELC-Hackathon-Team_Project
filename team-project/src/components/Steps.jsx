@@ -6,7 +6,8 @@ import {
     Card,
     Container,
     Row,
-    Col
+    Col, 
+    Accordion as Accordion3
 } from "react-bootstrap";
 import Accordion from "./Accordion"
 import InfoModal from "./InfoModal";
@@ -31,7 +32,8 @@ function Steps(props) {
         }}>
             <Container className="py-5">
                 <div style = {{textAlign:"left", marginBottom:"2rem"}}>
-                <h3 style = {{fontSize:"3rem", fontWeight:"bold"}}>Step by Step Directions</h3>
+                 <h2 style = {{fontSize:"3.2rem", fontWeight:"bold", opacity:"50%"}}>How to Get Started</h2>   
+                <h3 style = {{fontSize:"2.8rem", fontWeight:"bold", opacity:"80%"}}>Step by Step Directions</h3>
                 </div>
                 {/* intro */}
                 {/* <Card
@@ -49,7 +51,7 @@ function Steps(props) {
                 </Card> */}
 
                 {/* Modal */}
-                {/* <InfoModal
+                <InfoModal
                     show={modalShow}
                     onHide={() => setModalShow(false)}
                     title="Who is my primary care doctor"
@@ -62,7 +64,7 @@ function Steps(props) {
                         </div>
                     }
 
-                /> */}
+                />
 
                 {/* Step: 1 */}
                 <Accordion 
@@ -209,14 +211,14 @@ function Steps(props) {
 
                 </Accordion>
                 {/* Step: 4 */}
-                {/* <Accordion defaultActiveKey="1">
+                <Accordion3 defaultActiveKey="1">
                     <Card
                         className="my-4 mx-auto"
                         // bg={"Success".toLowerCase()}
                         text={"white"}
                         style={{ width: "80%" }}
                     >
-                        <Accordion.Toggle as={Card.Header}
+                        <Accordion3.Toggle as={Card.Header}
                             style={{ padding: "0px", backgroundColor: "white", color: "black" }}
                             eventKey="0">
                             <Row>
@@ -229,8 +231,8 @@ function Steps(props) {
                                 <Col className="py-4" style={{ textAlign: "center" }} md={8}>Keep your mammogram result.</Col>
                             </Row>
 
-                        </Accordion.Toggle>
-                        <Accordion.Collapse eventKey="0">
+                        </Accordion3.Toggle>
+                        <Accordion3.Collapse eventKey="0">
                             <Card.Body style={{ backgroundColor: "rgb(255, 227, 215)" }}>
                                 <Option setModalShow={setModalShow}>
                                     Who is my primary doctor?
@@ -242,9 +244,9 @@ function Steps(props) {
                                     What should I say to my doctor?
                                 </Option>
                             </Card.Body>
-                        </Accordion.Collapse>
+                        </Accordion3.Collapse>
                     </Card>
-                </Accordion> */}
+                </Accordion3>
             </Container>
         </div>
         </div>

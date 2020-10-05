@@ -10,40 +10,37 @@ import Gallery from "../components/Gallery"
 
 function Case2(props) {
     return (
-        <div>
+        // style ={{  backgroundImage: "linear-gradient(to right, #b19cd9 0%, #FFCCCB 100%)"}}
+        <div style ={{  backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)"}}>
             <Navbar />
             <Hero2 />
             <div style={{
-                height: "50vh",
+                height: "6vh",
                 padding: "0px",
                 backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
                 // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
             }}>
             </div>
 
-            <div style={{
-                // backgroundImage: "url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
-                // backgroundSize: "cover"
-            }}>
+          
 
                 <div style={{
                     margin: "10px",
                     border: "10px solid",
                     padding: "0px",
+                    borderRadius:"20px",
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                     borderImage: "linear-gradient(to right, #FFCCCB, #b19cd9) 1"
                 }}>
                     <Steps />
                 </div>
 
-            </div>
-            <di>
-                
-            </di>
-            <section style={{ backgroundImage: "linear-gradient(to right, #b19cd9 0%, #FFCCCB 100%)" }}>
+           
+            <section style={{ padding: "30px", backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
                 
                 <div style={{
-                    padding: "20px",
+                     padding: "20px", 
+                     borderRadius:"20px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -56,8 +53,16 @@ function Case2(props) {
                         <ResourceCard className="col mx-2" />
                     </Row>
                 </div>
-                <div className="py-5">
 
+                
+                <div style={{
+                height: "6vh",
+                padding: "0px",
+                backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
+            }}>
+            </div>
+                <div className="py-5" >
                     <Gallery />
                 </div>
 

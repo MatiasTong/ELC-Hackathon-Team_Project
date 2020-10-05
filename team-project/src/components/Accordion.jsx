@@ -32,7 +32,7 @@ function Accordion({ stepTitle, stepDescription, children, id,
                             fontFamily: "Montserrat, sans-serif", fontSize: "1.5rem",
                             alignItems: "center"
                         }}>
-                            <Col className="my-1 mx-2 py-4 px-2 h-100" md={2} style={{
+                            <Col className="my-1 mx-2 py-2 px-2 h-100" md={2} style={{
                                 marginLeft: "20px",
                                 alignItems: "center",
                                 justifyContent: "center",
@@ -47,7 +47,7 @@ function Accordion({ stepTitle, stepDescription, children, id,
                             >
                                 <span > {stepTitle}</span>
                             </Col>
-                            <Col className="py-4 my-auto"
+                            <Col className="py-2 my-auto"
                                 md={9}
                                 style={{ color: "black", textAlign: "left", fontSize: "1.5rem" }}>
                                 {stepDescription}
