@@ -3,66 +3,116 @@ import PropTypes from 'prop-types'
 import { Row, Col } from "react-bootstrap"
 import Hero2 from "../components/Hero2"
 import Media from 'react-bootstrap/Media'
-import Steps from "../components/Steps"
+import StepsCase2 from "../components/StepsCase2"
 import ResourceCard from "../components/ResourceCard"
 import Navbar from "../components/Navbar"
 import Gallery from "../components/Gallery"
 import Footer from "../components/Footer"
+import {resources} from "../data/resources"
 
 function Case2(props) {
     return (
-        <div>
-            <Navbar />
-            <Hero2 />
-            <div style={{
-                height: "50vh",
-                padding: "0px",
-                backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
-                // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-            }}>
-            </div>
+        <div style={{ backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
 
-            <div style={{
-                // backgroundImage: "url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
-                // backgroundSize: "cover"
-            }}>
+            {/* Section 1: Header and navbar */}
+            <header
+                style={{
+                    background: "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    minHeight: "100vh"
+                }}>
+                <Navbar />
+                <Hero2 />
+            </header>
 
-                <div style={{
-                    margin: "10px",
-                    border: "10px solid",
+            {/* Spacer div */}
+            <div
+                style={{
+                    height: "6vh",
                     padding: "0px",
+                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                    borderImage: "linear-gradient(to right, #FFCCCB, #b19cd9) 1"
                 }}>
-                    <Steps />
-                </div>
-
             </div>
-            <di>
-                
-            </di>
-            <section style={{ backgroundImage: "linear-gradient(to right, #b19cd9 0%, #FFCCCB 100%)" }}>
-                
-                <div style={{
-                    padding: "20px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundColor:"#f2f6fa",
-                    margin:"10px"
+
+            {/* Section 2: Steps or Options */}
+            <div
+                style={{
+                    //  background: "linear-gradient(0deg, rgba(241, 241, 241,0.2), rgba(241, 241, 241,0.2)), url(https://images.unsplash.com/photo-1552035509-b247fe8e5078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
+                    borderRadius: "10px",
+                    margin: "2.8rem",
+                    backgroundColor: "#f2f6fa",
+                    border: "none"
                 }}>
-                    <Row className="justify-content-center">
-                        <ResourceCard className="col mx-2" />
-                        <ResourceCard className="col mx-2" />
-                        <ResourceCard className="col mx-2" />
-                    </Row>
-                </div>
-                <div className="py-5">
+                <StepsCase2 />
+            </div>
 
-                    <Gallery />
-                </div>
+            {/* Spacer Div */}
+            <div
+                style={{
+                    height: "4vh",
+                    padding: "0px",
+                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
+                }}>
+            </div>
 
-            </section>
+            {/* Section 3: Resources */}
+            <div style={{
+                padding: "20px",
+                borderRadius: "20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "#f2f6fa",
+                margin: "2.8rem"
+            }}>
+                <Row className="justify-content-center">
+                    {resources.map((item) => (
+                        <ResourceCard
+                            className="col mx-2"
+                            type={item.type}
+                            title={item.title}
+                            organization={item.organization}
+                            url = {item.url}
+                            doctorLikes={item.doctorLikes}
+                            likes={item.likes}
+                            tags={item.tags}
+                            phoneNumber ={item.phoneNumber}
+                        />
+
+                    ))}
+                   
+                </Row>
+            </div>
+
+            {/* Spacer Div */}
+            <div
+                style={{
+                    height: "4vh",
+                    padding: "0px",
+                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
+                }}>
+            </div>
+
+            {/* Section 4: Gallery */}
+            <div className="py-5" >
+                <Gallery />
+            </div>
+
+
+            {/* Spacer Div */}
+            <div
+                style={{
+                    height: "4vh",
+                    padding: "0px",
+                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
+                }}>
+            </div>
+
 
 
 

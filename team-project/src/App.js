@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Switch, Route, useLocation} from "react-router-dom"
 import Home from "./pages/Home"
+import AboutUs from "./pages/AboutUs";
 import Age from "./pages/Age"
 import Insurance from "./pages/Insurance"
 import Result from "./pages/Result"
@@ -14,7 +15,7 @@ import Case1V2Step4 from "./pages/Case1V2Step4";
 import Case1Page2 from "./pages/Case1Page2";
 import Case4 from "./pages/Case4"
 import Case3 from "./pages/Case3"
-import Prevention from "./pages/Prevention";
+import Resources from "./pages/Resources";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {AnimatePresence} from "framer-motion";
 import './App.css';
@@ -25,24 +26,30 @@ function App() {
 
 
   return (
+      <div className="App">
+          <Formik
+              initialValues={{
+                  age: "",
+                  hasInsurance: false,
+                  insuranceType: "",
+                  state: "",
+                  zipCode: "",
+              }}
+              onSubmit={(data, { setSubmitting }) => {
+                  // To disable submit button when submitting
+                  setSubmitting(true);
+                  console.log("Submit: ", data);
+                  setSubmitting(false);
+              }}
+          >
+              {({
+                  values,
+                  handleChange,
+                  handleBlur,
+                  handleSubmit,
+                  isSubmitting,
+              }) => (
 
-    <div className="App">
-      <Formik    
-        initialValues={{
-            age: "",
-            hasInsurance: false,
-            insuranceType:"",
-            state:"",
-            zipCode: "",
-        }}
-        onSubmit = {(data, {setSubmitting})=> {
-            // To disable submit button when submitting
-            setSubmitting(true)
-            console.log("Submit: ", data)
-            setSubmitting(false)
-        }}>
-
-{({values, handleChange, handleBlur, handleSubmit, isSubmitting}) =>(
 
 // location={location} key={location.pathname}
      <AnimatePresence>
@@ -97,7 +104,10 @@ function App() {
                     </Route>
 
                     <Route path ="/resources">
-                        <Prevention/>
+                        <Resources/>
+                    </Route>
+                    <Route path="/AboutUs">
+                              <AboutUs />
                     </Route>
                 </Switch>
      </AnimatePresence>
@@ -105,6 +115,7 @@ function App() {
 )}
   </Formik>
     </div>
+
   );
 }
 

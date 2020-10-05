@@ -1,30 +1,101 @@
 import React from 'react'
 import Image from 'react-bootstrap/Image'
-import { Navbar, Nav, Carousel, Container, Card, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
+import { Nav, Carousel, Container, Card, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types'
-import "../components/Result.scss"
 import Hero2 from "../components/Hero2"
+import Media from 'react-bootstrap/Media'
+import CaseFourSteps from "../components/CaseFourSteps"
 import Gallery from "../components/Gallery"
-import "../App.css"
-import "../components/Gallery.scss"
+import Navbar from "../components/Navbar"
 import ResourceCard from "../components/ResourceCard"
+import {resources} from "../data/resources"
 
 function Case4(props) {
     return (
-        <div>
-            <Navbar variant="dark" className="Navbar fixed-top" >
-                <Navbar.Brand style={{ fontSize: "1.5rem" }} href="#home">
-                <Image src="./logo.png" fluid />
+        <div style={{ backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
+           
+            {/* Section 1: Header and navbar */}
+            <header
+                style={{
+                    background: "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    minHeight: "100vh"
+                }}>
+                <Navbar />
+                <Hero2 />
+            </header>
+            {/* Spacer div */}
+            <div
+                style={{
+                    height: "6vh",
+                    padding: "0px",
+                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
+                }}>
+            </div>
 
-                </Navbar.Brand>
-                <Nav className="mr-auto" style={{ fontSize: "1.3rem" }}>
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Prevention</Nav.Link>
-                </Nav>
-            </Navbar>
-            <Hero2 />
-            <br />
+            {/* Section 2: Steps or Options */}
+            <div
+                style={{
+                    //  background: "linear-gradient(0deg, rgba(241, 241, 241,0.2), rgba(241, 241, 241,0.2)), url(https://images.unsplash.com/photo-1552035509-b247fe8e5078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
+                    borderRadius: "10px",
+                    margin: "2.8rem",
+                    backgroundColor: "#f2f6fa",
+                    border: "none"
+                }}>
+                <CaseFourSteps />
+            </div>
+
+            {/* Spacer Div */}
+            <div
+                style={{
+                    height: "4vh",
+                    padding: "0px",
+                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
+                }}>
+            </div>
+
+            {/* Section 3: Resources */}
+            <div style={{
+                padding: "20px",
+                borderRadius: "20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "#f2f6fa",
+                margin: "2.8rem"
+            }}>
+                <Row className="justify-content-center">
+                    {resources.map((item) => (
+                        <ResourceCard
+                            className="col mx-2"
+                            type={item.type}
+                            title={item.title}
+                            organization={item.organization}
+                            url = {item.url}
+                            doctorLikes={item.doctorLikes}
+                            likes={item.likes}
+                            tags={item.tags}
+                            phoneNumber ={item.phoneNumber}
+                        />
+
+                    ))}
+                   
+                </Row>
+            </div>
+
+                  {/* Spacer Div */}
+                  <div
+                style={{
+                    height: "4vh",
+                    padding: "0px",
+                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
+                }}>
+            </div>
+
 
             <Container>
                 <br />
@@ -51,15 +122,15 @@ function Case4(props) {
                                         <ListGroup.Item>If you are taking, or have been told to take, hormone replacement or birth control pills, ask your doctor about the risks and find out if it is right for you.</ListGroup.Item>
                                         <ListGroup.Item>Breastfeed your children, if possible.</ListGroup.Item>
                                         <ListGroup.Item>If you have a family history of breast cancer or inherited changes in your BRCA1 and BRCA2 genes, talk to your doctor about other ways to lower your risk.</ListGroup.Item>
-                                        <p style={{color: "gray"}}>Source: Division of Cancer Prevention and Control, Centers for Disease Control and Prevention</p>
+                                        <ListGroup.Item><p style={{ color: "gray" }}>Source: Division of Cancer Prevention and Control, Centers for Disease Control and Prevention</p> </ListGroup.Item>
 
                                     </ListGroup>
 
                                     {/* <Sonnet /> */}
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MGsWSQGmFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    {/* <Sonnet /> */}
+                                   <ListGroup.Item><iframe width="560" height="315" src="https://www.youtube.com/embed/MGsWSQGmFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                   </ListGroup.Item> {/* <Sonnet /> */}
                                 </Tab.Pane>
                             </Tab.Content>
                         </Col>
@@ -68,56 +139,16 @@ function Case4(props) {
 
             </Container>
             <br />
-            <Container>
-                <CardGroup>
-                    <Card>
-                        <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRo8uls2XVayW1l6xx7RDWueZ8TRptoMygiOQ&usqp=CAU" />
-                        <Card.Body>
-                            <Card.Title>You may qualify for free or low cost screenings!</Card.Title>
-                            <Card.Text>
-                            </Card.Text>
-                        </Card.Body>
+          
+         {/* Section 4: Gallery */}
+         <div className="py-5" >
+                <Gallery />
+            </div>
 
-                        <div className="mb-2">
-                            <Button href="https://www.cdc.gov/cancer/nbccedp/screenings.htm" variant="primary" size="lg">
-                                Find Out More
-                                  </Button>
-                        </div>
-                    </Card>
-
-                    <Card>
-                        <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRxZVWN6Dwksf2tcudx9NZU6TZrFw7ZtCGAsQ&usqp=CAU" />
-                        <Card.Body>
-                            <Card.Title>Low-income? You may qualify for medicaid for health insurance. </Card.Title>
-                            <Card.Text>
-                            </Card.Text>
-                        </Card.Body>
-                        <div className="mb-2">
-                            <Button href="https://www.healthcare.gov/lower-costs/" variant="primary" size="lg">
-                                Find Out More
-                                  </Button>
-                        </div>
-
-                    </Card>
-                    <Card>
-                        <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSIEEBtF_UoU4j8WnCJtG_5KZ-3-9BcKGnL3g&usqp=CAU" />
-                        <Card.Body>
-                            <Card.Title>Breast Cancer Screening Events</Card.Title>
-
-                        </Card.Body>
-                        <div className="mb-2">
-                            <Button href="https://www.google.com/search?bih=754&biw=1536&hl=en&ei=VHl2X8PEFsKoytMPzZmFOA&q=free+mammogram+events+near+me&oq=free+mammogram+events+near+me&gs_lcp=CgZwc3ktYWIQAzIFCAAQzQIyBQgAEM0CMgUIABDNAjoECAAQRzoECAAQDVC7LljyNGD4NWgAcAJ4AIABZogBugSSAQM2LjGYAQCgAQGqAQdnd3Mtd2l6yAEIwAEB&sclient=psy-ab&ved=0ahUKEwjDvt6m2JTsAhVClHIEHc1MAQcQ4dUDCA0&uact=5" variant="primary" size="lg">
-                                Find Out More
-                        </Button>
-                        </div>
-                    </Card>
-                </CardGroup>
-            </Container>
-            <br />
-            <Gallery />
             <br />
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
-
+            <br />
+            <br />
         </div>
     )
 }
