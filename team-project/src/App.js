@@ -15,7 +15,7 @@ import Case1V2Step4 from "./pages/Case1V2Step4";
 import Case1Page2 from "./pages/Case1Page2";
 import Case4 from "./pages/Case4"
 import Case3 from "./pages/Case3"
-import Prevention from "./pages/Prevention";
+import Resources from "./pages/Resources";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {AnimatePresence} from "framer-motion";
 import './App.css';
@@ -104,7 +104,7 @@ function App() {
                     </Route>
 
                     <Route path ="/resources">
-                        <Prevention/>
+                        <Resources/>
                     </Route>
                     <Route path="/AboutUs">
                               <AboutUs />

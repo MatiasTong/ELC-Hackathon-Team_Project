@@ -8,6 +8,7 @@ import CaseFourSteps from "../components/CaseFourSteps"
 import Gallery from "../components/Gallery"
 import Navbar from "../components/Navbar"
 import ResourceCard from "../components/ResourceCard"
+import {resources} from "../data/resources"
 
 
 function Case3(props) {
@@ -57,8 +58,8 @@ function Case3(props) {
                 }}>
             </div>
 
-            {/* Section 3: Resources */}
-            <div style={{
+           {/* Section 3: Resources */}
+           <div style={{
                 padding: "20px",
                 borderRadius: "20px",
                 display: "flex",
@@ -68,12 +69,23 @@ function Case3(props) {
                 margin: "2.8rem"
             }}>
                 <Row className="justify-content-center">
-                    <ResourceCard className="col mx-2" />
-                    <ResourceCard className="col mx-2" />
-                    <ResourceCard className="col mx-2" />
+                    {resources.map((item) => (
+                        <ResourceCard
+                            className="col mx-2"
+                            type={item.type}
+                            title={item.title}
+                            organization={item.organization}
+                            url = {item.url}
+                            doctorLikes={item.doctorLikes}
+                            likes={item.likes}
+                            tags={item.tags}
+                            phoneNumber ={item.phoneNumber}
+                        />
+
+                    ))}
+                   
                 </Row>
             </div>
-
             {/* Spacer Div */}
             <div
                 style={{

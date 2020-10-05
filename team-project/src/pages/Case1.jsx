@@ -7,6 +7,7 @@ import StepsCase1 from "../components/StepsCase1";
 import ResourceCard from "../components/ResourceCard";
 import Navbar from "../components/Navbar";
 import Gallery from "../components/Gallery";
+import {resources} from "../data/resources"
 
 function Case1(props) {
     return (
@@ -65,22 +66,32 @@ function Case1(props) {
                 }}
             ></div>
 
-            {/* Section 3: Resources */}
-            <div
-                style={{
-                    padding: "20px",
-                    borderRadius: "20px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundColor: "#f2f6fa",
-                    margin: "2.8rem",
-                }}
-            >
+           {/* Section 3: Resources */}
+           <div style={{
+                padding: "20px",
+                borderRadius: "20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "#f2f6fa",
+                margin: "2.8rem"
+            }}>
                 <Row className="justify-content-center">
-                    <ResourceCard className="col mx-2" />
-                    <ResourceCard className="col mx-2" />
-                    <ResourceCard className="col mx-2" />
+                    {resources.map((item) => (
+                        <ResourceCard
+                            className="col mx-2"
+                            type={item.type}
+                            title={item.title}
+                            organization={item.organization}
+                            url = {item.url}
+                            doctorLikes={item.doctorLikes}
+                            likes={item.likes}
+                            tags={item.tags}
+                            phoneNumber ={item.phoneNumber}
+                        />
+
+                    ))}
+                   
                 </Row>
             </div>
 

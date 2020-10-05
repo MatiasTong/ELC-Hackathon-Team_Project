@@ -7,6 +7,7 @@ import StepsCase2 from "../components/StepsCase2"
 import ResourceCard from "../components/ResourceCard"
 import Navbar from "../components/Navbar"
 import Gallery from "../components/Gallery"
+import {resources} from "../data/resources"
 
 function Case2(props) {
     return (
@@ -45,7 +46,7 @@ function Case2(props) {
                 }}>
                 <StepsCase2 />
             </div>
-            
+
             {/* Spacer Div */}
             <div
                 style={{
@@ -67,9 +68,21 @@ function Case2(props) {
                 margin: "2.8rem"
             }}>
                 <Row className="justify-content-center">
-                    <ResourceCard className="col mx-2" />
-                    <ResourceCard className="col mx-2" />
-                    <ResourceCard className="col mx-2" />
+                    {resources.map((item) => (
+                        <ResourceCard
+                            className="col mx-2"
+                            type={item.type}
+                            title={item.title}
+                            organization={item.organization}
+                            url = {item.url}
+                            doctorLikes={item.doctorLikes}
+                            likes={item.likes}
+                            tags={item.tags}
+                            phoneNumber ={item.phoneNumber}
+                        />
+
+                    ))}
+                   
                 </Row>
             </div>
 
@@ -82,15 +95,15 @@ function Case2(props) {
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                 }}>
             </div>
-            
+
             {/* Section 4: Gallery */}
             <div className="py-5" >
                 <Gallery />
             </div>
 
 
-             {/* Spacer Div */}
-             <div
+            {/* Spacer Div */}
+            <div
                 style={{
                     height: "4vh",
                     padding: "0px",

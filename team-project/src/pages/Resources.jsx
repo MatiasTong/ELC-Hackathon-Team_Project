@@ -16,16 +16,16 @@ function Prevention(props) {
         <div style={{ backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
 
             {/* Section 1: Header and navbar */}
-            <header
+            {/* <header
                 style={{
                     background: "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')",
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                     minHeight: "100vh"
-                }}>
-                <Navbar />
-                <Hero2 />
-            </header>
+                }}> */}
+                <Navbar theme="light"/>
+                {/* <Hero2 /> */}
+            {/* </header> */}
 
             {/* Spacer div */}
             <div
@@ -57,6 +57,19 @@ function Prevention(props) {
             </>
 
             <br />
+
+            <div style={{
+                padding: "20px",
+                height:"100vh",
+                borderRadius: "20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "#f2f6fa",
+                margin: "2.8rem"
+            }}>
+                </div>
+
 
             <Container>
 
@@ -90,8 +103,8 @@ function Prevention(props) {
                                     {/* <Sonnet /> */}
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
-                                <ListGroup.Item><iframe width="560" height="315" src="https://www.youtube.com/embed/MGsWSQGmFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                  </ListGroup.Item>  {/* <Sonnet /> */}
+                                    <ListGroup.Item><iframe width="560" height="315" src="https://www.youtube.com/embed/MGsWSQGmFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </ListGroup.Item>  {/* <Sonnet /> */}
                                 </Tab.Pane>
                             </Tab.Content>
                         </Col>
