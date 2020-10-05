@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {Navbar, Form, Nav, FormControl, Button} from "react-bootstrap"
 import Hero from "../components/Hero"
+import Footer from "../components/Footer"
+// import logo from '../EZCheckLogo.NPG';
 
 function Home(props) {
     return (
@@ -20,6 +22,9 @@ function Home(props) {
                 
             </Navbar>
             <Hero/>
+            <Footer/>
+            
+
         </div>
     )
 }

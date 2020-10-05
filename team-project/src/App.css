@@ -6,12 +6,7 @@
   /* navbar opacity */
   background: rgba(255, 205, 205, 0);
   z-index: 2;
-<<<<<<< HEAD
-  position:fixed;
-=======
-
-
->>>>>>> d77b9c9974cf6009a5df2d5d80153a305a46100e
+  /* position:fixed; */
 }
 
 #footer-message{
