@@ -6,6 +6,7 @@ import SearchForm from './SearchForm'
 import { Link } from 'react-router-dom';
 import "./Hero.scss"
 import {motion} from "framer-motion"
+import Navbar from "./Navbar"
 
 // import PortfolioContext from '../../context/context';
 

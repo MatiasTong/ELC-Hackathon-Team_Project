@@ -25,11 +25,11 @@ const Header2 = () => {
   }, []);
 
   return (
-    <section id="hero2" className="jumbotron">
+    <section id="hero2" className="jumbotron" style={{backgroundColor:"transparent"}}>
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={200} distance="30px">
           <div className="row">
-          <h1 className="hero-title col-sm-12">
+          <h1 className="hero2-title col-sm-12">
             {"Breast Cancer in Young Women"}{' '}
            <br />
           </h1>
@@ -37,7 +37,7 @@ const Header2 = () => {
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={800} distance="30px">
           <div className="row">
-          <h2 className="col-sm-12 hero-text">
+          <h2 className="col-sm-12 hero2-text">
             {"Women who are under 40 years old may feel they are not at risk for breast cancer, but 5% of all cases happen in this group. Diagnosis can be more difficult due to breast tissue density. Also treatment can affect fertility."}
           </h2>
 

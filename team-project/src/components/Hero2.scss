@@ -13,7 +13,6 @@
 #hero2 {
     border-radius:0px;
     min-height: 100vh;
-    height: 100vh;
     display: flex;
     align-items: center;
     border-bottom: 0px;
@@ -29,19 +28,20 @@
     z-index: -1;
     font-family: Montserrat,sans-serif;
   
-    /* // If you want to set a background image on the hero section, uncomment these with yout custom image */
-    background: linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url("https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
-    background-position: center;
-    background-size: cover;
-    box-shadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)"
+ 
+    // box-shadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)"
 }
   
   
-    .hero-title {
-      font-size: 4rem;
+    .hero2-title {
+      font-size: #{"min(8vw, 4rem)"};
       font-weight: 700;
       margin-bottom: 3.2rem;
-      text-align: left;
+      // text-align: left;
+    }
+
+    .hero2-text {
+      font-size: #{"min(4vw, 2rem)"};
     }
   
     .hero-cta {
@@ -152,52 +152,52 @@
 
 
 /* Table Landscape */
-  @media screen and (max-width: 75em){
-    .hero-title {
-      font-size: 4rem;
-      }
-  }
+  // @media screen and (max-width: 75em){
+  //   .hero-title {
+  //     font-size: 4rem;
+  //     }
+  // }
 /* Table Portrait */
-  @media screen and (max-width: 56.25em){
-    .hero-title {
-      margin-top:2em;
-      font-size: 3.2rem;
-        text-align: center;
-      }
+  // @media screen and (max-width: 56.25em){
+  //   .hero-title {
+  //     margin-top:2em;
+  //     font-size: 3.2rem;
+  //       text-align: center;
+  //     }
 
-      .cta-btn--hero{
-        margin-left:auto;
-        margin-right:auto;
-      }
+  //     .cta-btn--hero{
+  //       margin-left:auto;
+  //       margin-right:auto;
+  //     }
      
-  }
+  // }
 /* phone */
-  @media screen and (max-width: 37.5em){
-    #hero {
-      padding: 0rem;
-    }
-    .hero-title {
-      padding-top:2em;
-     font-size: 3rem;
-      line-height: 1.5;
-    }
-    .hero-cta a {
-      font-size: 2rem;
-    }
-  .cta-btn--hero{
-    margin-left:auto;
-    margin-right:auto;
-  }
-}
+  // @media screen and (max-width: 37.5em){
+//     #hero {
+//       padding: 0rem;
+//     }
+//     .hero-title {
+//       padding-top:2em;
+//      font-size: 3rem;
+//       line-height: 1.5;
+//     }
+//     .hero-cta a {
+//       font-size: 2rem;
+//     }
+//   .cta-btn--hero{
+//     margin-left:auto;
+//     margin-right:auto;
+//   }
+// }
 
 
 /* Phone xs */
-@media screen and (max-width: 20em){
-  .hero-title {
-    padding-top:2em;
-    font-size: 2.8rem;
-    }
-}
+// @media screen and (max-width: 20em){
+//   .hero-title {
+//     margin-bottom:2em;
+//     font-size: 2.8rem;
+//     }
+// }
 
 
 

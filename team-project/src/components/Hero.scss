@@ -11,15 +11,13 @@
 
 
 #hero {
-    min-height: 100vh;
-    height: 100vh;
     display: flex;
     align-items: center;
     border-bottom: 0px;
     background-color: white;
     font-weight: 400;
     color: white;
-    padding: 0rem 5.6rem;
+    padding: 5rem 5.6rem;
     margin-bottom: 0;
     top: 0;
     left: 0;
@@ -27,18 +25,20 @@
     right: 0;
     z-index: -1;
     font-family: Montserrat,sans-serif;
+    background-color: transparent;
   
     /* // If you want to set a background image on the hero section, uncomment these with yout custom image */
-    background: url("https://images.unsplash.com/photo-1598884143267-586d90a32141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
-    background-position: center;
-    background-size: cover;
+    // background: url("https://images.unsplash.com/photo-1598884143267-586d90a32141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
+    // background-position: center;
+    // background-size: cover;
 }
   
   
     .hero-title {
-      font-size: 4rem;
+      // font-size: 4rem;
       font-weight: 700;
       margin-bottom: 3.2rem;
+      font-size: #{"min(8vw, 4rem)"};
       text-align: left;
     }
   
@@ -151,15 +151,15 @@
 
 /* Table Landscape */
   @media screen and (max-width: 75em){
-    .hero-title {
-      font-size: 4rem;
-      }
+    // .hero-title {
+      // font-size: 4rem;
+      // }
   }
 /* Table Portrait */
   @media screen and (max-width: 56.25em){
     .hero-title {
-      margin-top:2em;
-      font-size: 3.2rem;
+      // margin-top:2em;
+      // font-size: 3.2rem;
         text-align: center;
       }
 
@@ -171,14 +171,14 @@
   }
 /* phone */
   @media screen and (max-width: 37.5em){
-    #hero {
-      padding: 0rem;
-    }
-    .hero-title {
-      padding-top:2em;
-     font-size: 3rem;
-      line-height: 1.5;
-    }
+    // #hero {
+      // padding: 0rem;
+    // }
+    // .hero-title {
+      // padding-top:2em;
+    //  font-size: 3rem;
+      // line-height: 1.5;
+    // }
     .hero-cta a {
       font-size: 2rem;
     }
@@ -190,12 +190,12 @@
 
 
 /* Phone xs */
-@media screen and (max-width: 20em){
-  .hero-title {
-    padding-top:2em;
-    font-size: 2.8rem;
-    }
-}
+// @media screen and (max-width: 20em){
+  // .hero-title {
+    // padding-top:2em;
+    // font-size: 2.8rem;
+    // }
+// }
 
 
 

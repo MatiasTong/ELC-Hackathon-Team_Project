@@ -5,8 +5,13 @@ import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"
 
 function Home(props) {
+
+
     return (
-        <div>
+        <div style = {{ background: "url('https://images.unsplash.com/photo-1598884143267-586d90a32141?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80')",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        minHeight: "100vh"}}>
             <Navbar/>
             {/* <Navbar variant="dark" className = "Navbar fixed-top" >
                 <Navbar.Brand style = {{fontSize: "1.5rem"}} href="#home">Overcomer</Navbar.Brand>

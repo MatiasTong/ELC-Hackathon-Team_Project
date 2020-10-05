@@ -1,35 +1,15 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-
-import {
-    Card,
-    Container,
-    Row,
-    Col, 
-    Accordion as Accordion3
-} from "react-bootstrap";
+import {Card, Container, Row, Col, Accordion as Accordion3} from "react-bootstrap";
 import Accordion from "./Accordion"
-import InfoModal from "./InfoModal";
-import Option from "./Option"
+// import PropTypes from "prop-types";
+// import InfoModal from "./InfoModal";
+// import Option from "./Option"
 
-function Steps(props) {
-    const [modalShow, setModalShow] = React.useState(false);
+function StepsCase2(props) {
+    // const [modalShow, setModalShow] = React.useState(false);
 
     return (
-        // Colorful border
-        <div style={{
-            margin:"10px", 
-            border: "20px solid",
-            padding:"0px",
-            borderImage: "linear-gradient(to right, #FFCCCB, #b19cd9) 1"}}>
-        <div style={{
-            //  background: "linear-gradient(0deg, rgba(241, 241, 241,0.2), rgba(241, 241, 241,0.2)), url(https://images.unsplash.com/photo-1552035509-b247fe8e5078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
-            // backgroundColor: "#eaf8ff",
-            backgroundColor: "#f2f6fa",
-            // borderRadius:"10%",
-            border:"none"
-        }}>
+       
             <Container className="py-5">
                 <div style = {{textAlign:"left", marginBottom:"2rem"}}>
                  <h2 style = {{fontSize:"3.2rem", fontWeight:"bold", opacity:"50%"}}>How to Get Started</h2>   
@@ -50,21 +30,7 @@ function Steps(props) {
                     </Card.Body>
                 </Card> */}
 
-                {/* Modal */}
-                <InfoModal
-                    show={modalShow}
-                    onHide={() => setModalShow(false)}
-                    title="Who is my primary care doctor"
-                    message={
-                        <div>
-                            <p>Who is my primary doctor?</p>
-                            <p>How can I contact my doctor?</p>
-                            <p>What should I say to my doctor?</p>
-                            <p>Hello! I'm the body</p>
-                        </div>
-                    }
-
-                />
+             
 
                 {/* Step: 1 */}
                 <Accordion 
@@ -102,7 +68,7 @@ function Steps(props) {
 
 
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
+                            <Card.Header>
                                 Who is my primary doctor?
                                 </Card.Header>
                             <Card.Body>
@@ -111,7 +77,7 @@ function Steps(props) {
 
                         </Card>
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
+                            <Card.Header>
                                 How can I contact my doctor?
                                 </Card.Header>
                             <Card.Body>
@@ -120,7 +86,7 @@ function Steps(props) {
 
                         </Card>
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
+                            <Card.Header>
                                 What should I say to my doctor?
                                 </Card.Header>
                             <Card.Body>
@@ -139,7 +105,7 @@ function Steps(props) {
 
 
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
+                            <Card.Header>
                                 Who is my primary doctor?
                                 </Card.Header>
                             <Card.Body>
@@ -148,7 +114,7 @@ function Steps(props) {
 
                         </Card>
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
+                            <Card.Header>
                                 How can I contact my doctor?
                                 </Card.Header>
                             <Card.Body>
@@ -157,7 +123,7 @@ function Steps(props) {
 
                         </Card>
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
+                            <Card.Header>
                                 What should I say to my doctor?
                                 </Card.Header>
                             <Card.Body>
@@ -180,7 +146,7 @@ function Steps(props) {
 
 
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
+                            <Card.Header>
                                 Who is my primary doctor?
                                 </Card.Header>
                             <Card.Body>
@@ -189,7 +155,7 @@ function Steps(props) {
 
                         </Card>
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
+                            <Card.Header>
                                 How can I contact my doctor?
                                 </Card.Header>
                             <Card.Body>
@@ -198,7 +164,7 @@ function Steps(props) {
 
                         </Card>
                         <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                            <Card.Header setModalShow={setModalShow}>
+                            <Card.Header>
                                 What should I say to my doctor?
                                 </Card.Header>
                             <Card.Body>
@@ -210,8 +176,27 @@ function Steps(props) {
 
 
                 </Accordion>
-                {/* Step: 4 */}
-                <Accordion3 defaultActiveKey="1">
+
+
+                {/* Step with modal popup */}
+                   {/* Modal */}
+                   {/* <InfoModal
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                    title="Who is my primary care doctor"
+                    message={
+                        <div>
+                            <p>Who is my primary doctor?</p>
+                            <p>How can I contact my doctor?</p>
+                            <p>What should I say to my doctor?</p>
+                            <p>Hello! I'm the body</p>
+                        </div>
+                    }
+
+                /> */}
+
+
+                {/* <Accordion3 defaultActiveKey="1">
                     <Card
                         className="my-4 mx-auto"
                         // bg={"Success".toLowerCase()}
@@ -246,13 +231,13 @@ function Steps(props) {
                             </Card.Body>
                         </Accordion3.Collapse>
                     </Card>
-                </Accordion3>
+                </Accordion3> */}
             </Container>
-        </div>
-        </div>
+        // </div>
+        // </div>
     );
 }
 
-Steps.propTypes = {};
+StepsCase2.propTypes = {};
 
-export default Steps;
+export default StepsCase2;
