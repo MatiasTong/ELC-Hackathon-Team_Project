@@ -4,17 +4,27 @@ import { Navbar, Nav, Carousel, Container, Card, Button, Tab, Row, Col, Tabs, Ca
 import PropTypes from 'prop-types'
 import "../components/Result.scss"
 import Hero2 from "../components/Hero2"
+import CaseFourSteps from "../components/CaseFourSteps"
 import Gallery from "../components/Gallery"
 import "../App.css"
 import "../components/Gallery.scss"
 import ResourceCard from "../components/ResourceCard"
+
+
+
+{/* <p>Visit the CDC website to contact your state program
+
+</p>
+<p>Input your state.</p>
+<p>The phone number to call will appear.</p>
+<p>Call for more information on where to get screened, easy!</p> */}
 
 function Case4(props) {
     return (
         <div>
             <Navbar variant="dark" className="Navbar fixed-top" >
                 <Navbar.Brand style={{ fontSize: "1.5rem" }} href="#home">
-                <Image src="./logo.png" fluid />
+                    <Image src="./logo.png" fluid />
 
                 </Navbar.Brand>
                 <Nav className="mr-auto" style={{ fontSize: "1.3rem" }}>
@@ -25,6 +35,20 @@ function Case4(props) {
             </Navbar>
             <Hero2 />
             <br />
+
+        <Container>
+            <div style={{
+                margin: "10px",
+                border: "10px solid",
+                padding: "0px",
+                borderRadius: "20px",
+                // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
+                borderImage: "linear-gradient(to right, #FFCCCB, #b19cd9) 1"
+            }}>
+                <CaseFourSteps />
+            </div>
+
+            </Container>
 
             <Container>
                 <br />
@@ -51,7 +75,7 @@ function Case4(props) {
                                         <ListGroup.Item>If you are taking, or have been told to take, hormone replacement or birth control pills, ask your doctor about the risks and find out if it is right for you.</ListGroup.Item>
                                         <ListGroup.Item>Breastfeed your children, if possible.</ListGroup.Item>
                                         <ListGroup.Item>If you have a family history of breast cancer or inherited changes in your BRCA1 and BRCA2 genes, talk to your doctor about other ways to lower your risk.</ListGroup.Item>
-                                        <p style={{color: "gray"}}>Source: Division of Cancer Prevention and Control, Centers for Disease Control and Prevention</p>
+                                        <p style={{ color: "gray" }}>Source: Division of Cancer Prevention and Control, Centers for Disease Control and Prevention</p>
 
                                     </ListGroup>
 

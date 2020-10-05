@@ -14,7 +14,7 @@ function Prevention(props) {
         <div>
             <Navbar variant="dark" className="Navbar fixed-top" >
                 <Navbar.Brand style={{ fontSize: "1.5rem" }} href="#home">
-                <Image src="./logo.png"/>
+                    <Image src="./logo.png" />
 
                 </Navbar.Brand>
                 <Nav className="mr-auto" style={{ fontSize: "1.3rem" }}>
@@ -24,11 +24,32 @@ function Prevention(props) {
                 </Nav>
             </Navbar>
             <Hero2 />
-        
-                <br />
 
-                <Container>
-            
+            <br />
+
+            <>
+                <div className="mb-2">
+                    <Button variant= "success" size="lg">
+                        All(20)
+    </Button>{' '}
+                    <Button variant="info" size="lg">
+                        With insurance
+    </Button> {' '}
+    <Button variant="info" size="lg">
+                        No insurance
+    </Button> {' '}
+    <Button variant="info" size="lg">
+                        Events
+    </Button> {' '}
+                
+                </div>
+
+            </>
+
+            <br />
+
+            <Container>
+
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Row>
                         <Col sm={3}>
@@ -52,7 +73,7 @@ function Prevention(props) {
                                         <ListGroup.Item>If you are taking, or have been told to take, hormone replacement or birth control pills, ask your doctor about the risks and find out if it is right for you.</ListGroup.Item>
                                         <ListGroup.Item>Breastfeed your children, if possible.</ListGroup.Item>
                                         <ListGroup.Item>If you have a family history of breast cancer or inherited changes in your BRCA1 and BRCA2 genes, talk to your doctor about other ways to lower your risk.</ListGroup.Item>
-                                        <p style={{color: "gray"}}>Source: Division of Cancer Prevention and Control, Centers for Disease Control and Prevention</p>
+                                        <p style={{ color: "gray" }}>Source: Division of Cancer Prevention and Control, Centers for Disease Control and Prevention</p>
 
                                     </ListGroup>
 
@@ -66,7 +87,7 @@ function Prevention(props) {
                         </Col>
                     </Row>
                 </Tab.Container>
-            </Container>  
+            </Container>
 
             <br />
             <Gallery />
