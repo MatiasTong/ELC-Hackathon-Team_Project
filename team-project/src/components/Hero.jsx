@@ -4,7 +4,6 @@ import Fade from 'react-reveal/Fade';
 import SearchForm from './SearchForm'
 // import { Link } from 'react-scroll';
 import { Link } from 'react-router-dom';
-import { useFormikContext } from "formik"
 import "./Hero.scss"
 import {motion} from "framer-motion"
 

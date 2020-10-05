@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 // import { Link } from 'react-scroll';
 import { Link } from 'react-router-dom';
-import "./Hero3.scss"
+import "./Hero2.scss"
 
 // import PortfolioContext from '../../context/context';
 
@@ -25,24 +25,29 @@ const Header2 = () => {
   }, []);
 
   return (
-    <section id="hero3" className="jumbotron">
+    <section id="hero2" className="jumbotron">
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={200} distance="30px">
-          <h1 className="hero-title">
+          <div className="row">
+          <h1 className="hero-title col-sm-12">
             {"Breast Cancer in Young Women"}{' '}
            <br />
           </h1>
+          </div>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={800} distance="30px">
-          <h2 className="">
+          <div className="row">
+          <h2 className="col-sm-12 hero-text">
             {"Women who are under 40 years old may feel they are not at risk for breast cancer, but 5% of all cases happen in this group. Diagnosis can be more difficult due to breast tissue density. Also treatment can affect fertility."}
           </h2>
+
+          </div>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1100} distance="30px">
-          <p className="hero-cta">
+          <p className="hero-cta row justify-content-center mt-5">
             <span className="cta-btn cta-btn--hero">
-              <Link to="/case2" smooth duration={1000}>
-                {'Know more'}
+              <Link className="link" to="/case2" smooth duration={1000}>
+                {'Learn more'}
               </Link>
             </span>
           </p>

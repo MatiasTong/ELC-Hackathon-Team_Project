@@ -15,6 +15,7 @@ import Case1V2Step4 from "./pages/Case1V2Step4";
 import Case1Page2 from "./pages/Case1Page2";
 import Case4 from "./pages/Case4"
 import Case3 from "./pages/Case3"
+import Prevention from "./pages/Prevention";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {AnimatePresence} from "framer-motion";
 import './App.css';
@@ -96,17 +97,71 @@ function App() {
                               <Case4 />
                           </Route>
 
-                          <Route path="/case3">
-                              <Case3 />
-                          </Route>
-                          <Route path="/AboutUs">
+// location={location} key={location.pathname}
+     <AnimatePresence>
+         <Switch >
+                    {/* "exact" is needed in this route, otherwise it would match all paths starting with "/" */}
+                    {/* Route paths go here */}
+                     {console.log(values)}
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route path="/questionnaire-age">
+                        <Age/>
+                    </Route>
+                    <Route path="/questionnaire-insurance">
+                        <Insurance/>
+                    </Route>
+                    <Route path="/result">
+                        <Result/>
+                    </Route>
+                    <Route path="/case1">
+                        <Case1/>
+                    </Route>
+
+                    <Route path="/case2">
+                        <Case2/>
+                    </Route>
+                    <Route path="/case1page2">
+                        <Case1Page2 />
+                    </Route>
+                    <Route path="/case1V2">
+                        <Case1V2 />
+                    </Route>
+                    <Route path="/case1V2Step1">
+                        <Case1V2Step1 />
+                    </Route>
+                    <Route path="/case1V2Step2">
+                        <Case1V2Step2 />
+                    </Route>
+                    <Route path="/case1V2Step3">
+                        <Case1V2Step3 />
+                    </Route>
+                    <Route path="/case1V2Step4">
+                        <Case1V2Step4 />
+                    </Route>
+
+                    <Route path="/case4">
+                        <Case4/>
+                    </Route>
+
+                    <Route path="/case3">
+                        <Case3/>
+                    </Route>
+
+                    <Route path ="/resources">
+                        <Prevention/>
+                    </Route>
+                    <Route path="/AboutUs">
                               <AboutUs />
                           </Route>
-                      </Switch>
-                  </AnimatePresence>
-              )}
-          </Formik>
-      </div>
+                </Switch>
+     </AnimatePresence>
+
+)}
+  </Formik>
+    </div>
+
   );
 }
 
