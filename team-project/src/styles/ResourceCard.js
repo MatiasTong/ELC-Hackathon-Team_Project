@@ -35,8 +35,9 @@ font-family: 'Roboto', sans-serif;
 
    
    export const StyledCardBody = styled.div`
+   min-height: 160px;
    font-family: 'Roboto', sans-serif;
-   width: 28rem;
+   width: 26rem;
    margin:0.5rem 0.5rem;
    background-color: white;
    color: black;
@@ -50,7 +51,7 @@ font-family: 'Roboto', sans-serif;
 
    &:hover {
       box-shadow: 0 3.5px 7px rgba(0,0,0,0.25), 0 2.5px 2.5px rgba(0,0,0,0.22);
-      background-color: rgb(241, 241, 241);
+      // background-color: rgb(241, 241, 241);
      }
    `
 

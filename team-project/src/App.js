@@ -108,7 +108,7 @@ function App() {
                     </Route>
                     <Route path="/AboutUs">
                               <AboutUs />
-                          </Route>
+                    </Route>
                 </Switch>
      </AnimatePresence>
 
