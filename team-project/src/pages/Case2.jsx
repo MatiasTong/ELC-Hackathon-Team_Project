@@ -7,6 +7,7 @@ import StepsCase2 from "../components/StepsCase2"
 import ResourceCard from "../components/ResourceCard"
 import Navbar from "../components/Navbar"
 import Gallery from "../components/Gallery"
+import Footer from "../components/Footer"
 import {resources} from "../data/resources"
 
 function Case2(props) {
@@ -204,7 +205,7 @@ function Case2(props) {
                 <a href="http://www.zocdoc.com"><h1>Find doctors in your network</h1> </a>
 
             </ul> */}
-
+        <Footer></Footer>
         </div>
     )
 }
