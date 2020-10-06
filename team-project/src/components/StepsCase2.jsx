@@ -67,7 +67,7 @@ function StepsCase2(props) {
 
             {/* Step: 2 */}
             <Accordion
-                stepTitle="Step 1"
+                stepTitle="Step 2"
                 stepDescription="Call your primary doctor to make an appointment"
             >
                 <Row className="justify-content-center">
@@ -184,9 +184,9 @@ function StepsCase2(props) {
                 </Row>
             </Accordion>
 
-            {/* Step: 2 */}
+            {/* Step: 3 */}
             <Accordion
-                stepTitle="Step 2"
+                stepTitle="Step 3"
                 stepDescription="Make appointment with radiology lab/ clinic"
             >
                 <Row className="justify-content-center">
@@ -303,8 +303,8 @@ function StepsCase2(props) {
                     </Card>
                 </Row>
             </Accordion>
-            {/* Step: 3 */}
-            <Accordion stepTitle="Step 3" stepDescription="Wait for the result">
+            {/* Step: 4 */}
+            <Accordion stepTitle="Step 4" stepDescription="Wait for the result">
                 <Row className="justify-content-center">
                     <Card
                         className="col-9 px-0 m-2"
@@ -427,8 +427,8 @@ function StepsCase2(props) {
                 </Row>
             </Accordion>
 
-            {/* Step 4 */}
-            <Accordion stepTitle="Step 4" stepDescription="Keep your result">
+            {/* Step 5 */}
+            <Accordion stepTitle="Step 5" stepDescription="Keep your result">
                 <Row className="justify-content-center">
                     <Card
                         className="col-9 px-0 m-2"

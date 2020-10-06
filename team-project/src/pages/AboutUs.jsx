@@ -169,10 +169,12 @@ function AboutUs(props) {
                         <p className="lead">
                             I have a passion for Technology and Aviation. I have
                             been in the Airline industry since 2015 and I love
-                            every aspect of it. I am also enrolled in Laguardia
-                            CC Techhire Open Code program. Upon completion of
-                            the program I will have earned a Full Stack
-                            Developer certificate.
+                            every aspect of it. Recent graduate
+                            of a java full-stack bootcamp with experience
+                            developing web applications. I have a bachelor degree
+                            in coumputer engineering thechnology and experience developing
+                            full-stack web applications using Java, Spring Framework, SQL,
+                            HTML, CSS, React and JavaScript.
                         </p>
                         <span className="text-muted mr-3">Contact:</span>
                         <Card.Link href="https://www.linkedin.com/in/alancs90/">
@@ -234,6 +236,7 @@ function AboutUs(props) {
             <Footer/>
         </div>
     );
+    
 }
 
 AboutUs.propTypes = {};

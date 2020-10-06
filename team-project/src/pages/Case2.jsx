@@ -119,8 +119,16 @@ function Case2(props) {
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                 }}
             ></div>
-
-            {/* Section 3: Resources */}
+            <h2
+                className="justify-content-center"
+                style={{
+                    fontSize: "3.2rem",
+                    fontWeight: "bold",
+                    opacity: "50%",
+                }}
+            >
+                Related Resources
+            </h2>            {/* Section 3: Resources */}
             <div
                 style={{
                     padding: "20px",
@@ -132,6 +140,7 @@ function Case2(props) {
                     margin: "2.8rem",
                 }}
             >
+
                 <Row className="justify-content-center">
                     {resources
                         .filter((item) => item.forCase.includes("case2"))

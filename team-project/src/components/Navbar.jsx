@@ -16,6 +16,7 @@ function Navbar({ theme = "dark" }) {
                     height="30"
                     className="d-inline-block align-top"
                 />{' '} */}
+                <img src="./heartLogo.png"  width="75"height="75" />
                     EZCheck
                 </Navbar2.Brand>
            </Link>
