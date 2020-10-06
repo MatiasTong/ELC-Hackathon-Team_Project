@@ -1,5 +1,19 @@
 export const resources = [
+
     {
+        type: "website",
+        title: "Bring Your Brave Campaign",
+        isOver40: false,
+        isInsured: true,
+        forCase: ["case2"],
+        organization: "Center for Disease Control and Prevention",
+        url: "https://www.cdc.gov/cancer/breast/young_women/bringyourbrave/index.htm",
+        doctorLikes: 3,
+        likes: 5,
+        tags: ["Campaign"],
+        searchTerms:["under40", "breast cancer", "campaign"]
+    },
+  {
         type: "event",
         title: "Mobile Mammogram Screening in Long Island City",
         isOver40: false,
@@ -10,11 +24,25 @@ export const resources = [
         doctorLikes: 3,
         likes: 5,
         tags: ["Recommended"],
-        searchTerms: ["over40, breast cancer"],
+        searchTerms: ["over40", "breast cancer"],
     },
 
     {
         type: "website",
+        title: "Should women under age 40 get mammograms?",
+        isOver40: false,
+        isInsured: true,
+        forCase: ["case2"],
+        organization: "Cleveland Clinic",
+        url: "https://my.clevelandclinic.org/health/articles/16805-breast-cancer-in-young-women",
+        doctorLikes: 3,
+        likes: 5,
+        tags: "",
+        searchTerms:["under40", "breast cancer"]
+    },
+  
+      {
+        type:"website",
         title: "Breast Cancer Early Detection and Diagnosis",
         isOver40: true,
         isInsured: false,
@@ -25,9 +53,38 @@ export const resources = [
         doctorLikes: 3,
         likes: 5,
         tags: ["Recommended"],
-        searchTerms: ["over40, breast cancer"],
+        searchTerms: ["over40", "breast cancer"],
     },
+
     {
+        type: "video",
+        title: "Breast cancer affects young women too",
+        isOver40: false,
+        isInsured: true,
+        forCase: ["case2"],
+        organization: "abc KSAT 12",
+        url: "https://www.youtube.com/watch?v=I9_7zWoy7v4",
+        doctorLikes: 3,
+        likes: 5,
+        tags: "",
+        searchTerms:["under40", "breast cancer"]
+    },
+
+    {
+        type: "website",
+        title: "How to do a breast self-exam: The five steps",
+        isOver40: false,
+        isInsured: true,
+        forCase: ["case2"],
+        organization: "breastcancer.org",
+        url: "https://www.breastcancer.org/symptoms/testing/types/self_exam",
+        doctorLikes: 3,
+        likes: 5,
+        tags: "",
+        searchTerms:["under40", "breast cancer", "self-exam,"]
+    },
+
+  {
         type: "phone",
         title: "Getting A Mammogram w/o insurance",
         isOver40: true,
@@ -302,7 +359,7 @@ export const resources = [
         doctorLikes: 10,
         likes: 8,
         tags: ["mammogram"],
-        searchTerms:["over40, Recommended"]
+        searchTerms:["over40", "Recommended"]
     },
   
     {
@@ -316,35 +373,33 @@ export const resources = [
         doctorLikes: 7,
         likes: 5,
         tags: ["firstmammogram"],
-        searchTerms:["First Mammogram, Recommended"]
+        searchTerms:["First Mammogram", "Recommended"]
     },
     {
         type: "website",
         title: "What women under 40 should be doing to detect breast cancer",
         isOver40: false,
         isInsured: false,
+        forCase: ["case3" , "case2"],
         organization: "Centers for Disease Control and Prevention (CDC)",
         url: "https://www.today.com/health/what-women-under-40-should-be-doing-detect-breast-cancer-t159260",
         doctorLikes: 3,
         likes: 8,
         tags: ["mammogram"],
-        searchTerms:["Under40, Recommended"]
+        searchTerms:["Under40", "Recommended"]
     },
     {
         type: "video",
         title: "How To Catch Breast Cancer Early: Stanford Doctors Explain Mammography Options",
         isOver40: false,
         isInsured: false,
+        forCase: ["case3", "case2"],
         organization: "Stanford Health Care",
         url: "https://www.youtube.com/watch?v=ql11xKFMKg4",
         doctorLikes: 10,
         likes: 8,
         tags: ["mammogram"],
-        searchTerms:["Under40, Recommended"]
+        searchTerms:["Under40", "Recommended"]
     }
 ];
-
-
-
-
 
