@@ -208,7 +208,7 @@ function AboutUs(props) {
                             a Web Developer. I am focused on constantly
                             improving my skills and willing to learn other
                             stacks. Currently, I am well versed in full-stack
-                            Java web development using Spring and MySQL. I have also been learning React js and Node js and I am
+                            Java web development using Spring and MySQL. I have also been learning React js and Node js in my spare time and I am
                             willing to relocate or work remotely if required. I
                             look forward to connecting with you!
                         </p>
