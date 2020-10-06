@@ -8,7 +8,7 @@ import ResourceCard from "../components/ResourceCard"
 import Navbar from "../components/Navbar"
 import Gallery from "../components/Gallery"
 import Footer from "../components/Footer"
-import {resources} from "../data/resources"
+import { resources } from "../data/resources"
 
 function Case2(props) {
     return (
@@ -70,22 +70,21 @@ function Case2(props) {
             }}>
                 <Row className="justify-content-center">
                     {resources
-                        .filter((item)=>item.isOver40 === false && item.isInsured === true)
-                        .map((item) => (
-                        <ResourceCard
-                            className="col mx-2"
-                            type={item.type}
-                            title={item.title}
-                            organization={item.organization}
-                            url = {item.url}
-                            doctorLikes={item.doctorLikes}
-                            likes={item.likes}
-                            tags={item.tags}
-                            phoneNumber ={item.phoneNumber}
-                        />
+                        .filter((item) => item.forCase.includes("case2")).map((item) => (
+                            <ResourceCard
+                                className="col mx-2"
+                                type={item.type}
+                                title={item.title}
+                                organization={item.organization}
+                                url={item.url}
+                                doctorLikes={item.doctorLikes}
+                                likes={item.likes}
+                                tags={item.tags}
+                                phoneNumber={item.phoneNumber}
+                            />
 
-                    ))}
-                   
+                        ))}
+
                 </Row>
             </div>
 
@@ -207,7 +206,7 @@ function Case2(props) {
                 <a href="http://www.zocdoc.com"><h1>Find doctors in your network</h1> </a>
 
             </ul> */}
-        <Footer></Footer>
+            <Footer></Footer>
         </div>
     )
 }
