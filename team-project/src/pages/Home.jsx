@@ -28,7 +28,7 @@ function Home(props) {
                 
             {/* </Navbar>  */}
             <Hero/>
-            <Footer/>
+            {/* <Footer/> */}
             
 
         </div>

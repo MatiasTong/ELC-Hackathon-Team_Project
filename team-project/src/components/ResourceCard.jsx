@@ -101,7 +101,7 @@ function ResourceCard({ type, likes, doctorLikes, tags, title, organization, url
     return (
 
         <div>
-            <a href={url} style={{ textDecoration: "none" }}>
+            <a href={url} style={{ textDecoration: "none" }} target="_blank">
                 <StyledCardBody className="container" >
                     {infoTag()}
 

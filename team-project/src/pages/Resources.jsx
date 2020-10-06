@@ -7,25 +7,14 @@ import Hero2 from "../components/Hero2"
 import Gallery from "../components/Gallery"
 import "../App.css"
 import Navbar from "../components/Navbar"
-
+import { resources } from "../data/resources"
+import ResourceCard from "../components/ResourceCard"
 import "../components/Gallery.scss"
 
-
-function Prevention(props) {
+function Resources(props) {
     return (
         <div style={{ backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
-
-            {/* Section 1: Header and navbar */}
-            {/* <header
-                style={{
-                    background: "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')",
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                    minHeight: "100vh"
-                }}> */}
-                <Navbar theme="light"/>
-                {/* <Hero2 /> */}
-            {/* </header> */}
+            <Navbar theme="light" />
 
             {/* Spacer div */}
             <div
@@ -37,30 +26,22 @@ function Prevention(props) {
                 }}>
             </div>
 
-            <>
-                <div className="mb-2">
-                    <Button variant="success" size="lg">
-                        All(20)
-    </Button>{' '}
-                    <Button variant="info" size="lg">
-                        With insurance
-    </Button> {' '}
-                    <Button variant="info" size="lg">
-                        No insurance
-    </Button> {' '}
-                    <Button variant="info" size="lg">
-                        Events
-    </Button> {' '}
+            <div className="mb-2">
+                <Button variant="success" size="lg"> All(20) </Button>
+                <Button variant="info" size="lg"> With insurance </Button>
+                <Button variant="info" size="lg"> No insurance </Button>
+                <Button variant="info" size="lg"> Events </Button>
+            </div>
+            <Row className="justify-content-center">
+                <form class="form-inline col mx-auto">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search </button>
+                </form>
+            </Row>
 
-                </div>
-
-            </>
-
-            <br />
 
             <div style={{
                 padding: "20px",
-                height:"100vh",
                 borderRadius: "20px",
                 display: "flex",
                 alignItems: "center",
@@ -68,7 +49,25 @@ function Prevention(props) {
                 backgroundColor: "#f2f6fa",
                 margin: "2.8rem"
             }}>
-                </div>
+                <Row className="justify-content-center">
+                    {resources
+                        .map((item) => (
+                            <ResourceCard
+                                className="col mx-2"
+                                type={item.type}
+                                title={item.title}
+                                organization={item.organization}
+                                url={item.url}
+                                doctorLikes={item.doctorLikes}
+                                likes={item.likes}
+                                tags={item.tags}
+                                phoneNumber={item.phoneNumber}
+                            />
+
+                        ))}
+
+                </Row>
+            </div>
 
 
             <Container>
@@ -109,24 +108,18 @@ function Prevention(props) {
                             </Tab.Content>
                         </Col>
                     </Row>
-                </Tab.Container>
-            </Container>
+                </Tab.Container> */}
+            </Container> 
 
-            <br />
-            {/* Section 4: Gallery */}
-            <div className="py-5" >
-                <Gallery />
-            </div>
-            <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
-            <br />
-            <br />
+               
+                {/* Section 4: Gallery */}
+                <div className="py-5" >
+                    <Gallery />
+                </div>
+                {/* <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid /> */}
+               
         </div>
     )
 }
 
-Prevention.propTypes = {
-
-}
-
-export default Prevention
-
+export default Resources
