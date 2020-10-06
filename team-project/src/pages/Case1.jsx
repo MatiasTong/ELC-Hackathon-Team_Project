@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col,Image } from "react-bootstrap";
 import Hero2 from "../components/Hero2";
 import Media from "react-bootstrap/Media";
 import StepsCase1 from "../components/StepsCase1";
@@ -188,7 +188,9 @@ function Case1(props) {
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                 }}
             ></div>
+                        <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
 
+<br/>
             <Footer/>
             
         </div>
