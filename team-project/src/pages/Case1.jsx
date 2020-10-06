@@ -43,7 +43,7 @@ function Case1(props) {
             <header
                 style={{
                     background:
-                        "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')",
+                        "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://i.ytimg.com/vi/41QrZ42ewcY/maxresdefault.jpg')",
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                     minHeight: "100vh",
@@ -122,6 +122,16 @@ function Case1(props) {
             ></div>
 
             {/* Section 3: Resources */}
+            <h2
+                className="justify-content-center"
+                style={{
+                    fontSize: "3.2rem",
+                    fontWeight: "bold",
+                    opacity: "50%",
+                }}
+            >
+                    Related Resources
+            </h2>   
             <div
                 style={{
                     padding: "20px",
@@ -132,7 +142,7 @@ function Case1(props) {
                     backgroundColor: "#f2f6fa",
                     margin: "2.8rem",
                 }}
-            >
+            >          
                 <Row className="justify-content-center">
                     {resources
                         .filter((item) => item.forCase.includes("case1"))

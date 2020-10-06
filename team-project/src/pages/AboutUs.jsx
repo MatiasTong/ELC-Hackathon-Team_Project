@@ -24,11 +24,11 @@ function AboutUs(props) {
     return (
 
         <div
-            className="about-us"
+            className="about-us-body"
             style={{ backgroundImage:"linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)", }}
         >
             <Navbar theme="light" />
-            <Container>
+            <Container className ="about-us">
           
                 {/* About Us */}
                 <Row>
