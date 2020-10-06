@@ -4,9 +4,10 @@ import { Nav, Carousel, Container, Card, Button, Tab, Row, Col, Tabs, CardGroup,
 import PropTypes from 'prop-types'
 import Hero2 from "../components/Hero2"
 import Media from 'react-bootstrap/Media'
-import CaseFourSteps from "../components/CaseFourSteps"
+import Case3Steps from "../components/Case3Steps"
 import Gallery from "../components/Gallery"
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import ResourceCard from "../components/ResourceCard"
 import {resources} from "../data/resources"
 
@@ -45,7 +46,7 @@ function Case3(props) {
                     backgroundColor: "#f2f6fa",
                     border: "none"
                 }}>
-                <CaseFourSteps />
+                <Case3Steps />
             </div>
 
             {/* Spacer Div */}
@@ -97,7 +98,7 @@ function Case3(props) {
             </div>
 
 
-            <Container>
+            {/* <Container>
                 <br />
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Row>
@@ -126,18 +127,17 @@ function Case3(props) {
 
                                     </ListGroup>
 
-                                    {/* <Sonnet /> */}
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
                                     <ListGroup.Item><iframe width="560" height="315" src="https://www.youtube.com/embed/MGsWSQGmFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </ListGroup.Item> {/* <Sonnet /> */}
+                                    </ListGroup.Item> 
                                 </Tab.Pane>
                             </Tab.Content>
                         </Col>
                     </Row>
                 </Tab.Container>
 
-            </Container>
+            </Container> */}
             <br />
 
             {/* Section 4: Gallery */}
@@ -149,6 +149,8 @@ function Case3(props) {
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
             <br />
             <br />
+            <Footer></Footer>
+
         </div>
     )
 }
