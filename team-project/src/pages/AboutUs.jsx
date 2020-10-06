@@ -18,19 +18,19 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import "./AboutUs.css";
+import Navbar from "../components/Navbar"
 
 function AboutUs(props) {
 
     return (
+
         <div
             className="about-us"
-            style={{
-                backgroundImage:
-                    "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)",
-            }}
+            style={{ backgroundImage:"linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)", }}
         >
             <Navbar theme="light" />
             <Container>
+          
                 {/* About Us */}
                 <Row>
                     <h2 className="featurette-heading">About Us</h2>
@@ -54,7 +54,7 @@ function AboutUs(props) {
                     <Col md={7}>
                         <h2 className="featurette-heading">Matias Tong</h2>
                         <span className="text-muted">Software Developer</span>
-                        <p className="lead">
+                        <p className="lead my-auto ">
                             My research experience using software to analyze
                             large amounts of data and tackle environmental
                             challenges helped me decide that coding is what I
@@ -125,7 +125,7 @@ function AboutUs(props) {
 
                 <hr class="featurette-divider"></hr>
                 <Row className="featurette">
-                    <Col md={7}>
+                    <Col md={7} className ="my-auto">
                         <h2 className="featurette-heading">Tom Rachtawarn</h2>
                         <span className="text-muted">Software Developer</span>
                         <p className="lead">
@@ -164,7 +164,7 @@ function AboutUs(props) {
 
                 <hr class="featurette-divider"></hr>
                 <Row className="featurette">
-                    <Col md={7} className="order-md-2">
+                    <Col md={7} className="order-md-2 my-auto">
                         <h2 className="featurette-heading">Alan Carrasco</h2>
                         <span className="text-muted">Software Developer</span>
                         <p className="lead">
@@ -234,6 +234,8 @@ function AboutUs(props) {
             </Container>
             <Footer/>
         </div>
+        </div>
+        </>
     );
 }
 

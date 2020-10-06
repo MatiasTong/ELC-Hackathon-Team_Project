@@ -100,7 +100,7 @@ function ResourceCard({ type, likes, doctorLikes, tags, title, organization, url
 
     return (
 
-        <div>
+        <div class="item" {...props}>
             <a href={url} style={{ textDecoration: "none" }} target="_blank">
                 <StyledCardBody className="container" >
                     {infoTag()}
@@ -117,7 +117,7 @@ function ResourceCard({ type, likes, doctorLikes, tags, title, organization, url
                         </div>
                         }
                     </Row>
-                    <Row style={{ paddingBottom: "20px", position: "relative" }}>
+                    <Row style={{ paddingBottom: "0.9rem", position: "relative" }}>
                         <Col xs={3}>
                             <div style={{
                                 justifyContent: "center",
@@ -187,7 +187,9 @@ function ResourceCard({ type, likes, doctorLikes, tags, title, organization, url
                         <div></div>
 
                         <div>
-                            <Button variant="outline-info" size="sm">Helpful</Button>
+                            <a href="/">
+                            <Button variant="outline-info" size="sm" style={{zIndex: "99"}}>Helpful</Button>   
+                            </a>
                         </div>
 
                     </div>

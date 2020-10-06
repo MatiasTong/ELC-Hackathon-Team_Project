@@ -1,11 +1,11 @@
 export const resources = [
     {
-        type: "website",
-        title: "General Information About Cancer",
+        type: "event",
+        title: "Mobile Mammogram Screening in Long Island City",
         isOver40: false,
         isInsured: true,
         forCase: ["case2"],
-        organization: "American Cancer Society",
+        organization: "October 12, 10am - 4pm",
         url: "https://www.cancer.org/",
         doctorLikes: 3,
         likes: 5,
@@ -44,7 +44,7 @@ export const resources = [
 
     {
         type: "video",
-        title: "Getting A Mammogram When You Don't Have Insurance You ",
+        title: "Getting A Mammogram When You Don't Have Insurance",
         isOver40: true,
         isInsured: false,
         forCase: ["case2"],
@@ -53,7 +53,7 @@ export const resources = [
         doctorLikes: 3,
         likes: 5,
         tags: "",
-        searchTerms: ["over40, breast cancer"],
+        searchTerms:["over40, breast cancer"]
     },
 
     {
@@ -290,4 +290,30 @@ export const resources = [
         tags: ["Recommended"],
         searchTerms: ["anxiety", "phone call", "wait for result", "support"],
     },
+  
+  {
+        title: "Mammogram Procedure",
+        isOver40: true,
+        isInsured: false,
+        organization: "John Hopkins Medicine",
+        url: "https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/mammogram-procedure",
+        doctorLikes: 10,
+        likes: 8,
+        tags: ["mammogram"],
+        searchTerms:["over40, Recommended"]
+    },
+  
+    {
+        type: "video",
+        title: "What You Should Know Before Your First Mammogram",
+        isOver40: true,
+        isInsured: false,
+        organization: "Center for Diagnostic Imaging",
+        url: "https://www.youtube.com/watch?v=MGsWSQGmFnY&t=1s",
+        doctorLikes: 7,
+        likes: 5,
+        tags: ["firstmammogram"],
+        searchTerms:["First Mammogram, Recommended"]
+    }
 ];
+

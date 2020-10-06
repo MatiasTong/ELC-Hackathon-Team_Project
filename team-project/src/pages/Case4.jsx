@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Image from 'react-bootstrap/Image'
 import { Nav, Carousel, Form, Container, Card, Button, Tab, Row, Col, ListGroup, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types'
@@ -9,11 +9,30 @@ import Gallery from "../components/Gallery"
 import Navbar from "../components/Navbar"
 import ResourceCard from "../components/ResourceCard"
 import {resources} from "../data/resources"
+import React, { useContext, useState, useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
+import { Link } from 'react-scroll';
+// import { Link } from 'react-router-dom';
+
+import "../components/Hero2.scss"
 
 function Case4(props) {
+    const [isDesktop, setIsDesktop] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      if (window.innerWidth > 769) {
+        setIsDesktop(true);
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <div style={{ backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
-           
+
             {/* Section 1: Header and navbar */}
             <header
                 style={{
@@ -23,10 +42,43 @@ function Case4(props) {
                     minHeight: "100vh"
                 }}>
                 <Navbar />
-                <Hero2 />
+
+                 {/* Hero Image */}
+                 <section id="hero2" className="jumbotron" style={{ backgroundColor: "transparent" }}>
+                    <Container>
+                        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={200} distance="30px">
+                            <div className="row">
+                                <h1 className="hero2-title col-sm-12">
+                                    {"Breast Cancer in Young Women"}{' '}
+                                    <br />
+                                </h1>
+                            </div>
+                        </Fade>
+                        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={800} distance="30px">
+                            <div className="row">
+                                <h2 className="col-sm-12 hero2-text">
+                                    {"Women who are under 40 years old may feel they are not at risk for breast cancer, but 5% of all cases happen in this group. Diagnosis can be more difficult due to breast tissue density. Also treatment can affect fertility."}
+                                </h2>
+
+                            </div>
+                        </Fade>
+                        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1100} distance="30px">
+                            <p className="hero-cta row justify-content-center mt-5">
+                                <span className="cta-btn cta-btn--hero">
+                                    <Link activeClass="active" to="section1" spy={true} smooth={true} duration={1000}>
+                                        {'Learn more'}
+                                    </Link>
+                                </span>
+                            </p>
+                        </Fade>
+                    </Container>
+                </section>
+                {/* End of Hero Image */}
+
             </header>
             {/* Spacer div */}
             <div
+              id="section1"
                 style={{
                     height: "6vh",
                     padding: "0px",
@@ -68,26 +120,28 @@ function Case4(props) {
                 margin: "2.8rem"
             }}>
                 <Row className="justify-content-center">
-                    {resources.map((item) => (
-                        <ResourceCard
-                            className="col mx-2"
-                            type={item.type}
-                            title={item.title}
-                            organization={item.organization}
-                            url = {item.url}
-                            doctorLikes={item.doctorLikes}
-                            likes={item.likes}
-                            tags={item.tags}
-                            phoneNumber ={item.phoneNumber}
-                        />
+                    {resources
+                        .filter((item) => item.isOver40 === true && item.isInsured === false)
+                        .map((item) => (
+                            <ResourceCard
+                                className="col mx-2"
+                                type={item.type}
+                                title={item.title}
+                                organization={item.organization}
+                                url={item.url}
+                                doctorLikes={item.doctorLikes}
+                                likes={item.likes}
+                                tags={item.tags}
+                                phoneNumber={item.phoneNumber}
+                            />
 
-                    ))}
-                   
+                        ))}
+
                 </Row>
             </div>
 
-                  {/* Spacer Div */}
-                  <div
+            {/* Spacer Div */}
+            <div
                 style={{
                     height: "4vh",
                     padding: "0px",
@@ -97,7 +151,7 @@ function Case4(props) {
             </div>
 
 
-            <Container>
+            {/* <Container>
                 <br />
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Row>
@@ -126,22 +180,22 @@ function Case4(props) {
 
                                     </ListGroup>
 
-                                    {/* <Sonnet /> */}
+                                  
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
                                    <ListGroup.Item><iframe width="560" height="315" src="https://www.youtube.com/embed/MGsWSQGmFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                   </ListGroup.Item> {/* <Sonnet /> */}
+                                   </ListGroup.Item> 
                                 </Tab.Pane>
                             </Tab.Content>
                         </Col>
                     </Row>
                 </Tab.Container>
 
-            </Container>
+            </Container> */}
             <br />
-          
-         {/* Section 4: Gallery */}
-         <div className="py-5" >
+
+            {/* Section 4: Gallery */}
+            <div className="py-5" >
                 <Gallery />
             </div>
 
@@ -149,6 +203,7 @@ function Case4(props) {
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
             <br />
             <br />
+
         </div>
     )
 }

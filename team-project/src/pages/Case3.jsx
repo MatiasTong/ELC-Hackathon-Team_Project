@@ -1,17 +1,37 @@
-import React from 'react'
 import Image from 'react-bootstrap/Image'
-import { Nav, Carousel, Container, Card, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
+import { Nav, Carousel, Container, Card,Accordion, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types'
 import Hero2 from "../components/Hero2"
 import Media from 'react-bootstrap/Media'
-import CaseFourSteps from "../components/CaseFourSteps"
+import Case3Steps from "../components/Case3Steps"
 import Gallery from "../components/Gallery"
+import Linkify from 'react-linkify';
+
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import ResourceCard from "../components/ResourceCard"
 import {resources} from "../data/resources"
+import React, { useContext, useState, useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
+import { Link } from 'react-scroll';
+// import { Link } from 'react-router-dom';
 
+import "../components/Hero2.scss"
 
 function Case3(props) {
+    const [isDesktop, setIsDesktop] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      if (window.innerWidth > 769) {
+        setIsDesktop(true);
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+        setIsDesktop(false);
+      }
+    }, []);
+
     return (
         <div style={{ backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
 
@@ -24,10 +44,43 @@ function Case3(props) {
                     minHeight: "100vh"
                 }}>
                 <Navbar />
-                <Hero2 />
+
+                  {/* Hero Image */}
+                  <section id="hero2" className="jumbotron" style={{ backgroundColor: "transparent" }}>
+                    <Container>
+                        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={200} distance="30px">
+                            <div className="row">
+                                <h1 className="hero2-title col-sm-12">
+                                    {"Breast Cancer in Young Women"}{' '}
+                                    <br />
+                                </h1>
+                            </div>
+                        </Fade>
+                        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={800} distance="30px">
+                            <div className="row">
+                                <h2 className="col-sm-12 hero2-text">
+                                    {"Women who are under 40 years old may feel they are not at risk for breast cancer, but 5% of all cases happen in this group. Diagnosis can be more difficult due to breast tissue density. Also treatment can affect fertility."}
+                                </h2>
+
+                            </div>
+                        </Fade>
+                        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1100} distance="30px">
+                            <p className="hero-cta row justify-content-center mt-5">
+                                <span className="cta-btn cta-btn--hero">
+                                    <Link activeClass="active" to="section1" spy={true} smooth={true} duration={1000}>
+                                        {'Learn more'}
+                                    </Link>
+                                </span>
+                            </p>
+                        </Fade>
+                    </Container>
+                </section>
+                {/* End of Hero Image */}
+
             </header>
             {/* Spacer div */}
             <div
+                  id="section1"
                 style={{
                     height: "6vh",
                     padding: "0px",
@@ -45,7 +98,7 @@ function Case3(props) {
                     backgroundColor: "#f2f6fa",
                     border: "none"
                 }}>
-                <CaseFourSteps />
+                <Case3Steps />
             </div>
 
             {/* Spacer Div */}
@@ -97,7 +150,7 @@ function Case3(props) {
             </div>
 
 
-            <Container>
+            {/* <Container>
                 <br />
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Row>
@@ -126,19 +179,42 @@ function Case3(props) {
 
                                     </ListGroup>
 
-                                    {/* <Sonnet /> */}
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
                                     <ListGroup.Item><iframe width="560" height="315" src="https://www.youtube.com/embed/MGsWSQGmFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </ListGroup.Item> {/* <Sonnet /> */}
+                                    </ListGroup.Item> 
                                 </Tab.Pane>
                             </Tab.Content>
                         </Col>
                     </Row>
                 </Tab.Container>
 
-            </Container>
+            </Container> */}
             <br />
+
+             {/* Option: 4 */}
+             <Accordion
+                stepTitle="Option 4"
+                stepDescription="Reach out to your local clinic.">
+
+                <Row className="justify-content-center">
+
+
+                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
+                        <Card.Header>
+                            Find and book your appointment through the Planned Parenthood Portal.
+                        </Card.Header>
+                        <Card.Body>
+                            <Linkify>
+                                Visit: {' '}
+                                <a href='https://www.plannedparenthood.org/health-center'>
+                                    Planned Parenthood site
+  </a>. You will be able to receive care through a sliding pay scale.
+</Linkify>
+                        </Card.Body>
+                    </Card>
+                </Row>
+            </Accordion>
 
             {/* Section 4: Gallery */}
             <div className="py-5" >
@@ -149,6 +225,8 @@ function Case3(props) {
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
             <br />
             <br />
+            <Footer></Footer>
+
         </div>
     )
 }
