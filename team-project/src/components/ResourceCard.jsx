@@ -28,6 +28,7 @@ import PopoverButton from "./PopoverButton"
 
 function ResourceCard({ type, likes, doctorLikes, tags, title, organization, url, phoneNumber }, ...props) {
     const [isLiked, setIsLiked] = useState(true);
+    
     // const [likes, setLikes] = useState(0)
     // const [iconBackground, setIconBackground] = useState("#4B8FFD")
 
@@ -100,12 +101,14 @@ function ResourceCard({ type, likes, doctorLikes, tags, title, organization, url
 
 
     return (
-
+        
         <div class="item">
+            
             <a href={url} style={{ textDecoration: "none" }} target="_blank">
+                
                 <StyledCardBody className="container" >
                     {infoTag()}
-
+                    
                     <Row style={{ marginBottom: "0.5rem", display: "grid", fontSize: "14px", gridTemplateColumns: "repeat(4, 1fr)", justifyItems: "flex-start" }}>
                         {/* Add list of tags to top of card */}
                         {tags ? tags.map(tag => (

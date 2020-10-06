@@ -201,6 +201,9 @@ function Resources(props) {
                                     <Nav.Item>
                                         <Nav.Link eventKey="second">Myths and Facts</Nav.Link>
                                     </Nav.Item>
+                                    <Nav.Item>
+                                        <Nav.Link eventKey="third">Self-Examination</Nav.Link>
+                                    </Nav.Item>
                                 </Nav>
                             </Col>
                             <Col sm={9}>
@@ -231,6 +234,12 @@ function Resources(props) {
                                     <Tab.Pane eventKey="second">
                                         <ListGroup.Item style={{ border: "none", backgroundColor: "transparent" }}>
                                             <Image id="infographic1" src="./mammyths.jpg" />
+                                        </ListGroup.Item>
+
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="third">
+                                        <ListGroup.Item style={{ border: "none", backgroundColor: "transparent" }}>
+                                            <Image id="infographic2" src="./selfexam.jpg" fluid />
                                         </ListGroup.Item>
 
                                     </Tab.Pane>

@@ -68,9 +68,9 @@ function CaseFourSteps(props) {
 
 
                     <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header>
-                            Low-income? You may be eligible to apply to your local state Medicaid/Medicare program.
-                        </Card.Header>
+                  
+                           <h4> Low-income? You may be eligible to apply to your local state Medicaid/Medicare program.</h4>
+           
                         <Card.Body>
                             <Linkify>
                                 Visit the {' '}
@@ -81,9 +81,7 @@ function CaseFourSteps(props) {
 
                     </Card>
                     <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header>
-                            Visit our resources page.
-                        </Card.Header>
+                            <h4>Visit our resources page.</h4>
                         <Card.Body>
                             <p>Be sure to bookmark the page to stay up to date with the latest information. </p>
                         </Card.Body>
@@ -101,9 +99,7 @@ function CaseFourSteps(props) {
 
 
                     <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header>
-                            Browse online for any upcoming events near you.
-                        </Card.Header>
+                           <h4>Browse online for any upcoming events near you.</h4>
                         <Card.Body>
                             <Linkify>
                                 Visit: {' '}
@@ -115,9 +111,7 @@ function CaseFourSteps(props) {
 
                     </Card>
                     <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header>
-                            Reach out to the community.
-                        </Card.Header>
+                           <h4>Reach out to the community.</h4>
                         <Card.Body>
                             <p>Some doctor offices, churches or health departments host free screenings events from time to time.</p>
                         </Card.Body>
@@ -138,9 +132,7 @@ function CaseFourSteps(props) {
 
 
                     <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header>
-                            Find and book your appointment through the Planned Parenthood Portal.
-                        </Card.Header>
+                          <h4>  Find and book your appointment through the Planned Parenthood Portal.</h4>
                         <Card.Body>
                             <Linkify>
                                 Visit: {' '}

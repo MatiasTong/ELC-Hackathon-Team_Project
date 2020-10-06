@@ -1,12 +1,11 @@
 import Image from 'react-bootstrap/Image'
 import { Nav, Carousel, Container, Card, Accordion, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types'
-import Hero2 from "../components/Hero2"
+import Hero3 from "../components/Hero3"
 import Media from 'react-bootstrap/Media'
 import Case3Steps from "../components/Case3Steps"
 import Gallery from "../components/Gallery"
 import Linkify from 'react-linkify';
-
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import ResourceCard from "../components/ResourceCard"
@@ -38,7 +37,7 @@ function Case3(props) {
             {/* Section 1: Header and navbar */}
             <header
                 style={{
-                    background: "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')",
+                    background: "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://images.unsplash.com/photo-1598885159329-9377168ac375?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')",
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                     minHeight: "100vh"
@@ -51,7 +50,7 @@ function Case3(props) {
                         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={200} distance="30px">
                             <div className="row">
                                 <h1 className="hero2-title col-sm-12">
-                                    {"Breast Cancer in Young Women"}{' '}
+                                    {"Breast Cancer in Young Women "}{' '}
                                     <br />
                                 </h1>
                             </div>
@@ -59,7 +58,7 @@ function Case3(props) {
                         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={800} distance="30px">
                             <div className="row">
                                 <h2 className="col-sm-12 hero2-text">
-                                    {"Women who are under 40 years old may feel they are not at risk for breast cancer, but 5% of all cases happen in this group. Diagnosis can be more difficult due to breast tissue density. Also treatment can affect fertility."}
+                                    {"With treatment, the chances of survival for young women diagnosed with early breast cancer are good."}
                                 </h2>
 
                             </div>
@@ -110,7 +109,18 @@ function Case3(props) {
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                 }}>
             </div>
+            <h2
+                className="justify-content-center"
+                style={{
+                    fontSize: "3.2rem",
+                    fontWeight: "bold",
+                    opacity: "50%",
+                }}
+            >
+                    Related Resources
+            </h2>
 
+                 
             {/* Section 3: Resources */}
             <div style={{
                 padding: "20px",
@@ -121,7 +131,9 @@ function Case3(props) {
                 backgroundColor: "#f2f6fa",
                 margin: "2.8rem"
             }}>
+                
                 <Row className="justify-content-center">
+              
                     {resources
                         .filter((item) => item.isOver40 === false && item.isInsured === false)
                         .map((item) => (
