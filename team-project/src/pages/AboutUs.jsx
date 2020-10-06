@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import {
-    Navbar,
     Form,
     Nav,
     FormControl,
@@ -15,33 +14,36 @@ import {
     Col,
     Image,
 } from "react-bootstrap";
+import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 import "./AboutUs.css";
 
 function AboutUs(props) {
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
 
     return (
-        <div className="about-us">
+
+        <div
+            className="about-us"
+            style={{ backgroundImage:"linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)", }}
+        >
+            <Navbar theme="light" />
             <Container>
+          
                 {/* About Us */}
                 <Row>
                     <h2 className="featurette-heading">About Us</h2>
 
                     <p className="lead" style={{ textAlign: "left" }}>
-                        We are a team of 5 aspired developers with varieties of
+                        We are a team of 5 aspired developers with a variety of
                         professional backgrounds. We met at LaGuardia Community
                         College - Software Guild web development bootcamp. We
-                        went through a 9 months intensive programming course
+                        went through a 9 month intensive programming course
                         together and recently graduated from the bootcamp with
                         Java Web Development certificate. We are passionate
                         about learning new technology and building cool
                         projects. We love to challenge ourselves and are very
-                        excited about our first hackathon here with ELC
+                        excited about our first hackathon to be the ELC
                         Hackathon.
                     </p>
                 </Row>
@@ -51,7 +53,7 @@ function AboutUs(props) {
                     <Col md={7}>
                         <h2 className="featurette-heading">Matias Tong</h2>
                         <span className="text-muted">Software Developer</span>
-                        <p className="lead">
+                        <p className="lead my-auto ">
                             My research experience using software to analyze
                             large amounts of data and tackle environmental
                             challenges helped me decide that coding is what I
@@ -88,7 +90,7 @@ function AboutUs(props) {
                 <hr class="featurette-divider"></hr>
                 <Row className="featurette">
                     <Col md={7} className="order-md-2">
-                        <h2 className="featurette-heading">Shirley Sosa</h2>
+                        <h2 className="featurette-heading">Shirley Layme-Sosa</h2>
                         <span className="text-muted">Software Developer</span>
                         <p className="lead">
                             Creative coding bootcamp graduate with experience in
@@ -122,17 +124,17 @@ function AboutUs(props) {
 
                 <hr class="featurette-divider"></hr>
                 <Row className="featurette">
-                    <Col md={7}>
+                    <Col md={7} className ="my-auto">
                         <h2 className="featurette-heading">Tom Rachtawarn</h2>
                         <span className="text-muted">Software Developer</span>
                         <p className="lead">
                             An aspiring developer who has passion for building
-                            and solving programming projects Who has 2 years of
+                            and solving programming projects who has 2 years of
                             4+ years of professional working experience in
                             business operation and management. Recent graduate
                             of a java full-stack bootcamp with experience
                             developing web applications. With a bachelor degree
-                            in Business Administration, Major in Information
+                            in Business Administration, major in Information
                             System Management. Looking for an opportunity to
                             join the developer team and contribute to amazing
                             projects.
@@ -161,7 +163,7 @@ function AboutUs(props) {
 
                 <hr class="featurette-divider"></hr>
                 <Row className="featurette">
-                    <Col md={7} className="order-md-2">
+                    <Col md={7} className="order-md-2 my-auto">
                         <h2 className="featurette-heading">Alan Carrasco</h2>
                         <span className="text-muted">Software Developer</span>
                         <p className="lead">
@@ -229,6 +231,7 @@ function AboutUs(props) {
                     </Col>
                 </Row>
             </Container>
+            <Footer/>
         </div>
     );
 }

@@ -1,8 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
-// import { Link } from 'react-scroll';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
+// import { Link } from 'react-router-dom';
+
 import "./Hero2.scss"
 
 // import PortfolioContext from '../../context/context';
@@ -46,7 +47,7 @@ const Header2 = () => {
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1100} distance="30px">
           <p className="hero-cta row justify-content-center mt-5">
             <span className="cta-btn cta-btn--hero">
-              <Link className="link" to="/case2" smooth duration={1000}>
+              <Link activeClass="active" to="section12" spy={true} smooth={true} duration={1000}>
                 {'Learn more'}
               </Link>
             </span>

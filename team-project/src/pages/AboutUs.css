@@ -2,10 +2,15 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+.about-us-body{
+  background-image: linear-gradient(to right, rgb(255, 246, 246) 0%, #f3eeff 100%);
+
+}
 .about-us {
-  padding-top: 3rem;
+  padding-top: 2rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
+  /* background-image: linear-gradient(to right, rgb(255, 246, 246) 0%, #f3eeff 100%); */
 }
 
 

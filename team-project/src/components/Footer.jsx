@@ -6,7 +6,7 @@ import {Image} from "react-bootstrap";
 
 const FooterPage = () => {
     return (
-        <MDBFooter style={{ backgroundColor: '#ffe6e6' }} className="font-small pt-4 mt-4"  >
+        <MDBFooter style={{ backgroundColor: '#ffe6e6', opacity:"90%" }} className="font-small pt-4 mt-4"  >
             <MDBContainer fluid className="text-center text-md-left">
                 <MDBRow>
                     <MDBCol md="6">
