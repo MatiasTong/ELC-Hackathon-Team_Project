@@ -210,7 +210,7 @@ function AboutUs(props) {
                             a Web Developer. I am focused on constantly
                             improving my skills and willing to learn other
                             stacks. Currently, I am well versed in full-stack
-                            Java web development using Spring and MySQL. I am
+                            Java web development using Spring and MySQL. I have also been learning React js and Node js in my spare time and I am
                             willing to relocate or work remotely if required. I
                             look forward to connecting with you!
                         </p>
@@ -228,7 +228,7 @@ function AboutUs(props) {
                     <Col md={5}>
                         <Image
                             className="featurette-image img-fluid mx-auto"
-                            src="../profileholder.jpg"
+                            src="../jodi-profilepic.jpg"
                         />
                     </Col>
                 </Row>
