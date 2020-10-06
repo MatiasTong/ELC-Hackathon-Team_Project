@@ -346,5 +346,5 @@ export const resources = [
 
 
 
-]
+
 
