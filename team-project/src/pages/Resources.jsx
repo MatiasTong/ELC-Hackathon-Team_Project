@@ -53,7 +53,7 @@ function Resources(props) {
                 <header className="mb-4" style={{ textAlign: "left", fontFamily: "Montserrat" }}>
                     {/* <Row> */}
                     <h1 style={{ fontWeight: "bold", display:"inline-block", paddingRight:"1.2rem"}}> Mammogram Resources</h1> 
-                     {/* <RecommendPopoverButton/> */}
+                     <RecommendPopoverButton/>
 
                     {/* </Row> */}
 

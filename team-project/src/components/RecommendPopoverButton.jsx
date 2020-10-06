@@ -15,8 +15,8 @@ function PopoverButton(props) {
       );
 
     return (
-    <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-    <Button variant="outline-info" size="lg" style={{display:"inline-block", borderRadius:"20px"}}>Recommend A Resource</Button>
+    <OverlayTrigger trigger="click" placement="left" overlay={popover}>
+    <Button variant="outline-info" size="lg" style={{display:"inline-block", position:"absolute", top:"8px", right:"8px", borderRadius:"20px"}}>Recommend A Resource</Button>
     </OverlayTrigger>
     )
 }
