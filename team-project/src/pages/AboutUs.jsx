@@ -27,7 +27,8 @@ function AboutUs(props) {
 
     return (
         <>
-            <Navbar theme="light" />
+        <div className ="about-us-body">
+            <Navbar theme="light" style={{backgroundColor:"transparent"}} />
         <div className="about-us">
             
             <Container>
@@ -55,7 +56,7 @@ function AboutUs(props) {
                     <Col md={7}>
                         <h2 className="featurette-heading">Matias Tong</h2>
                         <span className="text-muted">Software Developer</span>
-                        <p className="lead">
+                        <p className="lead my-auto ">
                             My research experience using software to analyze
                             large amounts of data and tackle environmental
                             challenges helped me decide that coding is what I
@@ -233,6 +234,7 @@ function AboutUs(props) {
                     </Col>
                 </Row>
             </Container>
+        </div>
         </div>
         </>
     );

@@ -204,8 +204,6 @@ function Case4(props) {
             <br />
             <br />
 
-            <Footer></Footer>
-
         </div>
     )
 }

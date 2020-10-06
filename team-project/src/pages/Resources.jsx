@@ -30,24 +30,26 @@ function Resources(props) {
                 </div>
 
             <div className="mb-4">
-                <Button variant="success" size="lg"> All(20) </Button>
+                <Button variant="success" className="my-1" size="lg"> All(20) </Button>
                 {"    "}
             
 
-                <Button variant="info" size="lg"> With insurance </Button>
+                <Button variant="info" className="my-1" size="lg"> With insurance </Button>
                 {"    "}
              
 
-                <Button variant="info" size="lg"> No insurance </Button>
+                <Button variant="info" className="my-1" size="lg"> No insurance </Button>
                 {"    "}
            
-                <Button variant="info" size="lg"> Events </Button>
+                <Button variant="info" className="my-1" size="lg"> Events </Button>
             </div>
-            <Row className="justify-content-center">
-                <form class="form-inline col mx-auto">
+            <Row className="justify-content-center mb-4">
+               <Col sm="auto" md="auto">
+                <form class="form-inline" style={{margin:"0 auto"}}>
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search </button>
+                    <button class="btn btn-outline-primary my-2 my-sm-0 text-center" type="submit"> Search </button>
                 </form>
+               </Col>
             </Row>
 
 
@@ -58,13 +60,14 @@ function Resources(props) {
                 alignItems: "center",
                 justifyContent: "center",
                 backgroundColor: "#f2f6fa",
-                margin: "2.8rem"
+                margin: "0.5rem"
             }}>
                 <Row className="justify-content-center">
                     {resources
                         .map((item) => (
                             <ResourceCard
-                                className="col mx-2"
+                                className="col"
+                                style={{padding: "0.4rem"}}
                                 type={item.type}
                                 title={item.title}
                                 organization={item.organization}
@@ -77,45 +80,8 @@ function Resources(props) {
 
                         ))}
 
-                    </Col>
                 </Row>
-                <Row className="justify-content-center">
-                    <form class="form-inline col mx-auto">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search </button>
-                    </form>
-                </Row>
-
-
-                <div style={{
-                    padding: "20px",
-                    borderRadius: "20px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundColor: "#f2f6fa",
-                    margin: "2.8rem"
-                }}>
-                    <Row className="justify-content-center">
-                        {resources
-                            .map((item) => (
-                                <ResourceCard
-                                    className="col mx-2"
-                                    type={item.type}
-                                    title={item.title}
-                                    organization={item.organization}
-                                    url={item.url}
-                                    doctorLikes={item.doctorLikes}
-                                    likes={item.likes}
-                                    tags={item.tags}
-                                    phoneNumber={item.phoneNumber}
-                                />
-
-                            ))}
-
-                    </Row>
                 </div>
-
 
             </Container>
 
@@ -123,14 +89,14 @@ function Resources(props) {
 
 
             <br />
-            <Image src="./mammyths.jpg" />
+           
             <br />
             {/* Section 4: Gallery */}
-            <div className="py-5" >
+            {/* <div className="py-5" >
                 <Gallery />
-            </div>
+            </div> */}
 
-            <Container>
+            <Container style ={{fontFamily: "Montserrat"}}>
 
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Row>
@@ -147,22 +113,22 @@ function Resources(props) {
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
 
-                                    <ListGroup variant="flush">
-                                        <ListGroup.Item style ={{border:"none"}}>Maintain a healthy weight.</ListGroup.Item>
-                                        <hr className="mt-0 mb-0"/>
-                                        <ListGroup.Item>Exercise regularly.</ListGroup.Item>
-                                        <hr className="mt-0 mb-0"/>
-                                        <ListGroup.Item>Don’t drink alcohol, or limit alcoholic drinks.</ListGroup.Item>
-                                        <hr className="mt-0 mb-0"/>
-                                        <ListGroup.Item>If you are taking, or have been told to take, hormone replacement or birth control pills, ask your doctor about the risks and find out if it is right for you.</ListGroup.Item>
-                                        <hr className="mt-0 mb-0"/>
-                                        <ListGroup.Item>Breastfeed your children, if possible.</ListGroup.Item>
-                                        <hr className="mt-0 mb-0"/>
-                                        <ListGroup.Item>If you have a family history of breast cancer or inherited changes in your BRCA1 and BRCA2 genes, talk to your doctor about other ways to lower your risk.</ListGroup.Item>
-                                        <hr className="mt-0 mb-0"/>
-                                        <ListGroup.Item><p style={{ color: "gray" }}>Source: Division of Cancer Prevention and Control, Centers for Disease Control and Prevention</p> </ListGroup.Item>
+                                    <ListGroup variant="flush" style={{fontSize:"1.2rem"}} >
+                                        <ListGroup.Item className ="resources-list-item" style={{backgroundColor:"#FFFFF"}}>Maintain a healthy weight.</ListGroup.Item>
+                                        <hr className="mt-0 mb-1"/>
+                                        <ListGroup.Item style={{backgroundColor:"#FBEdFB"}}>Exercise regularly.</ListGroup.Item>
+                                        <hr className="mt-0 mb-1"/>
+                                        <ListGroup.Item style={{backgroundColor:"#F7DAF7"}}>Don’t drink alcohol, or limit alcoholic drinks.</ListGroup.Item>
+                                        <hr className="mt-0 mb-1" />
+                                        <ListGroup.Item style={{backgroundColor:"#F3C8F3"}}>If you are taking, or have been told to take, hormone replacement or birth control pills, ask your doctor about the risks and find out if it is right for you.</ListGroup.Item>
+                                        <hr className="mt-0 mb-1"/>
+                                        <ListGroup.Item style={{backgroundColor:"#EFB6EF"}}>Breastfeed your children, if possible.</ListGroup.Item>
+                                        <hr className="mt-0 mb-1"/>
+                                        <ListGroup.Item style={{backgroundColor:"#EBA4EB"}}>If you have a family history of breast cancer or inherited changes in your BRCA1 and BRCA2 genes, talk to your doctor about other ways to lower your risk.</ListGroup.Item>
+                                        <hr className="mt-0 mb-1"/>
+                                        <ListGroup.Item style={{backgroundColor:"#E691E7"}} ><p style={{ color: "WHITE" }}>Source: Division of Cancer Prevention and Control, Centers for Disease Control and Prevention</p> </ListGroup.Item>
                                     </ListGroup>
-
+                                    {/* #EFB6EF EBA4EB*/}
                                     {/* <Sonnet /> */}
                                 </Tab.Pane>
                               </Tab.Content>
@@ -170,6 +136,8 @@ function Resources(props) {
                     </Row>
                 </Tab.Container>
             </Container>
+
+            <Image src="./mammyths.jpg" />
 
 
             {/* Section 4: Gallery */}
