@@ -74,7 +74,32 @@ export const resources = [
         likes: 5,
         tags: ["firstmammogram"],
         searchTerms:["First Mammogram, Recommended"]
+    },
+    {
+        type: "website",
+        title: "What women under 40 should be doing to detect breast cancer",
+        isOver40: false,
+        isInsured: false,
+        organization: "Centers for Disease Control and Prevention (CDC)",
+        url: "https://www.today.com/health/what-women-under-40-should-be-doing-detect-breast-cancer-t159260",
+        doctorLikes: 3,
+        likes: 8,
+        tags: ["mammogram"],
+        searchTerms:["Under40, Recommended"]
+    },
+    {
+        type: "video",
+        title: "How To Catch Breast Cancer Early: Stanford Doctors Explain Mammography Options",
+        isOver40: false,
+        isInsured: false,
+        organization: "Stanford Health Care",
+        url: "https://www.youtube.com/watch?v=ql11xKFMKg4",
+        doctorLikes: 10,
+        likes: 8,
+        tags: ["mammogram"],
+        searchTerms:["Under40, Recommended"]
     }
+
 
 
     

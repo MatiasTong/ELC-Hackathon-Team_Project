@@ -11,6 +11,7 @@ import ResourceCard from "../components/ResourceCard"
 import {resources} from "../data/resources"
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
+import Footer from "../components/Footer"
 import { Link } from 'react-scroll';
 // import { Link } from 'react-router-dom';
 
@@ -203,6 +204,7 @@ function Case4(props) {
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
             <br />
             <br />
+            <Footer></Footer>
 
         </div>
     )
