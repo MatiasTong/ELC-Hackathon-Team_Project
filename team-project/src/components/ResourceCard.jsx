@@ -100,7 +100,7 @@ function ResourceCard({ type, likes, doctorLikes, tags, title, organization, url
 
     return (
 
-        <div class="item" {...props}>
+        <div class="item">
             <a href={url} style={{ textDecoration: "none" }} target="_blank">
                 <StyledCardBody className="container" >
                     {infoTag()}
@@ -118,14 +118,14 @@ function ResourceCard({ type, likes, doctorLikes, tags, title, organization, url
                         }
                     </Row>
                     <Row style={{ paddingBottom: "0.9rem", position: "relative" }}>
-                        <Col xs={3}>
+                        <Col xs={3} >
                             <div style={{
                                 justifyContent: "center",
                                 alignItems: "center",
                                 opacity: "90%",
                                 backgroundColor: iconBackground(), display: "inline-flex", width: "5rem", height: "5rem",
                                 // borderRadius: "10px", border: "1px solid lightgray",
-                                boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+                                boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)"
                             }}>
                                 {/* The icon and background color changes based on resource type */}
                                 {icon()}
