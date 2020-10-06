@@ -93,9 +93,6 @@ function Resources(props) {
                 </div>
             </Container>
 
-
-
-
             <br />
            
             <br />
@@ -144,7 +141,8 @@ function Resources(props) {
                     </Row>
                 </Tab.Container>
             </Container>
-
+            <br />
+            <br />
             <Image src="./mammyths.jpg" />
 
 
@@ -153,6 +151,9 @@ function Resources(props) {
                 <Gallery />
             </div>
             {/* <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid /> */}
+            <br />
+            <Footer></Footer>
+
         </div>
     );
 }
