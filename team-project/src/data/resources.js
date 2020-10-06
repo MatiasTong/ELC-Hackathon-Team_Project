@@ -343,8 +343,3 @@ export const resources = [
         searchTerms:["Under40, Recommended"]
     }
 ];
-
-
-
-
-
