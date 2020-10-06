@@ -19,15 +19,15 @@ import "../components/Hero2.scss"
 function Case2(props) {
     const [isDesktop, setIsDesktop] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-  
+
     useEffect(() => {
-      if (window.innerWidth > 769) {
-        setIsDesktop(true);
-        setIsMobile(false);
-      } else {
-        setIsMobile(true);
-        setIsDesktop(false);
-      }
+        if (window.innerWidth > 769) {
+            setIsDesktop(true);
+            setIsMobile(false);
+        } else {
+            setIsMobile(true);
+            setIsDesktop(false);
+        }
     }, []);
 
     return (
@@ -85,7 +85,7 @@ function Case2(props) {
 
             {/* Spacer div */}
             <div
-              id="section1"
+                id="section1"
                 style={{
                     height: "6vh",
                     padding: "0px",
@@ -97,7 +97,7 @@ function Case2(props) {
 
             {/* Section 2: Steps or Options */}
             <div
-          
+
                 style={{
                     //  background: "linear-gradient(0deg, rgba(241, 241, 241,0.2), rgba(241, 241, 241,0.2)), url(https://images.unsplash.com/photo-1552035509-b247fe8e5078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
                     borderRadius: "10px",
@@ -134,7 +134,8 @@ function Case2(props) {
             >
                 <Row className="justify-content-center">
                     {resources
-                        .filter((item) => item.forCase.includes("case2")).map((item) => (
+                        .filter((item) => item.forCase.includes("case2"))
+                        .map((item) => (
                             <ResourceCard
                                 className="col mx-2"
                                 type={item.type}
@@ -263,9 +264,8 @@ function Case2(props) {
                 <a href="http://www.zocdoc.com"><h1>Find doctors in your network</h1> </a>
 
             </ul> */}
-            <Footer></Footer>
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
-            <br />
+            <Footer></Footer>
         </div>
     );
 }
