@@ -15,59 +15,74 @@ function Resources(props) {
     return (
         <div style={{ backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
             <Navbar theme="light" />
+            <Container>
 
-            {/* Spacer div */}
-            <div
-                style={{
-                    height: "6vh",
-                    padding: "0px",
-                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
-                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                }}>
-            </div>
+                {/* Spacer div */}
+                <div
+                    style={{
+                        height: "6vh",
+                        padding: "0px",
+                        backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                        // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
+                    }}>
+                </div>
 
-            <div className="mb-2">
-                <Button variant="success" size="lg"> All(20) </Button>
-                <Button variant="info" size="lg"> With insurance </Button>
-                <Button variant="info" size="lg"> No insurance </Button>
-                <Button variant="info" size="lg"> Events </Button>
-            </div>
-            <Row className="justify-content-center">
-                <form class="form-inline col mx-auto">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search </button>
-                </form>
-            </Row>
+                <Row className="mb-2 justify-content-center" style={{width:"70%"}}>
+                    <Col>
+                        <Button variant="success" size="lg"> All(20) </Button>
+                    </Col>
+                    <Col>
+                        <Button variant="info" size="lg"> With insurance </Button>
+                    </Col>
+                    <Col>
+                        <Button variant="info" size="lg"> No insurance </Button>
+                    </Col>
+                    <Col>
+                        <Button variant="info" size="lg"> Events </Button>
 
-
-            <div style={{
-                padding: "20px",
-                borderRadius: "20px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#f2f6fa",
-                margin: "2.8rem"
-            }}>
-                <Row className="justify-content-center">
-                    {resources
-                        .map((item) => (
-                            <ResourceCard
-                                className="col mx-2"
-                                type={item.type}
-                                title={item.title}
-                                organization={item.organization}
-                                url={item.url}
-                                doctorLikes={item.doctorLikes}
-                                likes={item.likes}
-                                tags={item.tags}
-                                phoneNumber={item.phoneNumber}
-                            />
-
-                        ))}
-
+                    </Col>
                 </Row>
-            </div>
+                <Row className="justify-content-center">
+                    <form class="form-inline col mx-auto">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search </button>
+                    </form>
+                </Row>
+
+
+                <div style={{
+                    padding: "20px",
+                    borderRadius: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "#f2f6fa",
+                    margin: "2.8rem"
+                }}>
+                    <Row className="justify-content-center">
+                        {resources
+                            .map((item) => (
+                                <ResourceCard
+                                    className="col mx-2"
+                                    type={item.type}
+                                    title={item.title}
+                                    organization={item.organization}
+                                    url={item.url}
+                                    doctorLikes={item.doctorLikes}
+                                    likes={item.likes}
+                                    tags={item.tags}
+                                    phoneNumber={item.phoneNumber}
+                                />
+
+                            ))}
+
+                    </Row>
+                </div>
+
+
+            </Container>
+
+
 
 
             <Container>
@@ -89,12 +104,18 @@ function Resources(props) {
                                 <Tab.Pane eventKey="first">
 
                                     <ListGroup variant="flush">
-                                        <ListGroup.Item>Maintain a healthy weight.</ListGroup.Item>
+                                        <ListGroup.Item style ={{border:"none"}}>Maintain a healthy weight.</ListGroup.Item>
+                                        <hr className="mt-0 mb-0"/>
                                         <ListGroup.Item>Exercise regularly.</ListGroup.Item>
+                                        <hr className="mt-0 mb-0"/>
                                         <ListGroup.Item>Don’t drink alcohol, or limit alcoholic drinks.</ListGroup.Item>
+                                        <hr className="mt-0 mb-0"/>
                                         <ListGroup.Item>If you are taking, or have been told to take, hormone replacement or birth control pills, ask your doctor about the risks and find out if it is right for you.</ListGroup.Item>
+                                        <hr className="mt-0 mb-0"/>
                                         <ListGroup.Item>Breastfeed your children, if possible.</ListGroup.Item>
+                                        <hr className="mt-0 mb-0"/>
                                         <ListGroup.Item>If you have a family history of breast cancer or inherited changes in your BRCA1 and BRCA2 genes, talk to your doctor about other ways to lower your risk.</ListGroup.Item>
+                                        <hr className="mt-0 mb-0"/>
                                         <ListGroup.Item><p style={{ color: "gray" }}>Source: Division of Cancer Prevention and Control, Centers for Disease Control and Prevention</p> </ListGroup.Item>
 
                                     </ListGroup>
@@ -108,16 +129,16 @@ function Resources(props) {
                             </Tab.Content>
                         </Col>
                     </Row>
-                </Tab.Container> */}
-            </Container> 
+                </Tab.Container>
+            </Container>
 
-               
-                {/* Section 4: Gallery */}
-                <div className="py-5" >
-                    <Gallery />
-                </div>
-                {/* <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid /> */}
-               
+
+            {/* Section 4: Gallery */}
+            <div className="py-5" >
+                <Gallery />
+            </div>
+            {/* <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid /> */}
+
         </div>
     )
 }

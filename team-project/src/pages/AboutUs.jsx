@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import {
-    Navbar,
     Form,
     Nav,
     FormControl,
@@ -17,6 +16,7 @@ import {
 } from "react-bootstrap";
 import Hero from "../components/Hero";
 import "./AboutUs.css";
+import Navbar from "../components/Navbar"
 
 function AboutUs(props) {
     const [index, setIndex] = useState(0);
@@ -26,8 +26,12 @@ function AboutUs(props) {
     };
 
     return (
+        <>
+            <Navbar theme="light" />
         <div className="about-us">
+            
             <Container>
+          
                 {/* About Us */}
                 <Row>
                     <h2 className="featurette-heading">About Us</h2>
@@ -122,7 +126,7 @@ function AboutUs(props) {
 
                 <hr class="featurette-divider"></hr>
                 <Row className="featurette">
-                    <Col md={7}>
+                    <Col md={7} className ="my-auto">
                         <h2 className="featurette-heading">Tom Rachtawarn</h2>
                         <span className="text-muted">Software Developer</span>
                         <p className="lead">
@@ -161,7 +165,7 @@ function AboutUs(props) {
 
                 <hr class="featurette-divider"></hr>
                 <Row className="featurette">
-                    <Col md={7} className="order-md-2">
+                    <Col md={7} className="order-md-2 my-auto">
                         <h2 className="featurette-heading">Alan Carrasco</h2>
                         <span className="text-muted">Software Developer</span>
                         <p className="lead">
@@ -230,6 +234,7 @@ function AboutUs(props) {
                 </Row>
             </Container>
         </div>
+        </>
     );
 }
 

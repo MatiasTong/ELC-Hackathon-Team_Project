@@ -1,10 +1,10 @@
 export const resources = [
     {
-        type: "website",
-        title: "General Information About Cancer",
+        type: "event",
+        title: "Mobile Mammogram Screening in Long Island City",
         isOver40: false,
         isInsured: true,
-        organization: "American Cancer Society",
+        organization: "October 12, 10am - 4pm",
         url: "https://www.cancer.org/",
         doctorLikes: 3,
         likes: 5,
