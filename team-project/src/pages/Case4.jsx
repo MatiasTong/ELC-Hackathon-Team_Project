@@ -8,7 +8,7 @@ import CaseFourSteps from "../components/CaseFourSteps"
 import Gallery from "../components/Gallery"
 import Navbar from "../components/Navbar"
 import ResourceCard from "../components/ResourceCard"
-import {resources} from "../data/resources"
+import { resources } from "../data/resources"
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import Footer from "../components/Footer"
@@ -20,15 +20,15 @@ import "../components/Hero2.scss"
 function Case4(props) {
     const [isDesktop, setIsDesktop] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-  
+
     useEffect(() => {
-      if (window.innerWidth > 769) {
-        setIsDesktop(true);
-        setIsMobile(false);
-      } else {
-        setIsMobile(true);
-        setIsDesktop(false);
-      }
+        if (window.innerWidth > 769) {
+            setIsDesktop(true);
+            setIsMobile(false);
+        } else {
+            setIsMobile(true);
+            setIsDesktop(false);
+        }
     }, []);
 
     return (
@@ -37,20 +37,20 @@ function Case4(props) {
             {/* Section 1: Header and navbar */}
             <header
                 style={{
-                    background: "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')",
+                    background: "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://images.unsplash.com/photo-1507653050-4053dc17dfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')",
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                     minHeight: "100vh"
                 }}>
                 <Navbar />
 
-                 {/* Hero Image */}
-                 <section id="hero2" className="jumbotron" style={{ backgroundColor: "transparent" }}>
+                {/* Hero Image */}
+                <section id="hero2" className="jumbotron" style={{ backgroundColor: "transparent" }}>
                     <Container>
                         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={200} distance="30px">
                             <div className="row">
                                 <h1 className="hero2-title col-sm-12">
-                                    {"Breast Cancer in Young Women"}{' '}
+                                    {"Breast Cancer in Older Women"}{' '}
                                     <br />
                                 </h1>
                             </div>
@@ -58,7 +58,7 @@ function Case4(props) {
                         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={800} distance="30px">
                             <div className="row">
                                 <h2 className="col-sm-12 hero2-text">
-                                    {"Women who are under 40 years old may feel they are not at risk for breast cancer, but 5% of all cases happen in this group. Diagnosis can be more difficult due to breast tissue density. Also treatment can affect fertility."}
+                                    {"Breast cancer is the second leading cause of cancer death in women (only lung cancer kills more women each year). The chance that a woman will die from breast cancer is about 1 in 38 (about 2.6%)."}
                                 </h2>
 
                             </div>
@@ -79,7 +79,7 @@ function Case4(props) {
             </header>
             {/* Spacer div */}
             <div
-              id="section1"
+                id="section1"
                 style={{
                     height: "6vh",
                     padding: "0px",
@@ -108,6 +108,16 @@ function Case4(props) {
                     backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                 }}>
+                <h2
+                    className="justify-content-center"
+                    style={{
+                        fontSize: "3.2rem",
+                        fontWeight: "bold",
+                        opacity: "50%",
+                    }}
+                >
+                    Related Resources
+            </h2>
             </div>
 
             {/* Section 3: Resources */}

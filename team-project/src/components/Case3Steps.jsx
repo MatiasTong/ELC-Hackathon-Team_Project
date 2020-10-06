@@ -47,27 +47,34 @@ function Case3Steps(props) {
                 stepDescription="Find a screening program near you." >
                 <Row className="justify-content-center">
                     <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header>
-                            <h4>Reach out to your state program.</h4>
-                        </Card.Header> <Linkify>
+                    <Card.Body style={{ textAlign: "left" }}>
+
+                        <h4>Reach out to your state program.</h4>
+                        <Linkify>
                             Visit the {' '}
                             <a href='https://www.cdc.gov/cancer/nbccedp/screenings.htm?s_cid=dcpc_bcbtn_003'>
                                 CDC website
 </a>
-</Linkify>
-
-                    </Card>
-                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                    <Card.Header>
-                            <h4> Input your state.</h4>
-                            </Card.Header>
-                            <p>Note: There are territory & American Indian/Alaska Native Organization programs available.</p>
-                    </Card>
-                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                    <Card.Header>                            <h4>Call the phone number given.</h4>
-                             </Card.Header><p>Representatives are there to assist and check to see if you qualify for free or low-cost screenings, easy!</p>
+                        </Linkify>
+                        </Card.Body>
                     </Card>
 
+                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
+                    <Card.Body style={{ textAlign: "left" }}>
+
+                        <h4> Input your state.</h4>
+
+                        <p>Note: There are territory & American Indian/Alaska Native Organization programs available.</p>
+                        </Card.Body>
+                    </Card>
+                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
+                    <Card.Body style={{ textAlign: "left" }}>
+
+                        <h4>Call the phone number given.</h4>
+                        <p>Representatives are there to assist and check to see if you qualify for free or low-cost screenings, easy!</p>
+                    </Card.Body>
+                    </Card>
+    
                 </Row>
             </Accordion>
 
@@ -80,22 +87,25 @@ function Case3Steps(props) {
 
 
                     <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header><h4>Reach out to your state program.
-                            Low-income? You may be eligible.</h4></Card.Header>
+                    <Card.Body style={{ textAlign: "left" }}>
+
+                        <h4>Reach out to your state program.
+                            Low-income? You may be eligible!</h4>
                         <Linkify>
 
                             Visit the {' '}
                             <a href='https://www.healthcare.gov/lower-costs/'>
                                 HealthCare.gov website
 </a>
-</Linkify>
-
+                        </Linkify>
+                    </Card.Body>
                     </Card>
                     <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header>
-                            <h4>Bookmark our resources page.</h4>
-                        </Card.Header>
-                        <Card.Body>
+                    <Card.Body style={{ textAlign: "left" }}>
+
+                        <h4>Bookmark our resources page.</h4>
+
+                     
                             <p>Be sure to bookmark the page to stay up to date with the latest information. </p>
                         </Card.Body>
 
@@ -107,29 +117,27 @@ function Case3Steps(props) {
             <Accordion
                 stepTitle="Option 3"
                 stepDescription="Attend free events.">
-
                 <Row className="justify-content-center">
-
-
                     <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header>
-                           <h4>Browse online for any upcoming events near you.</h4>
-                    </Card.Header>
-                        <Card.Body>
+                        <Card.Body style={{ textAlign: "left" }}>
+                            <h4>Browse online for any upcoming events near you.</h4>
                             <Linkify>
                                 Visit: {' '}
                                 <a href='https://www.google.com/search?ei=QmJ7X8a6OeehytMPjI6LkAM&q=free+mammogram+screening+events+near+me&oq=free+mammogram+screening+events+near+me&gs_lcp=CgZwc3ktYWIQAzIFCAAQzQIyBQgAEM0CMgUIABDNAjoECAAQRzoCCAA6BAgAEA1QyEJY3ktgk01oAHACeACAAVSIAY4EkgEBN5gBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab&ved=0ahUKEwjG4-eAh57sAhXnkHIEHQzHAjIQ4dUDCA0&uact=5'>
                                     View Events
 </a>.
 </Linkify>
-                        </Card.Body>
 
+                        </Card.Body>
                     </Card>
-                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header>
+                    <Card
+                        className="col-9 px-0 m-2"
+                        style={{ color: "black", width: "50%" }}
+                    >
+                        <Card.Body style={{ textAlign: "left" }}>
                             <h4>Reach out to the community.</h4>
-                    </Card.Header>
-                        <Card.Body>
+
+
                             <p>Some doctor offices, churches or health departments host free screenings events from time to time.</p>
                         </Card.Body>
 
@@ -139,9 +147,9 @@ function Case3Steps(props) {
 
 
             </Accordion>
-            
-             {/* Option: 4 */}
-             <Accordion
+
+            {/* Option: 4 */}
+            <Accordion
                 stepTitle="Option 4"
                 stepDescription="Reach out to your local clinic.">
 
@@ -149,10 +157,9 @@ function Case3Steps(props) {
 
 
                     <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header>
-                            Find and book your appointment through the Planned Parenthood Portal.
-                        </Card.Header>
-                        <Card.Body>
+                        <Card.Body style={{ textAlign: "left" }}>
+                            <h4> Find and book your appointment through the Planned Parenthood Portal. </h4>
+
                             <Linkify>
                                 Visit: {' '}
                                 <a href='https://www.plannedparenthood.org/health-center'>
@@ -169,7 +176,8 @@ function Case3Steps(props) {
                 stepDescription="Friendly Reminders" >
                 <Row className="justify-content-center">
                     <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header><h4>What to expect and How to prepare</h4></Card.Header>
+                        <Card.Body style={{ textAlign: "left" }}>
+                            <h4>What to expect and How to prepare</h4>
                             <p>
                                 - Most primary doctors will not do mammograms
                                 themselves, but you will need their referral for
@@ -187,6 +195,7 @@ function Case3Steps(props) {
                                     Click Here
                                 </a>
                             </p>
+                        </Card.Body>
                     </Card>
 
                     <Card
