@@ -57,7 +57,7 @@ export const resources = [
     },
 
     {
-        type: "Video",
+        type: "video",
         title: "Breast cancer affects young women too",
         isOver40: false,
         isInsured: true,
@@ -380,6 +380,7 @@ export const resources = [
         title: "What women under 40 should be doing to detect breast cancer",
         isOver40: false,
         isInsured: false,
+        forCase: ["case3"],
         organization: "Centers for Disease Control and Prevention (CDC)",
         url: "https://www.today.com/health/what-women-under-40-should-be-doing-detect-breast-cancer-t159260",
         doctorLikes: 3,
@@ -392,6 +393,7 @@ export const resources = [
         title: "How To Catch Breast Cancer Early: Stanford Doctors Explain Mammography Options",
         isOver40: false,
         isInsured: false,
+        forCase: ["case3"],
         organization: "Stanford Health Care",
         url: "https://www.youtube.com/watch?v=ql11xKFMKg4",
         doctorLikes: 10,
