@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'react-bootstrap/Image'
-import { Nav, Carousel, Container, Card, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
+import { Nav, Carousel, Form, Container, Card, Button, Tab, Row, Col, ListGroup, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types'
 import Hero2 from "../components/Hero2"
 import Media from 'react-bootstrap/Media'

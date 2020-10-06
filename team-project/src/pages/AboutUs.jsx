@@ -80,7 +80,7 @@ function AboutUs(props) {
                     <Col md={5}>
                         <Image
                             className="featurette-image img-fluid mx-auto"
-                            src="../profileholder.jpg"
+                            src="../matias-profilepic.png"
                         />
                     </Col>
                 </Row>

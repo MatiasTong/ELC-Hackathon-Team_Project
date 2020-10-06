@@ -69,7 +69,9 @@ function Case2(props) {
                 margin: "2.8rem"
             }}>
                 <Row className="justify-content-center">
-                    {resources.map((item) => (
+                    {resources
+                        .filter((item)=>item.isOver40 === false && item.isInsured === true)
+                        .map((item) => (
                         <ResourceCard
                             className="col mx-2"
                             type={item.type}
