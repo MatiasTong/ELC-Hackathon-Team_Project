@@ -187,7 +187,9 @@ function ResourceCard({ type, likes, doctorLikes, tags, title, organization, url
                         <div></div>
 
                         <div>
-                            <Button variant="outline-info" size="sm">Helpful</Button>
+                            <a href="/">
+                            <Button variant="outline-info" size="sm" style={{zIndex: "99"}}>Helpful</Button>   
+                            </a>
                         </div>
 
                     </div>
