@@ -344,7 +344,3 @@ export const resources = [
     }
 ];
 
-
-
-]
-

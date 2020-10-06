@@ -16,12 +16,22 @@ import "../components/Gallery.scss"
 function Resources(props) {
     const [filterResources, setFilterResources] = useState(resources);
     const [inputValue, setInputValue] = useState("");
-
-
     const searchChange = (event) => {
         setFilterResources(resources.filter((item) => item.title.toLowerCase().includes(event.target.value.toLowerCase())));
     }
-
+    const filterShowAll = () => {
+        setFilterResources(resources)
+    }
+    const filterEvent = () => {
+        setFilterResources(resources.filter((item) => item.type === "event"))
+    }
+    const filterHasInsurance = () => {
+        setFilterResources(resources.filter((item) => item.isInsured === true))
+    }
+    const filterNoInsurance = () => {
+        setFilterResources(resources.filter((item) => item.isInsured === false))
+    }
+    
     return (
         <div
             style={{
@@ -42,18 +52,18 @@ function Resources(props) {
                     }}>
                 </div>
             <div className="mb-4">
-                <Button variant="success" className="my-1" size="lg"> All(20) </Button>
+                <Button variant="success" className="my-1" size="lg" onClick={ filterShowAll }> All(20) </Button>
                 {"    "}
             
 
-                <Button variant="info" className="my-1" size="lg"> With insurance </Button>
+                <Button variant="info" className="my-1" size="lg" onClick={ filterHasInsurance }> With insurance </Button>
                 {"    "}
              
 
-                <Button variant="info" className="my-1" size="lg"> No insurance </Button>
+                <Button variant="info" className="my-1" size="lg" onClick={ filterNoInsurance }> No insurance </Button>
                 {"    "}
            
-                <Button variant="info" className="my-1" size="lg"> Events </Button>
+                <Button variant="info" className="my-1" size="lg" onClick={ filterEvent }> Events </Button>
             </div>
             <Row className="justify-content-center mb-4">
                <Col sm="auto" md="auto">
