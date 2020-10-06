@@ -139,6 +139,30 @@ function Case3Steps(props) {
 
 
             </Accordion>
+            
+             {/* Option: 4 */}
+             <Accordion
+                stepTitle="Option 4"
+                stepDescription="Reach out to your local clinic.">
+
+                <Row className="justify-content-center">
+
+
+                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
+                        <Card.Header>
+                            Find and book your appointment through the Planned Parenthood Portal.
+                        </Card.Header>
+                        <Card.Body>
+                            <Linkify>
+                                Visit: {' '}
+                                <a href='https://www.plannedparenthood.org/health-center'>
+                                    Planned Parenthood site
+  </a>. You will be able to receive care through a sliding pay scale.
+</Linkify>
+                        </Card.Body>
+                    </Card>
+                </Row>
+            </Accordion>
 
             <Accordion
                 stepTitle=" &#x2605; &#x2605; &#x2605;"

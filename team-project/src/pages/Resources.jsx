@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'react-bootstrap/Image'
 import { Nav, Carousel, Container, Card, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types'
@@ -14,6 +14,14 @@ import "../styles/Resources.css"
 import "../components/Gallery.scss"
 
 function Resources(props) {
+    const [filterResources, setFilterResources] = useState(resources);
+    const [inputValue, setInputValue] = useState("");
+
+
+    const searchChange = (event) => {
+        setFilterResources(resources.filter((item) => item.title.toLowerCase().includes(event.target.value.toLowerCase())));
+    }
+
     return (
         // backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)"backgroundColor: "#f2f6fa" 
         <div style={{
@@ -42,11 +50,6 @@ function Resources(props) {
                     <Button variant="success" className="my-1" size="lg"> All(20) </Button>
                     {"    "}
 
-
-                    <Button variant="info" className="my-1" size="lg"> With insurance </Button>
-                    {"    "}
-
-
                     <Button variant="info" className="my-1" size="lg"> No insurance </Button>
                     {"    "}
 
@@ -55,14 +58,54 @@ function Resources(props) {
                 <Row className="justify-content-center mb-4">
                     <Col sm="auto" md="auto">
                         <form class="form-inline" style={{ margin: "0 auto" }}>
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+                            <input
+                                class="form-control mr-sm-2"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                                onChange={searchChange}
+                                style={{ boxShadow: "rgba(50, 50, 93, 0.11) 0px 4px 6px, rgba(0, 0, 0, 0.08) 0px 1px 3px"}}>
+                            </input>
                             <button class="btn btn-outline-primary my-2 my-sm-0 text-center" type="submit"> Search </button>
                         </form>
                     </Col>
                 </Row>
             </Container>
-
             <Container fluid>
+
+                <div id="searchContainer"
+                    style={{
+                        position: "relative",
+                        padding: "20px",
+                        borderRadius: "20px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        backgroundColor: "rgb(242,246,250, 0.8)",
+                        margin: "2vw"
+                    }}>
+                    <Row className="justify-content-center">
+                        {filterResources
+                            .map((item) => (
+                                <ResourceCard
+                                    className="col"
+                                    // style={{ padding: "0.4rem" }}
+                                    type={item.type}
+                                    title={item.title}
+                                    organization={item.organization}
+                                    url={item.url}
+                                    doctorLikes={item.doctorLikes}
+                                    likes={item.likes}
+                                    tags={item.tags}
+                                    phoneNumber={item.phoneNumber}
+                                />
+
+                            ))}
+                    </Row>
+                </div>
+            </Container>
+
+            {/* <Container fluid>
 
                 <div id="searchContainer"
                     style={{
@@ -92,10 +135,9 @@ function Resources(props) {
 
                     </Row>
                 </div>
+            </Container> */}
 
-            </Container>
 
-           
             <div
                 style={{
                     height: "20vh",
@@ -104,8 +146,8 @@ function Resources(props) {
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                 }}>
             </div>
-               
-          
+
+
 
             <Container fluid style={{ fontFamily: "Montserrat" }}>
 
@@ -120,11 +162,11 @@ function Resources(props) {
                         padding: "2vw"
                     }}>
 
-                        <header className="mb-5" style={{ textAlign: "left", fontFamily: "Montserrat", }}>
-                                    {/* <h1 style={{ fontWeight: "bold" }}> Mammogram Resources</h1> */}
-                                    <h2 style={{ color: "rgba(0, 0, 0, 0.5)" }}>Before you go...here's our daily digest</h2>
-            
-                                </header>
+                    <header className="mb-5" style={{ textAlign: "left", fontFamily: "Montserrat", }}>
+                        {/* <h1 style={{ fontWeight: "bold" }}> Mammogram Resources</h1> */}
+                        <h2 style={{ color: "rgba(0, 0, 0, 0.5)" }}>Before you go...here's our daily digest</h2>
+
+                    </header>
 
                     <Tab.Container fluid id="left-tabs-example" defaultActiveKey="first" >
                         <Row>
@@ -207,16 +249,18 @@ function Resources(props) {
                         padding: "2vw"
                     }}>
 
-                        <header className="mb-5" style={{ textAlign: "left", fontFamily: "Montserrat", }}>
-                                    <h2 style={{ color: "rgba(0, 0, 0, 0.5)" }}>Gallery</h2>
-            
-                                </header>
+                    <header className="mb-5" style={{ textAlign: "left", fontFamily: "Montserrat", }}>
+                        <h2 style={{ color: "rgba(0, 0, 0, 0.5)" }}>Gallery</h2>
+
+                    </header>
                     <div className="py-2" >
                         <Gallery />
                     </div>
                 </div>
             </Container>
             {/* <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid /> */}
+            <br />
+            <Footer></Footer>
 
 
 
@@ -234,7 +278,7 @@ function Resources(props) {
 
 
         </div>
-    )
+    );
 }
 
 export default Resources

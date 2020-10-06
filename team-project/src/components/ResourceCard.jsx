@@ -105,7 +105,7 @@ function ResourceCard({ type, likes, doctorLikes, tags, title, organization, url
                 <StyledCardBody className="container" >
                     {infoTag()}
 
-                    <Row style={{ marginBottom: "0.5rem", display: "grid", fontSize: "14px", gridTemplateColumns: "repeat(4, 1fr)", justifyItems: "center" }}>
+                    <Row style={{ marginBottom: "0.5rem", display: "grid", fontSize: "14px", gridTemplateColumns: "repeat(4, 1fr)", justifyItems: "flex-start" }}>
                         {/* Add list of tags to top of card */}
                         {tags ? tags.map(tag => (
                             <div style={{ color: "#908A8A", padding: "5px 10px" }}>

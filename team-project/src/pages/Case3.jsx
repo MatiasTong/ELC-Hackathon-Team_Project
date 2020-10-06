@@ -1,5 +1,5 @@
 import Image from 'react-bootstrap/Image'
-import { Nav, Carousel, Container, Card,Accordion, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
+import { Nav, Carousel, Container, Card, Accordion, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types'
 import Hero2 from "../components/Hero2"
 import Media from 'react-bootstrap/Media'
@@ -10,7 +10,7 @@ import Linkify from 'react-linkify';
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import ResourceCard from "../components/ResourceCard"
-import {resources} from "../data/resources"
+import { resources } from "../data/resources"
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
@@ -21,15 +21,15 @@ import "../components/Hero2.scss"
 function Case3(props) {
     const [isDesktop, setIsDesktop] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-  
+
     useEffect(() => {
-      if (window.innerWidth > 769) {
-        setIsDesktop(true);
-        setIsMobile(false);
-      } else {
-        setIsMobile(true);
-        setIsDesktop(false);
-      }
+        if (window.innerWidth > 769) {
+            setIsDesktop(true);
+            setIsMobile(false);
+        } else {
+            setIsMobile(true);
+            setIsDesktop(false);
+        }
     }, []);
 
     return (
@@ -45,8 +45,8 @@ function Case3(props) {
                 }}>
                 <Navbar />
 
-                  {/* Hero Image */}
-                  <section id="hero2" className="jumbotron" style={{ backgroundColor: "transparent" }}>
+                {/* Hero Image */}
+                <section id="hero2" className="jumbotron" style={{ backgroundColor: "transparent" }}>
                     <Container>
                         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={200} distance="30px">
                             <div className="row">
@@ -80,7 +80,7 @@ function Case3(props) {
             </header>
             {/* Spacer div */}
             <div
-                  id="section1"
+                id="section1"
                 style={{
                     height: "6vh",
                     padding: "0px",
@@ -111,8 +111,8 @@ function Case3(props) {
                 }}>
             </div>
 
-           {/* Section 3: Resources */}
-           <div style={{
+            {/* Section 3: Resources */}
+            <div style={{
                 padding: "20px",
                 borderRadius: "20px",
                 display: "flex",
@@ -122,21 +122,23 @@ function Case3(props) {
                 margin: "2.8rem"
             }}>
                 <Row className="justify-content-center">
-                    {resources.map((item) => (
-                        <ResourceCard
-                            className="col mx-2"
-                            type={item.type}
-                            title={item.title}
-                            organization={item.organization}
-                            url = {item.url}
-                            doctorLikes={item.doctorLikes}
-                            likes={item.likes}
-                            tags={item.tags}
-                            phoneNumber ={item.phoneNumber}
-                        />
+                    {resources
+                        .filter((item) => item.isOver40 === false && item.isInsured === false)
+                        .map((item) => (
+                            <ResourceCard
+                                className="col mx-2"
+                                type={item.type}
+                                title={item.title}
+                                organization={item.organization}
+                                url={item.url}
+                                doctorLikes={item.doctorLikes}
+                                likes={item.likes}
+                                tags={item.tags}
+                                phoneNumber={item.phoneNumber}
+                            />
 
-                    ))}
-                   
+                        ))}
+
                 </Row>
             </div>
             {/* Spacer Div */}
@@ -190,31 +192,8 @@ function Case3(props) {
                 </Tab.Container>
 
             </Container> */}
-            <br />
-
-             {/* Option: 4 */}
-             <Accordion
-                stepTitle="Option 4"
-                stepDescription="Reach out to your local clinic.">
-
-                <Row className="justify-content-center">
 
 
-                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
-                        <Card.Header>
-                            Find and book your appointment through the Planned Parenthood Portal.
-                        </Card.Header>
-                        <Card.Body>
-                            <Linkify>
-                                Visit: {' '}
-                                <a href='https://www.plannedparenthood.org/health-center'>
-                                    Planned Parenthood site
-  </a>. You will be able to receive care through a sliding pay scale.
-</Linkify>
-                        </Card.Body>
-                    </Card>
-                </Row>
-            </Accordion>
 
             {/* Section 4: Gallery */}
             <div className="py-5" >
