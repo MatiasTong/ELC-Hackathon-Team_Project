@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { Row, Col } from "react-bootstrap"
+import { Row, Image, Col } from "react-bootstrap"
 import Hero2 from "../components/Hero2"
 import Media from 'react-bootstrap/Media'
 import StepsCase2 from "../components/StepsCase2"
@@ -168,14 +168,6 @@ function Case2(props) {
                 }}>
             </div>
 
-
-
-
-
-
-
-
-
             {/* 
             <ul className="list-unstyled">
                 <Media as="li" className="mx-5 my-5">
@@ -260,7 +252,10 @@ function Case2(props) {
                 <a href="http://www.zocdoc.com"><h1>Find doctors in your network</h1> </a>
 
             </ul> */}
-            <Footer></Footer>
+
+            <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
+            <br />
+        <Footer></Footer>
         </div>
     )
 }

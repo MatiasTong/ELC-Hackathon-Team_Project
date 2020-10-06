@@ -7,8 +7,10 @@ import Hero2 from "../components/Hero2"
 import Gallery from "../components/Gallery"
 import "../App.css"
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import { resources } from "../data/resources"
 import ResourceCard from "../components/ResourceCard"
+
 import "../components/Gallery.scss"
 
 function Resources(props) {
@@ -16,7 +18,7 @@ function Resources(props) {
         <div style={{ backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
             <Navbar theme="light" />
             <Container>
-
+ 
                 {/* Spacer div */}
                 <div
                     style={{
@@ -27,18 +29,53 @@ function Resources(props) {
                     }}>
                 </div>
 
-                <Row className="mb-2 justify-content-center" style={{width:"70%"}}>
-                    <Col>
-                        <Button variant="success" size="lg"> All(20) </Button>
-                    </Col>
-                    <Col>
-                        <Button variant="info" size="lg"> With insurance </Button>
-                    </Col>
-                    <Col>
-                        <Button variant="info" size="lg"> No insurance </Button>
-                    </Col>
-                    <Col>
-                        <Button variant="info" size="lg"> Events </Button>
+            <div className="mb-4">
+                <Button variant="success" size="lg"> All(20) </Button>
+                {"    "}
+            
+
+                <Button variant="info" size="lg"> With insurance </Button>
+                {"    "}
+             
+
+                <Button variant="info" size="lg"> No insurance </Button>
+                {"    "}
+           
+                <Button variant="info" size="lg"> Events </Button>
+            </div>
+            <Row className="justify-content-center">
+                <form class="form-inline col mx-auto">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search </button>
+                </form>
+            </Row>
+
+
+            <div style={{
+                padding: "20px",
+                borderRadius: "20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "#f2f6fa",
+                margin: "2.8rem"
+            }}>
+                <Row className="justify-content-center">
+                    {resources
+                        .map((item) => (
+                            <ResourceCard
+                                className="col mx-2"
+                                type={item.type}
+                                title={item.title}
+                                organization={item.organization}
+                                url={item.url}
+                                doctorLikes={item.doctorLikes}
+                                likes={item.likes}
+                                tags={item.tags}
+                                phoneNumber={item.phoneNumber}
+                            />
+
+                        ))}
 
                     </Col>
                 </Row>
@@ -85,6 +122,14 @@ function Resources(props) {
 
 
 
+            <br />
+            <Image src="./mammyths.jpg" />
+            <br />
+            {/* Section 4: Gallery */}
+            <div className="py-5" >
+                <Gallery />
+            </div>
+
             <Container>
 
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
@@ -94,12 +139,11 @@ function Resources(props) {
                                 <Nav.Item>
                                     <Nav.Link eventKey="first">Prevention Tips</Nav.Link>
                                 </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="second">First Mammogram Video</Nav.Link>
-                                </Nav.Item>
                             </Nav>
                         </Col>
                         <Col sm={9}>
+
+
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
 
@@ -117,16 +161,11 @@ function Resources(props) {
                                         <ListGroup.Item>If you have a family history of breast cancer or inherited changes in your BRCA1 and BRCA2 genes, talk to your doctor about other ways to lower your risk.</ListGroup.Item>
                                         <hr className="mt-0 mb-0"/>
                                         <ListGroup.Item><p style={{ color: "gray" }}>Source: Division of Cancer Prevention and Control, Centers for Disease Control and Prevention</p> </ListGroup.Item>
-
                                     </ListGroup>
 
                                     {/* <Sonnet /> */}
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="second">
-                                    <ListGroup.Item><iframe width="560" height="315" src="https://www.youtube.com/embed/MGsWSQGmFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </ListGroup.Item>  {/* <Sonnet /> */}
-                                </Tab.Pane>
-                            </Tab.Content>
+                              </Tab.Content>
                         </Col>
                     </Row>
                 </Tab.Container>

@@ -359,7 +359,7 @@ function StepsCase2(props) {
                         style={{ color: "black", width: "50%" }}
                     >
                         <Card.Body style={{ textAlign: "left" }}>
-                            <h4>How can I stay claim while waiting?</h4>
+                            <h4>How can I stay calm while waiting?</h4>
                             <p>
                                 Waiting for appointments and the results of
                                 tests can be frightening. Many women have strong
