@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'react-bootstrap/Image'
 import { Nav, Carousel, Container, Card, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types'
@@ -14,8 +14,21 @@ import ResourceCard from "../components/ResourceCard"
 import "../components/Gallery.scss"
 
 function Resources(props) {
+    const [filterResources, setFilterResources] = useState(resources);
+    const [inputValue, setInputValue] = useState("");
+
+
+    const searchChange = (event) => {
+        setFilterResources(resources.filter((item) => item.title.toLowerCase().includes(event.target.value.toLowerCase())));
+    }
+
     return (
-        <div style={{ backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
+        <div
+            style={{
+                backgroundImage:
+                    "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)",
+            }}
+        >
             <Navbar theme="light" />
             <Container>
  
@@ -28,7 +41,6 @@ function Resources(props) {
                         // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                     }}>
                 </div>
-
             <div className="mb-4">
                 <Button variant="success" className="my-1" size="lg"> All(20) </Button>
                 {"    "}
@@ -46,13 +58,11 @@ function Resources(props) {
             <Row className="justify-content-center mb-4">
                <Col sm="auto" md="auto">
                 <form class="form-inline" style={{margin:"0 auto"}}>
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={searchChange}></input>
                     <button class="btn btn-outline-primary my-2 my-sm-0 text-center" type="submit"> Search </button>
                 </form>
                </Col>
             </Row>
-
-
             <div style={{
                 padding: "20px",
                 borderRadius: "20px",
@@ -63,7 +73,7 @@ function Resources(props) {
                 margin: "0.5rem"
             }}>
                 <Row className="justify-content-center">
-                    {resources
+                    {filterResources
                         .map((item) => (
                             <ResourceCard
                                 className="col"
@@ -79,10 +89,8 @@ function Resources(props) {
                             />
 
                         ))}
-
                 </Row>
                 </div>
-
             </Container>
 
 
@@ -97,13 +105,14 @@ function Resources(props) {
             </div> */}
 
             <Container style ={{fontFamily: "Montserrat"}}>
-
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Row>
                         <Col sm={3}>
                             <Nav variant="pills" className="flex-column">
                                 <Nav.Item>
-                                    <Nav.Link eventKey="first">Prevention Tips</Nav.Link>
+                                    <Nav.Link eventKey="first">
+                                        Prevention Tips
+                                    </Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </Col>
@@ -112,7 +121,6 @@ function Resources(props) {
 
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
-
                                     <ListGroup variant="flush" style={{fontSize:"1.2rem"}} >
                                         <ListGroup.Item className ="resources-list-item" style={{backgroundColor:"#FFFFF"}}>Maintain a healthy weight.</ListGroup.Item>
                                         <hr className="mt-0 mb-1"/>
@@ -145,9 +153,8 @@ function Resources(props) {
                 <Gallery />
             </div>
             {/* <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid /> */}
-
         </div>
-    )
+    );
 }
 
 export default Resources

@@ -31,16 +31,22 @@ function Case2(props) {
     }, []);
 
     return (
-        <div style={{ backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
-
+        <div
+            style={{
+                backgroundImage:
+                    "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)",
+            }}
+        >
             {/* Section 1: Header and navbar */}
             <header
                 style={{
-                    background: "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')",
+                    background:
+                        "linear-gradient(0deg, rgba(44, 31, 61, 0.35), rgba(22, 11, 11, 0.349)), url('https://images.unsplash.com/photo-1535469420027-517674dad7a1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')",
                     backgroundPosition: "center",
                     backgroundSize: "cover",
-                    minHeight: "100vh"
-                }}>
+                    minHeight: "100vh",
+                }}
+            >
                 <Navbar />
 
                 {/* Hero Image */}
@@ -83,10 +89,11 @@ function Case2(props) {
                 style={{
                     height: "6vh",
                     padding: "0px",
-                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                    backgroundImage:
+                        "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                }}>
-            </div>
+                }}
+            ></div>
 
             {/* Section 2: Steps or Options */}
             <div
@@ -96,8 +103,9 @@ function Case2(props) {
                     borderRadius: "10px",
                     margin: "2.8rem",
                     backgroundColor: "#f2f6fa",
-                    border: "none"
-                }}>
+                    border: "none",
+                }}
+            >
                 <StepsCase2 />
             </div>
 
@@ -106,24 +114,27 @@ function Case2(props) {
                 style={{
                     height: "4vh",
                     padding: "0px",
-                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                    backgroundImage:
+                        "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                }}>
-            </div>
+                }}
+            ></div>
 
             {/* Section 3: Resources */}
-            <div style={{
-                padding: "20px",
-                borderRadius: "20px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#f2f6fa",
-                margin: "2.8rem"
-            }}>
+            <div
+                style={{
+                    padding: "20px",
+                    borderRadius: "20px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "#f2f6fa",
+                    margin: "2.8rem",
+                }}
+            >
                 <Row className="justify-content-center">
                     {resources
-                        .filter((item) => item.isOver40 === false && item.isInsured === true)
+                        .filter((item) => item.forCase.includes("case2"))
                         .map((item) => (
                             <ResourceCard
                                 className="col mx-2"
@@ -136,9 +147,7 @@ function Case2(props) {
                                 tags={item.tags}
                                 phoneNumber={item.phoneNumber}
                             />
-
                         ))}
-
                 </Row>
             </div>
 
@@ -147,23 +156,24 @@ function Case2(props) {
                 style={{
                     height: "4vh",
                     padding: "0px",
-                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                    backgroundImage:
+                        "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                }}>
-            </div>
+                }}
+            ></div>
 
             {/* Section 4: Gallery */}
-            <div className="py-5" >
+            <div className="py-5">
                 <Gallery />
             </div>
-
 
             {/* Spacer Div */}
             <div
                 style={{
                     height: "4vh",
                     padding: "0px",
-                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
+                    backgroundImage:
+                        "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                 }}>
             </div>
@@ -252,12 +262,11 @@ function Case2(props) {
                 <a href="http://www.zocdoc.com"><h1>Find doctors in your network</h1> </a>
 
             </ul> */}
-
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
             <br />
         <Footer></Footer>
         </div>
-    )
+    );
 }
 
 Case2.propTypes = {
