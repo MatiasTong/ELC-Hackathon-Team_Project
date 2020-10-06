@@ -13,8 +13,8 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 // import { Link } from 'react-router-dom';
-
 import "../components/Hero2.scss"
+
 
 function Case2(props) {
     const [isDesktop, setIsDesktop] = useState(false);
@@ -134,8 +134,7 @@ function Case2(props) {
             >
                 <Row className="justify-content-center">
                     {resources
-                        .filter((item) => item.forCase.includes("case2"))
-                        .map((item) => (
+                        .filter((item) => item.forCase.includes("case2")).map((item) => (
                             <ResourceCard
                                 className="col mx-2"
                                 type={item.type}
@@ -147,7 +146,9 @@ function Case2(props) {
                                 tags={item.tags}
                                 phoneNumber={item.phoneNumber}
                             />
+
                         ))}
+
                 </Row>
             </div>
 
@@ -262,9 +263,9 @@ function Case2(props) {
                 <a href="http://www.zocdoc.com"><h1>Find doctors in your network</h1> </a>
 
             </ul> */}
+            <Footer></Footer>
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
             <br />
-        <Footer></Footer>
         </div>
     );
 }
