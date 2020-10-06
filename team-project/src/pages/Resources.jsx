@@ -10,6 +10,7 @@ import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { resources } from "../data/resources"
 import ResourceCard from "../components/ResourceCard"
+import RecommendPopoverButton from "../components/RecommendPopoverButton"
 import "../styles/Resources.css"
 import "../components/Gallery.scss"
 
@@ -41,7 +42,12 @@ function Resources(props) {
                 </div>
 
                 <header className="mb-4" style={{ textAlign: "left", fontFamily: "Montserrat" }}>
-                    <h1 style={{ fontWeight: "bold" }}> Mammogram Resources</h1>
+                    {/* <Row> */}
+                    <h1 style={{ fontWeight: "bold", display:"inline-block", paddingRight:"1.2rem"}}> Mammogram Resources</h1> 
+                     {/* <RecommendPopoverButton/> */}
+
+                    {/* </Row> */}
+
                     <h2 style={{ color: "rgba(0, 0, 0, 0.5)" }}>Up-to-date resources recommended by health professionals & you!</h2>
 
                 </header>
@@ -59,14 +65,14 @@ function Resources(props) {
                     <Col sm="auto" md="auto">
                         <form class="form-inline" style={{ margin: "0 auto" }}>
                             <input
-                                class="form-control mr-sm-2"
+                                class="form-control mr-sm-2 "
                                 type="search"
                                 placeholder="Search"
                                 aria-label="Search"
                                 onChange={searchChange}
-                                style={{ boxShadow: "rgba(50, 50, 93, 0.11) 0px 4px 6px, rgba(0, 0, 0, 0.08) 0px 1px 3px"}}>
+                                style={{ boxShadow: "rgba(50, 50, 93, 0.11) 0px 4px 6px, rgba(0, 0, 0, 0.08) 0px 1px 3px", 
+                                width: "100%"}}>
                             </input>
-                            <button class="btn btn-outline-primary my-2 my-sm-0 text-center" type="submit"> Search </button>
                         </form>
                     </Col>
                 </Row>
@@ -140,12 +146,14 @@ function Resources(props) {
 
             <div
                 style={{
-                    height: "20vh",
-                    padding: "0px",
+                    // height: "20vh",
+                    marginTop:"10vh",
+                    paddingTop: "10vh",
                     backgroundColor: "rgb(148,0,211, 0.4)",
+                    backgroundImage: "linear-gradient(to bottom, rgb(242,246,250, 0.1) 0%, rgb(242,246,250, 0.4) 100%)"
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                 }}>
-            </div>
+           
 
 
 
@@ -226,7 +234,7 @@ function Resources(props) {
                 style={{
                     height: "6vh",
                     padding: "0px",
-                    backgroundColor: "purple",
+                    backgroundColor: "transparent",
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                 }}>
             </div>
@@ -245,7 +253,6 @@ function Resources(props) {
                         alignItems: "center",
                         justifyContent: "center",
                         backgroundColor: "rgb(242,246,250, 0.4)",
-                        // backgroundColor: "lightpurple",
                         padding: "2vw"
                     }}>
 
@@ -260,7 +267,6 @@ function Resources(props) {
             </Container>
             {/* <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid /> */}
             <br />
-            <Footer></Footer>
 
 
 
@@ -273,6 +279,8 @@ function Resources(props) {
                     // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
                 }}>
             </div>
+            </div>
+
             <Footer />
 
 

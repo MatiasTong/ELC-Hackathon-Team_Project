@@ -11,6 +11,7 @@ import { FaPhoneAlt } from "react-icons/fa"
 import { BsFillCameraVideoFill } from "react-icons/bs"
 import { Row, Col, Button, Badge } from "react-bootstrap"
 import { RiCalendarEventFill, RiStethoscopeFill, RiStethoscopeLine, RiEyeCloseFill } from "react-icons/ri"
+import PopoverButton from "./PopoverButton"
 
 // [{
 //     type: "event, video, website, phone" 
@@ -187,9 +188,10 @@ function ResourceCard({ type, likes, doctorLikes, tags, title, organization, url
                         <div></div>
 
                         <div>
-                            <a href="/">
-                            <Button variant="outline-info" size="sm" style={{zIndex: "99"}}>Helpful</Button>   
-                            </a>
+                            
+                            <PopoverButton/>
+                            {/* <Button variant="outline-info" size="sm" style={{zIndex: "99"}}>Helpful</Button>    */}
+                            
                         </div>
 
                     </div>

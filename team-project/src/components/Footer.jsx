@@ -54,7 +54,7 @@ const FooterPage = () => {
                     </MDBCol>
                 </MDBRow>
             </MDBContainer>
-            <div style={{ backgroundColor: '#ffc0cb' }} className="footer-copyright text-center py-3">
+            <div style={{backgroundColor: "#FFCCCB" }} className="footer-copyright text-center py-3">
                 <MDBContainer fluid>
                     &copy; {new Date().getFullYear()} Copyright: <a href="#!"> ezcheck.com </a>
                 </MDBContainer>
