@@ -56,17 +56,19 @@ function Case1(props) {
                         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={200} distance="30px">
                             <div className="row">
                                 <h1 className="hero2-title col-sm-12">
-                                    {"Breast Cancer in Young Women"}{' '}
-                                    <br />
+                                    <b>Congratulations!!</b> We have found a way for you to get screening with no cost.
                                 </h1>
                             </div>
                         </Fade>
                         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={800} distance="30px">
                             <div className="row">
                                 <h2 className="col-sm-12 hero2-text">
-                                    {"Women who are under 40 years old may feel they are not at risk for breast cancer, but 5% of all cases happen in this group. Diagnosis can be more difficult due to breast tissue density. Also treatment can affect fertility."}
+                                    The Affordable Care Act requires most health
+                                    insurance plans to pay for screening mammograms with no
+                                    out-of-pocket expenses for women ages 40 and older.<br/>
+                                    Since, you are 40 or older and have insurance. You can get checked with
+                                    no extra cost.                                
                                 </h2>
-
                             </div>
                         </Fade>
                         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1100} distance="30px">
