@@ -7,9 +7,7 @@ import Hero2 from "../components/Hero2"
 import Gallery from "../components/Gallery"
 import "../App.css"
 import Navbar from "../components/Navbar"
-
 import Footer from "../components/Footer"
-
 import { resources } from "../data/resources"
 import ResourceCard from "../components/ResourceCard"
 
@@ -30,10 +28,18 @@ function Resources(props) {
                 }}>
             </div>
 
-            <div className="mb-2">
+            <div className="mb-4">
                 <Button variant="success" size="lg"> All(20) </Button>
+                {"    "}
+            
+
                 <Button variant="info" size="lg"> With insurance </Button>
+                {"    "}
+             
+
                 <Button variant="info" size="lg"> No insurance </Button>
+                {"    "}
+           
                 <Button variant="info" size="lg"> Events </Button>
             </div>
             <Row className="justify-content-center">
@@ -82,7 +88,6 @@ function Resources(props) {
                 <Gallery />
             </div>
 
-            
             <Container>
 
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
@@ -92,12 +97,11 @@ function Resources(props) {
                                 <Nav.Item>
                                     <Nav.Link eventKey="first">Prevention Tips</Nav.Link>
                                 </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="second">First Mammogram Video</Nav.Link>
-                                </Nav.Item>
                             </Nav>
                         </Col>
                         <Col sm={9}>
+
+
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
 
@@ -109,29 +113,17 @@ function Resources(props) {
                                         <ListGroup.Item>Breastfeed your children, if possible.</ListGroup.Item>
                                         <ListGroup.Item>If you have a family history of breast cancer or inherited changes in your BRCA1 and BRCA2 genes, talk to your doctor about other ways to lower your risk.</ListGroup.Item>
                                         <ListGroup.Item><p style={{ color: "gray" }}>Source: Division of Cancer Prevention and Control, Centers for Disease Control and Prevention</p> </ListGroup.Item>
-
                                     </ListGroup>
 
                                     {/* <Sonnet /> */}
                                 </Tab.Pane>
-                                <Tab.Pane eventKey="second">
-                                    <ListGroup.Item><iframe width="560" height="315" src="https://www.youtube.com/embed/MGsWSQGmFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    </ListGroup.Item>  {/* <Sonnet /> */}
-                                </Tab.Pane>
-                            </Tab.Content>
+                              </Tab.Content>
                         </Col>
                     </Row>
-                </Tab.Container> */}
-            </Container> 
-
-
-               
-                {/* Section 4: Gallery */}
-                <div className="py-5" >
-                    <Gallery />
-                </div>
-                {/* <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid /> */}
-
+                </Tab.Container>
+            </Container>
+            {/* <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid /> */}
+            <Footer></Footer>
         </div>
     )
 }

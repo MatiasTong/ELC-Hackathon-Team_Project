@@ -9,12 +9,12 @@ import Gallery from "../components/Gallery"
 import Navbar from "../components/Navbar"
 import ResourceCard from "../components/ResourceCard"
 import Footer from "../components/Footer"
-import {resources} from "../data/resources"
+import { resources } from "../data/resources"
 
 function Case4(props) {
     return (
         <div style={{ backgroundImage: "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)" }}>
-           
+
             {/* Section 1: Header and navbar */}
             <header
                 style={{
@@ -69,26 +69,28 @@ function Case4(props) {
                 margin: "2.8rem"
             }}>
                 <Row className="justify-content-center">
-                    {resources.map((item) => (
-                        <ResourceCard
-                            className="col mx-2"
-                            type={item.type}
-                            title={item.title}
-                            organization={item.organization}
-                            url = {item.url}
-                            doctorLikes={item.doctorLikes}
-                            likes={item.likes}
-                            tags={item.tags}
-                            phoneNumber ={item.phoneNumber}
-                        />
+                    {resources
+                        .filter((item) => item.isOver40 === true && item.isInsured === false)
+                        .map((item) => (
+                            <ResourceCard
+                                className="col mx-2"
+                                type={item.type}
+                                title={item.title}
+                                organization={item.organization}
+                                url={item.url}
+                                doctorLikes={item.doctorLikes}
+                                likes={item.likes}
+                                tags={item.tags}
+                                phoneNumber={item.phoneNumber}
+                            />
 
-                    ))}
-                   
+                        ))}
+
                 </Row>
             </div>
 
-                  {/* Spacer Div */}
-                  <div
+            {/* Spacer Div */}
+            <div
                 style={{
                     height: "4vh",
                     padding: "0px",
@@ -140,9 +142,9 @@ function Case4(props) {
 
             </Container> */}
             <br />
-          
-         {/* Section 4: Gallery */}
-         <div className="py-5" >
+
+            {/* Section 4: Gallery */}
+            <div className="py-5" >
                 <Gallery />
             </div>
 

@@ -1,11 +1,13 @@
 import React from 'react'
 import Image from 'react-bootstrap/Image'
-import { Nav, Carousel, Container, Card, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
+import { Nav, Carousel, Container, Card,Accordion, Button, Tab, Row, Col, Tabs, CardGroup, Form, ListGroup, Jumbotron } from 'react-bootstrap';
 import PropTypes from 'prop-types'
 import Hero2 from "../components/Hero2"
 import Media from 'react-bootstrap/Media'
 import Case3Steps from "../components/Case3Steps"
 import Gallery from "../components/Gallery"
+import Linkify from 'react-linkify';
+
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import ResourceCard from "../components/ResourceCard"
@@ -139,6 +141,30 @@ function Case3(props) {
 
             </Container> */}
             <br />
+
+             {/* Option: 4 */}
+             <Accordion
+                stepTitle="Option 4"
+                stepDescription="Reach out to your local clinic.">
+
+                <Row className="justify-content-center">
+
+
+                    <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
+                        <Card.Header>
+                            Find and book your appointment through the Planned Parenthood Portal.
+                        </Card.Header>
+                        <Card.Body>
+                            <Linkify>
+                                Visit: {' '}
+                                <a href='https://www.plannedparenthood.org/health-center'>
+                                    Planned Parenthood site
+  </a>. You will be able to receive care through a sliding pay scale.
+</Linkify>
+                        </Card.Body>
+                    </Card>
+                </Row>
+            </Accordion>
 
             {/* Section 4: Gallery */}
             <div className="py-5" >

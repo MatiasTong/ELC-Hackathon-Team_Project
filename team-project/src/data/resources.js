@@ -40,7 +40,7 @@ export const resources = [
 
     {
         type: "video",
-        title: "Getting A Mammogram When You Don't Have Insurance You ",
+        title: "Getting A Mammogram When You Don't Have Insurance",
         isOver40: true,
         isInsured: false,
         organization: "The American Cancer Society",
@@ -49,5 +49,35 @@ export const resources = [
         likes: 5,
         tags: "",
         searchTerms:["over40, breast cancer"]
+    },
+
+    {
+        type: "website",
+        title: "Mammogram Procedure",
+        isOver40: true,
+        isInsured: false,
+        organization: "John Hopkins Medicine",
+        url: "https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/mammogram-procedure",
+        doctorLikes: 10,
+        likes: 8,
+        tags: ["mammogram"],
+        searchTerms:["over40, Recommended"]
+    },
+    {
+        type: "video",
+        title: "What You Should Know Before Your First Mammogram",
+        isOver40: true,
+        isInsured: false,
+        organization: "Center for Diagnostic Imaging",
+        url: "https://www.youtube.com/watch?v=MGsWSQGmFnY&t=1s",
+        doctorLikes: 7,
+        likes: 5,
+        tags: ["firstmammogram"],
+        searchTerms:["First Mammogram, Recommended"]
     }
+
+
+    
+
+
 ]
