@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import {
-    Navbar,
     Form,
     Nav,
     FormControl,
@@ -15,18 +14,22 @@ import {
     Col,
     Image,
 } from "react-bootstrap";
+import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import Footer from "../components/Footer";
 import "./AboutUs.css";
 
 function AboutUs(props) {
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
 
     return (
-        <div className="about-us">
+        <div
+            className="about-us"
+            style={{
+                backgroundImage:
+                    "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)",
+            }}
+        >
+            <Navbar theme="light" />
             <Container>
                 {/* About Us */}
                 <Row>
@@ -229,6 +232,7 @@ function AboutUs(props) {
                     </Col>
                 </Row>
             </Container>
+            <Footer/>
         </div>
     );
 }
