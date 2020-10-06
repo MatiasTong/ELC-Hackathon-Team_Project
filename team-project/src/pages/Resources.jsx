@@ -62,7 +62,7 @@ function Resources(props) {
                 </header>
 
                 <div className="mb-4">
-                    <Button variant="success" className="my-1" size="lg" onClick={ filterShowAll }> All(20) </Button>
+                    <Button variant="success" className="my-1" size="lg" onClick={ filterShowAll }> All </Button>
                     {"    "}
             
 

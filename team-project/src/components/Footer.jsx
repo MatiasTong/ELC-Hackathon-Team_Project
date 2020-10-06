@@ -21,13 +21,13 @@ const FooterPage = () => {
                             <h5 className="title">Links</h5>
 
                             <li className="list-unstyled">
-                                <a href="#!">About Us</a>
+                                <a href="/AboutUs">About Us</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!">Contact Us</a>
+                                <a href="/AboutUs">Contact Us</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!">Help</a>
+                                <a href="/AboutUs">Help</a>
                             </li>
                             {/* <li className="list-unstyled">
                                 <a href="#!">Link 4</a>
