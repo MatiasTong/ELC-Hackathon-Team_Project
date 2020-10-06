@@ -13,21 +13,21 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 // import { Link } from 'react-router-dom';
-
 import "../components/Hero2.scss"
+
 
 function Case2(props) {
     const [isDesktop, setIsDesktop] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
-  
+
     useEffect(() => {
-      if (window.innerWidth > 769) {
-        setIsDesktop(true);
-        setIsMobile(false);
-      } else {
-        setIsMobile(true);
-        setIsDesktop(false);
-      }
+        if (window.innerWidth > 769) {
+            setIsDesktop(true);
+            setIsMobile(false);
+        } else {
+            setIsMobile(true);
+            setIsDesktop(false);
+        }
     }, []);
 
     return (
@@ -85,7 +85,7 @@ function Case2(props) {
 
             {/* Spacer div */}
             <div
-              id="section1"
+                id="section1"
                 style={{
                     height: "6vh",
                     padding: "0px",
@@ -97,7 +97,7 @@ function Case2(props) {
 
             {/* Section 2: Steps or Options */}
             <div
-          
+
                 style={{
                     //  background: "linear-gradient(0deg, rgba(241, 241, 241,0.2), rgba(241, 241, 241,0.2)), url(https://images.unsplash.com/photo-1552035509-b247fe8e5078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
                     borderRadius: "10px",
@@ -147,7 +147,9 @@ function Case2(props) {
                                 tags={item.tags}
                                 phoneNumber={item.phoneNumber}
                             />
+
                         ))}
+
                 </Row>
             </div>
 
@@ -263,8 +265,7 @@ function Case2(props) {
 
             </ul> */}
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
-            <br />
-        <Footer></Footer>
+            <Footer></Footer>
         </div>
     );
 }
