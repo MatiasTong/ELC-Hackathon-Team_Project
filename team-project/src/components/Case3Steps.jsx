@@ -14,8 +14,6 @@ import InfoModal from "./InfoModal";
 import Option from "./Option"
 
 
-import React from 'react'
-import PropTypes from 'prop-types'
 
 function Case3Steps(props) {
     const [modalShow, setModalShow] = React.useState(false);
@@ -66,6 +64,13 @@ function Case3Steps(props) {
                         <p>Note: There are territory & American Indian/Alaska Native Organization programs available.</p>
                     </Card.Body>
                 </Card>
+                <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
+                    <Card.Body style={{ textAlign: "left" }}>
+                        <h4>Call the phone number given.</h4>
+                        <p>Representatives are there to assist and check to see if you qualify for free or low-cost screenings, easy!</p>
+                    </Card.Body>
+                </Card>
+
                 <Card className="col-9 px-0 m-2" style={{ color: "black", width: "50%" }}>
                     <Card.Body style={{ textAlign: "left" }}>
                         <h4>Call the phone number given.</h4>

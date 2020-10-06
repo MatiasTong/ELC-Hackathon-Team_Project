@@ -8,6 +8,7 @@ import CaseFourSteps from "../components/CaseFourSteps"
 import Gallery from "../components/Gallery"
 import Navbar from "../components/Navbar"
 import ResourceCard from "../components/ResourceCard"
+import Footer from "../components/Footer"
 import {resources} from "../data/resources"
 
 function Case4(props) {
@@ -97,7 +98,7 @@ function Case4(props) {
             </div>
 
 
-            <Container>
+            {/* <Container>
                 <br />
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                     <Row>
@@ -126,18 +127,18 @@ function Case4(props) {
 
                                     </ListGroup>
 
-                                    {/* <Sonnet /> */}
+                                  
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
                                    <ListGroup.Item><iframe width="560" height="315" src="https://www.youtube.com/embed/MGsWSQGmFnY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                   </ListGroup.Item> {/* <Sonnet /> */}
+                                   </ListGroup.Item> 
                                 </Tab.Pane>
                             </Tab.Content>
                         </Col>
                     </Row>
                 </Tab.Container>
 
-            </Container>
+            </Container> */}
             <br />
           
          {/* Section 4: Gallery */}
@@ -149,6 +150,9 @@ function Case4(props) {
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
             <br />
             <br />
+
+            <Footer></Footer>
+
         </div>
     )
 }

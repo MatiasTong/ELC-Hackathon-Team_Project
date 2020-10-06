@@ -7,8 +7,12 @@ import Hero2 from "../components/Hero2"
 import Gallery from "../components/Gallery"
 import "../App.css"
 import Navbar from "../components/Navbar"
+
+import Footer from "../components/Footer"
+
 import { resources } from "../data/resources"
 import ResourceCard from "../components/ResourceCard"
+
 import "../components/Gallery.scss"
 
 function Resources(props) {
@@ -70,6 +74,15 @@ function Resources(props) {
             </div>
 
 
+            <br />
+            <Image src="./mammyths.jpg" />
+            <br />
+            {/* Section 4: Gallery */}
+            <div className="py-5" >
+                <Gallery />
+            </div>
+
+            
             <Container>
 
                 <Tab.Container id="left-tabs-example" defaultActiveKey="first">
@@ -111,13 +124,14 @@ function Resources(props) {
                 </Tab.Container> */}
             </Container> 
 
+
                
                 {/* Section 4: Gallery */}
                 <div className="py-5" >
                     <Gallery />
                 </div>
                 {/* <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid /> */}
-               
+
         </div>
     )
 }
