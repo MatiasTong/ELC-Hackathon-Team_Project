@@ -17,7 +17,7 @@ function SearchForm({ isDesktop, isMobile, displayForm }) {
     ) {
         resultPage = "/case1";
     } else if (
-        values.age < 40 &&
+        (values.age < 40 && values.age > 1) &&
         (values.insuranceType == "state insurance" ||
             values.insuranceType == "private insurance")
     ) {
