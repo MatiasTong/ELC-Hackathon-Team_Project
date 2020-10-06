@@ -26,10 +26,10 @@ function Resources(props) {
         setFilterResources(resources.filter((item) => item.type === "event"))
     }
     const filterHasInsurance = () => {
-        setFilterResources(resources.filter((item) => item.isInsured === true))
+        setFilterResources(resources.filter((item) => item.forCase.includes("case1") || item.forCase.includes("case2")))
     }
     const filterNoInsurance = () => {
-        setFilterResources(resources.filter((item) => item.isInsured === false))
+        setFilterResources(resources.filter((item) => item.forCase.includes("case3") || item.forCase.includes("case4")))
     }
     
     return (

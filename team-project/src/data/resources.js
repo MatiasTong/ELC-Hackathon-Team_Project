@@ -11,7 +11,7 @@ export const resources = [
         doctorLikes: 3,
         likes: 5,
         tags: ["Campaign"],
-        searchTerms:["under40, breast cancer, campaign"]
+        searchTerms:["under40", "breast cancer", "campaign"]
     },
   {
         type: "event",
@@ -24,7 +24,7 @@ export const resources = [
         doctorLikes: 3,
         likes: 5,
         tags: ["Recommended"],
-        searchTerms: ["over40, breast cancer"],
+        searchTerms: ["over40", "breast cancer"],
     },
 
     {
@@ -38,7 +38,7 @@ export const resources = [
         doctorLikes: 3,
         likes: 5,
         tags: "",
-        searchTerms:["under40, breast cancer"]
+        searchTerms:["under40", "breast cancer"]
     },
   
       {
@@ -53,7 +53,7 @@ export const resources = [
         doctorLikes: 3,
         likes: 5,
         tags: ["Recommended"],
-        searchTerms: ["over40, breast cancer"],
+        searchTerms: ["over40", "breast cancer"],
     },
 
     {
@@ -67,7 +67,7 @@ export const resources = [
         doctorLikes: 3,
         likes: 5,
         tags: "",
-        searchTerms:["under40, breast cancer"]
+        searchTerms:["under40", "breast cancer"]
     },
 
     {
@@ -81,7 +81,7 @@ export const resources = [
         doctorLikes: 3,
         likes: 5,
         tags: "",
-        searchTerms:["under40, breast cancer, self-exam,"]
+        searchTerms:["under40", "breast cancer", "self-exam,"]
     },
 
   {
@@ -359,7 +359,7 @@ export const resources = [
         doctorLikes: 10,
         likes: 8,
         tags: ["mammogram"],
-        searchTerms:["over40, Recommended"]
+        searchTerms:["over40", "Recommended"]
     },
   
     {
@@ -373,32 +373,33 @@ export const resources = [
         doctorLikes: 7,
         likes: 5,
         tags: ["firstmammogram"],
-        searchTerms:["First Mammogram, Recommended"]
+        searchTerms:["First Mammogram", "Recommended"]
     },
     {
         type: "website",
         title: "What women under 40 should be doing to detect breast cancer",
         isOver40: false,
         isInsured: false,
-        forCase: ["case3"],
+        forCase: ["case3" , "case2"],
         organization: "Centers for Disease Control and Prevention (CDC)",
         url: "https://www.today.com/health/what-women-under-40-should-be-doing-detect-breast-cancer-t159260",
         doctorLikes: 3,
         likes: 8,
         tags: ["mammogram"],
-        searchTerms:["Under40, Recommended"]
+        searchTerms:["Under40", "Recommended"]
     },
     {
         type: "video",
         title: "How To Catch Breast Cancer Early: Stanford Doctors Explain Mammography Options",
         isOver40: false,
         isInsured: false,
-        forCase: ["case3"],
+        forCase: ["case3", "case2"],
         organization: "Stanford Health Care",
         url: "https://www.youtube.com/watch?v=ql11xKFMKg4",
         doctorLikes: 10,
         likes: 8,
         tags: ["mammogram"],
-        searchTerms:["Under40, Recommended"]
+        searchTerms:["Under40", "Recommended"]
     }
 ];
+
