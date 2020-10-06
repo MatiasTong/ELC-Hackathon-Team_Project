@@ -7,7 +7,7 @@ function Navbar({ theme = "dark" }) {
     return (
         <Navbar2 variant={theme} style={{ color: "black" }}>
            <Link to = "/">
-            <Navbar2.Brand lassName="my-auto " style={{ fontSize: "1.5rem" }}>
+            <Navbar2.Brand className="my-auto mb-1" style={{ fontSize: "1.5rem" }}>
 
                 {/* <img
                     alt=""
