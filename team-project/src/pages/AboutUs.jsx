@@ -18,7 +18,6 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import "./AboutUs.css";
-import Navbar from "../components/Navbar"
 
 function AboutUs(props) {
 
@@ -234,8 +233,6 @@ function AboutUs(props) {
             </Container>
             <Footer/>
         </div>
-        </div>
-        </>
     );
 }
 

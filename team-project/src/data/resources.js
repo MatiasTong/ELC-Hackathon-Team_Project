@@ -292,9 +292,11 @@ export const resources = [
     },
   
   {
+        type: "website",
         title: "Mammogram Procedure",
         isOver40: true,
         isInsured: false,
+        forCase: ["case3"],
         organization: "John Hopkins Medicine",
         url: "https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/mammogram-procedure",
         doctorLikes: 10,
@@ -308,6 +310,7 @@ export const resources = [
         title: "What You Should Know Before Your First Mammogram",
         isOver40: true,
         isInsured: false,
+        forCase: ["case3"],
         organization: "Center for Diagnostic Imaging",
         url: "https://www.youtube.com/watch?v=MGsWSQGmFnY&t=1s",
         doctorLikes: 7,
