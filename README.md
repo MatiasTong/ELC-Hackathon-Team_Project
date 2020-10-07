@@ -17,6 +17,7 @@ This project was created for the Estee Lauder Companies Hackathon in Oct 2020. T
 * React
 * Javascript
 * CSS (Flexbox, Grid)
+* Styled Components 
 * Bootstrap
 * Node.js
 
