@@ -1,3 +1,10 @@
+
+## ELC Hackathon 2020
+#HackForPink
+#Challenge: Develop a technology solution that promotes and/or enhances the fight against breast cancer.
+Solution: A web application that streamlines the patient journey in getting a mammogram
+
+## Running this App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
