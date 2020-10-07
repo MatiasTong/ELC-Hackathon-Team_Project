@@ -1,11 +1,9 @@
 
-# ELCHackathon 2020 - CodeSharkz:EZCheck 
+# ELCHackathon 2020 - CodeSharkz: EZCheck 
+Challenge: Develop a technology solution that promotes and/or enhances the fight against breast cancer. #HackForPink
 
-## Challenge
-Develop a technology solution that promotes and/or enhances the fight against breast cancer. #HackForPink
 
-# Our Solution
-EZCheck, a web application that streamlines the patient journey in getting a mammogram and makes finding personalized and up-to-date resources easier
+
 
 
 
