@@ -5,8 +5,9 @@ EZCheck is a web app that makes life simpler for users who want to know the wher
 
 This project was created for the Estee Lauder Companies Hackathon in Oct 2020 by team CodeSharkz which is comprised of the following Laguardia CC TechHire/ Software Guild alumni:
 
-SEI: Alan
-SEI: Jodi
-SEI: Matias
-SEI: Shirley
-SEI: Tom
+* SEI: Shirley
+* SEI: Tom
+* SEI: Alan
+* SEI: Jodi
+* SEI: Matias
+
