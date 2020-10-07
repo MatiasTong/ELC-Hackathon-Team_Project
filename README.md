@@ -1,7 +1,7 @@
 # ELCHackathon 2020 - CodeSharkz: EZCheck 
 ![EZCheck Landing Page](/team-project/public/ezcheck3.png)<br/>
 
-EZCheck is a web app that makes life simpler for users who want to know the where and how of getting a mammogram. In the fight against breast cancer, early detection is key and getting mammograms can be a lifesaving procedure. But some of the factors that prevent people from getting checked regularly including stress and fear, financial reasons, misinformation, and work.
+EZCheck is a web app that makes life simpler for users who want to know the where and how of getting a mammogram. In the fight against breast cancer, early detection is key and getting mammograms can be a lifesaving procedure. But people often do not get checked regularly because of stress and fear, financial reasons, misinformation, or work.
 
 This web app streamlines the patient journey in getting a mammogram through personalized resources and step-by-step recommendations. Our aim is that it will equip women from all socioeconomic backrounds, regardless of age or insurance status, with the knowledge they need to fight against breast cancer.
 
