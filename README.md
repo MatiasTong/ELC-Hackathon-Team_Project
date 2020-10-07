@@ -18,11 +18,10 @@ This project was created for the Estee Lauder Companies Hackathon in Oct 2020. T
 * Javascript
 * CSS (Flexbox, Grid)
 * Bootstrap
-* Styled Components
-
+* Node.js
 
 # Try it Out:
-* [EZCheck](https://sharp-wiles-a65094.netlify.app)
+* [EZCheck (Deployed with Netlify)](https://sharp-wiles-a65094.netlify.app)
 
 
 
