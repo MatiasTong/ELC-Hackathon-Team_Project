@@ -21,3 +21,8 @@ This project was created for the Estee Lauder Companies Hackathon in Oct 2020. T
 * Styled Components
 
 
+# Try it Out:
+* [EZCheck](sharp-wiles-a65094.netlify.app)
+
+
+
