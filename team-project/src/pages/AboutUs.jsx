@@ -54,16 +54,14 @@ function AboutUs(props) {
                         <h2 className="featurette-heading">Matias Tong</h2>
                         <span className="text-muted">Software Developer</span>
                         <p className="lead my-auto ">
-                            My research experience using software to analyze
+                            My experience using software to analyze
                             large amounts of data and tackle environmental
                             challenges helped me decide that coding is what I
                             love to do. I am passionate about topics at the
                             intersection between innovative tech and nature.
                             Recently, I enrolled in the Laguardia CC Techhire
                             program and earned my certification as a full stack
-                            web developer. Now I'm open to the next job
-                            opportunity! Check out my website:
-                            www.matiastong.com
+                            web developer.  
                         </p>
                         <span className="text-muted mr-3">Contact:</span>
                         <Card.Link href="https://linkedin.com/in/matiastong">

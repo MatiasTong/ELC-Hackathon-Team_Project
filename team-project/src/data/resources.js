@@ -403,7 +403,7 @@ export const resources = [
         isOver40: false,
         isInsured: false,
         forCase: ["case3, case2, case1, case4"],
-        organization: "Living Beyond Breast Cancer: NOVEMBER 7, 2020 05:00PM TO 06:00PM EST",
+        organization: "Living Beyond Breast Cancer: November 7, 2020 5pm to 6pm",
         url:"https://www.lbbc.org/programs-events/strength-stories-virtual-celebration?gclid=CjwKCAjwq_D7BRADEiwAVMDdHspOnRelffyADvXaHgloZkp9X4BuhInMXExKuF_u64VbrWBJcW_gaxoC48YQAvD_BwE",
         doctorLikes: 8,
         likes: 9,

@@ -22,8 +22,8 @@ function Navbar({ theme = "dark" }) {
            </Link>
             <Nav className="mr-auto " style={{ fontSize: "1.3rem", whiteSpace: "nowrap" }}>
                 <Nav.Link className="my-auto " href="/">Home</Nav.Link>
-                <Nav.Link className="my-auto " href="/resources">Resources</Nav.Link>
                 <Nav.Link className="my-auto " href="/AboutUs">About Us</Nav.Link>
+                <Nav.Link className="my-auto " href="/resources">Resources</Nav.Link>
             </Nav>
         </Navbar2>
     )
