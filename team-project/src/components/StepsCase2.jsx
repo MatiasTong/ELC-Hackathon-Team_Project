@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { Card, Container, Row, Col, Accordion as Accordion3 } from "react-bootstrap";
 import Accordion from "./Accordion"
-// import PropTypes from "prop-types";
-// import InfoModal from "./InfoModal";
-// import Option from "./Option"
 
 function StepsCase2(props) {
-    // const [modalShow, setModalShow] = React.useState(false);
+
 
     return (
 
@@ -15,22 +12,6 @@ function StepsCase2(props) {
                 <h2 style={{ fontSize: "3.2rem", fontWeight: "bold", opacity: "50%" }}>How to Get Started</h2>
                 <h3 style={{ fontSize: "2.8rem", fontWeight: "bold", opacity: "80%" }}>Step by Step Directions</h3>
             </div>
-            {/* intro */}
-            {/* <Card
-                    className="my-4 mx-auto"
-                    border="info"
-                    style={{ width: "80%" }}
-                >
-                    <Card.Header>Helps and Guidelines</Card.Header>
-                    <Card.Body>
-                        <Card.Text>
-                            Here are a few steps to guide you to get your doctor
-                            appointment.
-                        </Card.Text>
-                    </Card.Body>
-                </Card> */}
-
-
 
             {/* Step: 1 */}
             <Accordion

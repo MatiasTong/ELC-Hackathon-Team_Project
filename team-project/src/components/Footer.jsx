@@ -1,7 +1,7 @@
 import React from "react";
 import { SocialIcon } from 'react-social-icons';
 import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon, MDBBtn, } from "mdbreact";
-import {Image} from "react-bootstrap";
+import {Link} from "react-router-dom"
 
 
 const FooterPage = () => {
@@ -21,13 +21,13 @@ const FooterPage = () => {
                             <h5 className="title">Links</h5>
 
                             <li className="list-unstyled">
-                                <a href="/AboutUs">About Us</a>
+                                <Link to="/AboutUs">About Us</Link>
                             </li>
                             <li className="list-unstyled">
-                                <a href="/AboutUs">Contact Us</a>
+                                <Link to="/AboutUs">Contact Us</Link>
                             </li>
                             <li className="list-unstyled">
-                                <a href="/AboutUs">Help</a>
+                                <Link to="/AboutUs">Help</Link>
                             </li>
                             {/* <li className="list-unstyled">
                                 <a href="#!">Link 4</a>

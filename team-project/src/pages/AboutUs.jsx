@@ -70,7 +70,7 @@ function AboutUs(props) {
                         <Card.Link href="https://github.com/MatiasTong">
                             GitHub
                         </Card.Link>
-                        <Card.Link href="https://matiastong.com">
+                        <Card.Link href="https://www.matiastong.com">
                             Website
                         </Card.Link>
                         <Card.Link href="mailto: tongm1@bxscience.edu">

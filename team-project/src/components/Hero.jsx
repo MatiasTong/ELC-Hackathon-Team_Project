@@ -72,7 +72,7 @@ const Header = () => {
             {'Be in the know'}{' '}
             {/* <span className="text-color-main">{'Your Name'}</span> */}
             <br />
-            {"Find where you can do your mammogram today."}
+            {"Find how you can do your mammogram today."}
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
