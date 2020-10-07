@@ -13,6 +13,17 @@ This project was created for the Estee Lauder Companies Hackathon in Oct 2020. T
 * SEI: Jodi Pierre-Louis 
 * SEI: Matias Tong
 
+# How we built it
+We used React and Javascript and we used Adobe XD for the wireframes. We used Netlify to deploy it.
+
+# Challenges we ran into
+* Planning the app features and working on the UI/UX design (We wanted our message to be clear and user-friendly)
+* Learning Gatsby/React (Planning a study structure to meet within the timeframe)
+* Trying to implement the chat bot using Lex/Amplify
+
+# Accomplishments that we're proud of
+Being able to create a web app that has a questionnaire to generate results based on the user's age and insurance. We're proud to have signed up and be able to build a web app that can help more women getting checked. We understand the importance of getting checked, education is key.
+
 # Technologies:
 * React
 * Javascript
