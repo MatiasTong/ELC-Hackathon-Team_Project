@@ -13,3 +13,11 @@ This project was created for the Estee Lauder Companies Hackathon in Oct 2020. T
 * SEI: Jodi Pierre-Louis 
 * SEI: Matias Tong
 
+#Front-End:
+* React
+* Javascript
+* CSS (Flexbox, Grid)
+* Bootstrap
+* Styled Components
+
+
