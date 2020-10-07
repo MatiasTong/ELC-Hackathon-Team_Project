@@ -1,20 +1,15 @@
-import PropTypes from "prop-types";
-import { Row, Col, Image } from "react-bootstrap";
-import Hero2 from "../components/Hero2";
-import Media from "react-bootstrap/Media";
+import { Row, Image, Container } from "react-bootstrap";
 import StepsCase1 from "../components/StepsCase1";
 import ResourceCard from "../components/ResourceCard";
 import Navbar from "../components/Navbar";
 import Gallery from "../components/Gallery";
-
 import { resources } from "../data/resources"
 import Footer from "../components/Footer";
-import React, { useContext, useState, useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
-// import { Link } from 'react-router-dom';
 import "../components/Hero2.scss"
+import "../styles/Case.css"
 
 
 function Case1(props) {
@@ -33,13 +28,13 @@ function Case1(props) {
 
 
     return (
-        <div
+        <div class="case"
             style={{
                 backgroundImage:
                     "linear-gradient(to right,#FFCCCB  0%,#b19cd9  100%)",
             }}
         >
-            {/* Section 1: Header and navbar */}
+            {/* Section 1: Navbar and Hero header */}
             <header
                 style={{
                     background:
@@ -87,125 +82,73 @@ function Case1(props) {
             </header>
 
             {/* Spacer div */}
-            <div id="section1"
-                style={{
-                    height: "6vh",
-                    padding: "0px",
-                    backgroundImage:
-                        "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
-                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                }}
+            <div id="section1" className="case-spacer-div mt-4" 
             ></div>
 
             {/* Section 2: Steps or Options */}
-            <div
-                style={{
-                    //  background: "linear-gradient(0deg, rgba(241, 241, 241,0.2), rgba(241, 241, 241,0.2)), url(https://images.unsplash.com/photo-1552035509-b247fe8e5078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
-                    borderRadius: "10px",
-                    margin: "2.8rem",
-                    backgroundColor: "#f2f6fa",
-                    border: "none",
-                }}
-            >
-                <StepsCase1 />
-            </div>
 
-            {/* Spacer Div */}
-            <div
-                style={{
-                    height: "4vh",
-                    padding: "0px",
-                    backgroundImage:
-                        "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
-                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                }}
-            ></div>
+            <section className="case-section-container">
+                <div style={{ textAlign: "left" }}>
+                    <h2 className="case-section-heading">
+                        How to Get Started
+                    </h2>
+                    <h3 className="case-section-subheading">
+                        Step by Step Directions
+                </h3>
+                </div>
+                <StepsCase1 />
+            </section>
+
+
+            <div className="case-spacer-div">
+            </div>
 
             {/* Section 3: Resources */}
-
-
-            <Container className="py-5" style={{ margin: "2.8rem", }}>
-
-                <div style={{
-                    borderRadius: "20px",
-                    textAlign: "left",
-                    marginBottom: "2rem",
-                    backgroundColor: "#f2f6fa",
-                    padding: "20px",
-                }}>
-
-                    <h3
-                        style={{
-                            fontSize: "2.8rem",
-                            fontWeight: "bold",
-                            opacity: "80%",
-                        }}
-                    >
-                        Related Resources
+            <section className="case-section-container">
+                <h3 className="case-section-subheading">
+                    Related Resources
                 </h3>
-
-                    <div
-                        style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            margin: "2.8rem",
-                        }}
-                    >
-                        <Row className="justify-content-center">
-                            {resources
-                                .filter((item) => item.forCase.includes("case1"))
-                                .map((item) => (
-                                    <ResourceCard
-                                        className="col mx-2"
-                                        type={item.type}
-                                        title={item.title}
-                                        organization={item.organization}
-                                        url={item.url}
-                                        doctorLikes={item.doctorLikes}
-                                        likes={item.likes}
-                                        tags={item.tags}
-                                        phoneNumber={item.phoneNumber}
-                                    />
-                                ))}
-                        </Row>
-                    </div>
-
-
-
-
-
+                
+                <div className="case-resource-group">
+                    <Row className="justify-content-center">
+                        {resources
+                            .filter((item) => item.forCase.includes("case1"))
+                            .map((item) => (
+                                <ResourceCard
+                                    className="col mx-2"
+                                    type={item.type}
+                                    title={item.title}
+                                    organization={item.organization}
+                                    url={item.url}
+                                    doctorLikes={item.doctorLikes}
+                                    likes={item.likes}
+                                    tags={item.tags}
+                                    phoneNumber={item.phoneNumber}
+                                />
+                            ))}
+                    </Row>
                 </div>
-            </Container>
+            </section>
 
 
-
-            {/* Spacer Div */}
-            <div
-                style={{
-                    height: "4vh",
-                    padding: "0px",
-                    backgroundImage:
-                        "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
-                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                }}
-            ></div>
-
-            {/* Section 4: Gallery */}
-            <div className="py-5">
-                <Gallery />
+            <div className="case-spacer-div">
             </div>
 
+            {/* Section 4: Gallery */}
+            <section className="case-section-container">
+
+                <h3 className="case-section-subheading">
+                    Preparing for the day
+                </h3>
+                <div className="py-4">
+                    <Gallery />
+                </div>
+            </section>
+
             {/* Spacer Div */}
-            <div
-                style={{
-                    height: "4vh",
-                    padding: "0px",
-                    backgroundImage:
-                        "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
-                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                }}
+            <div className="case-spacer-div"
             ></div>
+
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
 
             <br />
@@ -214,7 +157,5 @@ function Case1(props) {
         </div>
     );
 }
-
-Case1.propTypes = {};
 
 export default Case1;

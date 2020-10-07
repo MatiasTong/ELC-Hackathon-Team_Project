@@ -19,12 +19,7 @@ function CaseFourSteps(props) {
 
     return (
 
-        <Container className="py-5">
-            <div style={{ textAlign: "left", marginBottom: "2rem" }}>
-                <h2 style={{ fontSize: "3.2rem", fontWeight: "bold", opacity: "50%" }}>How to Get Started</h2>
-                <h3 style={{ fontSize: "2.8rem", fontWeight: "bold", opacity: "80%" }}>Step by Step Directions</h3>
-            </div>
-
+        <Container className="py-3">
 
             {/* Option: 1 */}
             <Accordion

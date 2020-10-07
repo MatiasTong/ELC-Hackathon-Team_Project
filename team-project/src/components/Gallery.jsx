@@ -12,7 +12,7 @@ function Gallery(props) {
 
     return (
         <div>
-            <Container>
+            <Container className="py-1">
                 <Carousel className="li">
                     <Carousel.Item>
                         <img

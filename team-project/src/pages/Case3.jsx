@@ -13,6 +13,7 @@ import { resources } from "../data/resources"
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
+import "../styles/Case.css"
 // import { Link } from 'react-router-dom';
 
 import "../components/Hero2.scss"
@@ -77,60 +78,35 @@ function Case3(props) {
                 {/* End of Hero Image */}
 
             </header>
+       
             {/* Spacer div */}
-            <div
-                id="section1"
-                style={{
-                    height: "6vh",
-                    padding: "0px",
-                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
-                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                }}>
-            </div>
+            <div id="section1" className="case-spacer-div mt-4" 
+            ></div>
 
             {/* Section 2: Steps or Options */}
-            <div
-                style={{
-                    //  background: "linear-gradient(0deg, rgba(241, 241, 241,0.2), rgba(241, 241, 241,0.2)), url(https://images.unsplash.com/photo-1552035509-b247fe8e5078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)",
-                    borderRadius: "10px",
-                    margin: "2.8rem",
-                    backgroundColor: "#f2f6fa",
-                    border: "none"
-                }}>
+            <section className="case-section-container">
+                <div style={{ textAlign: "left" }}>
+                    <h2 className="case-section-heading">
+                        How to Get Started
+                    </h2>
+                    <h3 className="case-section-subheading">
+                        Step by Step Directions
+                </h3>
+                </div>
                 <Case3Steps />
-            </div>
+            </section>
 
             {/* Spacer Div */}
-            <div
-                style={{
-                    height: "4vh",
-                    padding: "0px",
-                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
-                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                }}>
+            <div className="case-spacer-div">
             </div>
-            <h2
-                className="justify-content-center"
-                style={{
-                    fontSize: "3.2rem",
-                    fontWeight: "bold",
-                    opacity: "50%",
-                }}
-            >
-                    Related Resources
-            </h2>
 
-                 
             {/* Section 3: Resources */}
-            <div style={{
-                padding: "20px",
-                borderRadius: "20px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "#f2f6fa",
-                margin: "2.8rem"
-            }}>
+            <section className="case-section-container">
+                <h3 className="case-section-subheading">
+                    Related Resources
+                </h3>
+                 
+                <div className="case-resource-group">
                 
                 <Row className="justify-content-center">
               
@@ -153,14 +129,10 @@ function Case3(props) {
 
                 </Row>
             </div>
-            {/* Spacer Div */}
-            <div
-                style={{
-                    height: "4vh",
-                    padding: "0px",
-                    backgroundImage: "linear-gradient(to right, #FFCCCB 0%, #b19cd9 100%)",
-                    // borderImage: "linear-gradient(135deg, rgb(255, 44, 167) 0%, rgb(230, 173, 201)) 1"}}>
-                }}>
+            </section>
+
+             {/* Spacer Div */}
+            <div className="case-spacer-div">
             </div>
 
 
@@ -208,9 +180,16 @@ function Case3(props) {
 
 
             {/* Section 4: Gallery */}
+               {/* Section 4: Gallery */}
+               <section className="case-section-container">
+
+<h3 className="case-section-subheading">
+    Preparing for the day
+</h3>
             <div className="py-5" >
                 <Gallery />
             </div>
+            </section>
 
             <br />
             <Image src="https://marvel-b1-cdn.bc0a.com/f00000000166771/www.beaconhealthsystem.org/wp-content/uploads/2020/09/Mammo-page-header_2020-09-v1.jpg" fluid />
