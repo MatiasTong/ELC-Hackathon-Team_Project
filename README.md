@@ -13,6 +13,9 @@ This project was created for the Estee Lauder Companies Hackathon in Oct 2020. T
 * SEI: Jodi Pierre-Louis 
 * SEI: Matias Tong
 
+# Try it Out:
+* [EZCheck (Deployed with Netlify)](https://sharp-wiles-a65094.netlify.app)
+
 # How we built it
 We used React and Javascript and we used Adobe XD for the wireframes. We used Netlify to deploy it.
 
@@ -32,8 +35,5 @@ Being able to create a web app that has a questionnaire to generate results base
 * Bootstrap
 * Node.js
 
-# Try it Out:
-* [EZCheck (Deployed with Netlify)](https://sharp-wiles-a65094.netlify.app)
-
-
-
+# What's next for EzCheck
+Our goal is also to make the app user friendly so users can learn about prevention and what to expect during a mammogram. In the future, we will personalize our app more by using the user’s location to find childcare, free mammography events and book appointments. We started off with mammograms for now to start but can be branched out to other medical procedures. We love to create and build especially if its for a good cause and make an impact! Thank you for the opportunity. Sincerely, The Code Sharkz :)
