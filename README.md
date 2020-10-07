@@ -1,7 +1,7 @@
 # ELCHackathon 2020 - CodeSharkz: EZCheck 
 ![EZCheck Landing Page](/team-project/public/ezcheck.png)<br/>
 
-EZCheck is a web app that makes life simpler for users who want to know the where and how of getting a mammogram. In the fight against breast cancer, early detection is key and getting mammograms can be a lifesaving procedure. But people often do not get checked regularly because of stress and fear, financial reasons, misinformation, or work.
+EZCheck is a web app that makes life simpler for users who want to know the where and how of getting a mamogram. In the fight against breast cancer, early detection is key and getting mammogram can be a lifesaving procedure. But people often do not get checked regularly because of stress and fear, financial reasons, misinformation or work.
 
 This web app streamlines the patient journey in getting a mammogram through personalized resources and step-by-step recommendations. Our aim is that it will equip women from all socioeconomic backrounds, regardless of age or insurance status, with the knowledge they need to fight against breast cancer.
 
@@ -36,4 +36,4 @@ Being able to create a web app that has a questionnaire to generate results base
 * Node.js
 
 # What's next for EzCheck
-Our goal is also to make the app user friendly so users can learn about prevention and what to expect during a mammogram. In the future, we will personalize our app more by using the user’s location to find childcare, free mammography events and book appointments. We started off with mammograms for now to start but can be branched out to other medical procedures. We love to create and build especially if its for a good cause and make an impact! Thank you for the opportunity. Sincerely, The Code Sharkz :)
+Our goal is also to make the app user friendly so users can learn about prevention and what to expect during a mammogram. In the future, we would like to personalize our app even more by using the user's location to find nearby childcare and free mammography events and book appointments. We started off with mammograms for now to start but can be expanded to other breast cancer screening procedures. We love to create and build especially if its for a good cause and make an impact! Thank you for the opportunity. Sincerely, The Code Sharkz :)
