@@ -22,7 +22,7 @@ This project was created for the Estee Lauder Companies Hackathon in Oct 2020. T
 
 
 # Try it Out:
-* [EZCheck](sharp-wiles-a65094.netlify.app)
+* [EZCheck](https://sharp-wiles-a65094.netlify.app)
 
 
 
