@@ -1,12 +1,3 @@
-
-# ELCHackathon 2020 - CodeSharkz: EZCheck 
-Challenge: Develop a technology solution that promotes and/or enhances the fight against breast cancer. #HackForPink
-
-
-
-
-
-
 ## Running this App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
