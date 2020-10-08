@@ -21,7 +21,7 @@ We used React and Javascript and we used Adobe XD for the wireframes. We used Ne
 
 ### Challenges we ran into
 * Planning the app features and working on the UI/UX design (We wanted our message to be clear and user-friendly)
-* Learning Gatsby/React (Planning a study structure to meet within the timeframe)
+* Learning React (Planning a study structure to meet within the timeframe)
 * Trying to implement the chat bot using Lex/Amplify
 
 ### Accomplishments that we're proud of
