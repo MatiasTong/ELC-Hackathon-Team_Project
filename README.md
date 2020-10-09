@@ -7,11 +7,11 @@ This web app streamlines the patient journey in getting a mammogram through pers
 
 This project was created for the Estee Lauder Companies Hackathon in Oct 2020. The challenge was to develop a technology solution that promotes and/or enhances the fight against breast cancer. It was built by team CodeSharkz which is comprised of the following Laguardia CC TechHire/ Software Guild alumni:
 
-* SEI: Shirley Sosa
-* SEI: Tom Rachtawarn
-* SEI: Alan Carrasco
-* SEI: Jodi Pierre-Louis 
-* SEI: Matias Tong
+* Shirley Sosa
+* Tom Rachtawarn
+* Alan Carrasco
+* Jodi Pierre-Louis 
+* Matias Tong
 
 # Try it Out:
 * https://ezcheck.netlify.app
