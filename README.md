@@ -14,7 +14,7 @@ This project was created for the Estee Lauder Companies Hackathon in Oct 2020. T
 * SEI: Matias Tong
 
 # Try it Out:
-* [EZCheck](https://sharp-wiles-a65094.netlify.app)
+* https://ezcheck.netlify.app
 
 # How we built it
 We used React and Javascript and we used Adobe XD for the wireframes. We used Netlify to deploy it.
